@@ -3,7 +3,7 @@
 **English copy:** `ZTE-Family-Toolbox-1.2.9-beta1-EN/` next to the original folder (local only, not in Git).
 The original `中兴家族工具箱1.2.9-beta1/` is untouched.
 
-> **Run it from `C:ZTE-Toolbox-EN`** (already copied there). It refuses to start from any path with spaces or ASCII parentheses, such as this project folder. Otherwise copy the English folder to a short path with no spaces and outside OneDrive, for example
+> **Run it from `C:\ZTE-Toolbox-EN\`** (already copied there). It refuses to start from any path with spaces or ASCII parentheses, such as this project folder. Otherwise copy the English folder to a short path with no spaces and outside OneDrive, for example
 > `C:\ZTE-Toolbox-EN\`. The toolbox rejects spaces in paths it uses, and XDA users report fewer EDL
 > failures from short plain paths.
 
