@@ -1,0 +1,41 @@
+# ZTE Family Toolbox assessment for NX809J
+
+Reviewed 2026-10-19. This is a static review of the project’s retained toolbox archive and public XDA records. No toolbox member, driver, ABL, Sahara/Firehose image, or phone operation was run.
+
+## Finding
+
+**The project already has a toolbox package with an explicit NX809J profile.** It is not accurate to dismiss it as Lenovo-only or as a generic unsupported tool. The retained archive identifies itself as version **1.2.9-beta1** both in its filename and in `bin/conf/fixed.bat`. Its `bin/conf/dev.csv` entry labels NX809J as RedMagic 11 series, Snapdragon `8E5`, UFS, an `efisp` path, A/B recovery layout, `init_boot`, and ZTE-specific EDL configuration. The profile is real static evidence of intended device support.
+
+That evidence does **not** establish that the bundled loader is accepted by this exact handset on its current firmware, that all expected GPT/LUN reads complete, or that the output is a complete restore package. The practical conclusion is: **this is the first device-specific toolbox to assess for NX809J backup work, but its current loader/read/restore path remains unvalidated on the project phone.** The phone already has its own 91 verified partition readbacks and six CRC-checked GPT pairs; those remain the baseline in [recovery.md](recovery.md).
+
+## Archive identity and newer releases
+
+The root archive and the preserved copy at [`research/originals/`](../research/originals/) are identical: 47,724,368 bytes and SHA-256 `550fef1ca2720a5e647bf2132c265fef84a7ac39e1ab4b7dcc6d5ee9fbf003d4`. The internal version field is `prog_ver=1.2.9-beta1`. The listing, selected extracted files, and per-file hashes are retained in [`research/zte-toolbox-review/`](../research/zte-toolbox-review/README.md).
+
+The XDA opening post credits `某贼` from Coolapk and links Google Drive mirrors. Its visible `Source Code / GitHub` link points to `gbl_root_canoe`, a separate GBL project rather than the toolbox source. [XDA opening post](https://xdaforums.com/t/red-magic-11-pro-guide-bootloader-unlock-free-also-support-rm10-pad3pro-z70u-z80u-unlock-zte-family-toolbox.4780930/post-90507037). The developer’s [Coolapk post](https://www.coolapk.com/feed/55222939) returned an EdgeOne access-restriction page in the ordinary browser, so no direct author release feed or newer build could be verified there. I did not attempt to bypass that restriction or download an unverified replacement.
+
+The live XDA thread through page 168 shows users referencing Toolbox **1.2.8-beta2**, including a success report on a self-described “RedMagic 11S Pro” with hardware ID NX809J and firmware `11.5.6_EA`, and a separate NX809J `11.5.8MR1_GB` report where 1.2.8-beta2 detected EDL and read a small amount before failing on the 512 KiB GPT read. These are user reports, not a controlled test, and the first report’s product label is ambiguous. [1.2.8-beta2 NX809J report](https://xdaforums.com/t/red-magic-11-pro-guide-bootloader-unlock-free-also-support-rm10-pad3pro-z70u-z80u-unlock-zte-family-toolbox.4780930/post-90750031) · [NX809J GPT-read failure](https://xdaforums.com/t/red-magic-11-pro-guide-bootloader-unlock-free-also-support-rm10-pad3pro-z70u-z80u-unlock-zte-family-toolbox.4780930/post-90783197) · [live page 168](https://xdaforums.com/t/red-magic-11-pro-guide-bootloader-unlock-free-also-support-rm10-pad3pro-z70u-z80u-unlock-zte-family-toolbox.4780930/page-168).
+
+Among the sources reachable during this review, I found no release newer than the retained 1.2.9-beta1 archive. The XDA reports I found use 1.2.8-beta2; that does not prove there is no separate newer author release.
+
+## What the NX809J profile includes
+
+The local [device table](../research/zte-toolbox-review/extracted/bin/conf/dev.csv#L43) contains the exact product key `NX809J`; this is stronger evidence than a generic Qualcomm/SM8850 claim. The associated [Sahara manifest](../research/zte-toolbox-review/extracted/bin/res/NX809J/devprg/qsahara_device_programmer.xml) declares chipset `kaanapali` and lists eight required images: `multi_image_qti.mbn`, `multi_image.mbn`, `xbl_sc.elf`, `signed_firmware_soc_view.elf`, `sequencer_ram.elf`, `tme_config.elf`, `prog_firehose_ddr.elf`, and `xbl_config_devprg.elf`. The archive contains those files under the NX809J profile. This is a multi-image Sahara/Firehose set, not a generic one-file programmer. It must be kept together and must be accepted by the actual device before it can read storage.
+
+The same profile includes an `abl_unlock.elf`; its companion text says the ABL came from RedMagic 11 `RedMagicOS11.0.23MR1`. That is only a bundled source note. It does not establish a match to the current phone’s firmware, region, board revision, or boot-chain policy. The table contains no exact firmware build field. The source package also does not prove that this Firehose set was accepted on the project phone. Since this phone is already rooted and unlocked, its ABL/root operations are not needed for the present Linux-port work.
+
+The retained archive contains programmer/profile assets, scripts, and recovery-related files; it is not itself a complete NX809J stock firmware restore package. I found no ready-to-use full NX809J `rawprogram`/patch set in the selected NX809J profile. The EDL procedure would still depend on the exact accepted loader, authorization state, current UFS/LUN geometry, complete matching firmware images, and a verified restore plan.
+
+## Readback versus writes
+
+The [EDL readback routine](../research/zte-toolbox-review/extracted/bin/ztetoolbox.bat#L64-L169) can take an optional Firehose path, requires the port to reach Firehose mode, reads the main and backup GPTs for each reported LUN, constructs `partition.xml` and `rawprogram*.xml`, and calls the separate [QCEDL read function](../research/zte-toolbox-review/extracted/bin/read.bat#L116-L146). The read helper invokes `fh_loader` with `--convertprogram2read`. The routine then copies rawprogram XML files into its `images` output folder and generates a `flash_all.bat` helper. That output is an input to a later firmware-building/flashing workflow, not evidence that a restore is safe.
+
+The full-read selection is not literally every region by default. `edlreadall_customize` is set to `n`; before reading, the generated list removes the selection brackets from `userdata`, `last_parti`, and `mindowsesp` / `mindowswin` / `mindowsdat`, so those names are skipped by the default selection logic. In particular, the package’s default readback excludes `userdata`. The code path does not perform a final SHA-256 inventory or compare all saved image lengths against the captured GPT before logging completion.
+
+The archive also has separate [QCEDL write/flash](../research/zte-toolbox-review/extracted/bin/write.bat#L314-L384) and GPT write operations. Its bundled [English ROM-maker note](../research/zte-toolbox-review/extracted/bin/tool/Other/ReadAllFunc_Readme_Eng.txt#L1-L19) describes modifying the readback output into an unbrick package, including merging `_a` and `_b` images and editing rawprogram entries. Those are not read-only backup steps. The project’s old [`README_EDL_SAFETY.md`](../README_EDL_SAFETY.md) repeats dangerous blank-filename and slot-merging advice; maintained [recovery rules](recovery.md#hard-boundaries) explicitly supersede it. A blank `filename` in one XML entry does not make the rest of a flash package safe, and mirroring both slot images conflicts with this project’s Android/Linux dual-boot goal.
+
+The toolbox is capable of useful device-specific work, but the readback must be checked independently for every GPT/LUN, expected partition, file size, SHA-256, and missing region. A small successful read or a returned GUI/menu is not a verified backup. No EDL read was attempted on this phone.
+
+## Decision for this project
+
+Keep the retained archive as an NX809J-specific research input. Do not use its unlock/ABL path or its generated ROM-maker flash instructions. It may be considered for a future read-only NX backup only after the exact current firmware/revision is matched to the multi-image programmer and the read path and resulting artifacts can be independently verified. Its static NX809J support profile is meaningful; its exact acceptance and recovery coverage on this phone remain open.

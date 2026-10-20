@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-19",
+  "operation": "verified copies; bulk move was denied",
+  "files": [
+    {
+      "original": "README_EDL_SAFETY.md",
+      "archived_copy": "research/originals/README_EDL_SAFETY.md",
+      "bytes": 4663,
+      "sha256": "a92389c047790dc5630abea98f4e541e6622f7e76bb80b6f66bffa32214045d0",
+      "original_retained": true
+    },
+    {
+      "original": "README_TUTORIAL.md",
+      "archived_copy": "research/originals/README_TUTORIAL.md",
+      "bytes": 834,
+      "sha256": "3c6ef4a370e381c2065687cbbbe0310a4050c0b2e275bb2c02ce18a9a76163c8",
+      "original_retained": true
+    },
+    {
+      "original": "Refrences To Study.txt",
+      "archived_copy": "research/originals/Refrences To Study.txt",
+      "bytes": 3612,
+      "sha256": "78a8a9d78479980992814f349c4e1c088abd419fb35bb8b0d0c25dfe32abe0a9",
+      "original_retained": true
+    },
+    {
+      "original": "Tools to handle this project.txt",
+      "archived_copy": "research/originals/Tools to handle this project.txt",
+      "bytes": 97,
+      "sha256": "c0b10c02fa71bafe08cd2a63abbe24c5877504c46eccc7fa94917b6ea23e566d",
+      "original_retained": true
+    },
+    {
+      "original": "[WIP][GUIDE] RedMagic 11 Pro - All in One Guide.pdf",
+      "archived_copy": "research/originals/[WIP][GUIDE] RedMagic 11 Pro - All in One Guide.pdf",
+      "bytes": 657944,
+      "sha256": "50e71f9aadefcf8fc37302e82c3038d0c9a355fc2561b70123d0526eed130cba",
+      "original_retained": true
+    },
+    {
+      "original": "web scraping pathway.txt",
+      "archived_copy": "research/originals/web scraping pathway.txt",
+      "bytes": 202,
+      "sha256": "cd4030861d4a5ae0ca935f8a5047e24885160f2d734956832eccad81eb223e12",
+      "original_retained": true
+    },
+    {
+      "original": "中兴家族工具箱1.2.9-beta1.7z",
+      "archived_copy": "research/originals/中兴家族工具箱1.2.9-beta1.7z",
+      "bytes": 47724368,
+      "sha256": "550fef1ca2720a5e647bf2132c265fef84a7ac39e1ab4b7dcc6d5ee9fbf003d4",
+      "original_retained": true
+    }
+  ]
+}

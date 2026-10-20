@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "captured_on": "2026-10-19",
+  "sources": [
+    {
+      "name": "kernel-vendor",
+      "url": "https://github.com/Coding-BR/android_kernel_nubia_sm8850_qwjujube.git",
+      "branch": "main",
+      "commit": "efee6f411184886b0fbdaf63fc9db36b3ed96036",
+      "path": "sources/checkouts/kernel-vendor",
+      "checkout": "shallow-no-worktree"
+    },
+    {
+      "name": "drivers-reference",
+      "url": "https://github.com/Coding-BR/zte-kernel-nx809j-drivers.git",
+      "branch": "main",
+      "commit": "fddb80c06ad6b9d1b972026d1d0711d82030f191",
+      "path": "sources/checkouts/drivers-reference",
+      "checkout": "shallow-no-worktree"
+    },
+    {
+      "name": "canoe-dock",
+      "url": "https://github.com/Coding-BR/rm11pro-canoe-dock.git",
+      "branch": "main",
+      "commit": "27177301b45ae9cb3d9271b9f53aa1ae6be5ff77",
+      "path": "sources/checkouts/canoe-dock",
+      "checkout": "shallow-no-worktree"
+    },
+    {
+      "name": "denial",
+      "url": "https://github.com/denialwm/denial.git",
+      "branch": "main",
+      "commit": "c96375a190a200b6343868afc42d4492b6badb9d",
+      "path": "sources/checkouts/denial",
+      "checkout": "shallow-no-worktree"
+    },
+    {
+      "name": "kernel-mainline",
+      "url": "https://github.com/torvalds/linux.git",
+      "branch": "master",
+      "commit": "c03c1a14507dfaf8b856c2608f9ac216021fc222",
+      "path": "sources/checkouts/kernel-mainline",
+      "checkout": "shallow-no-worktree-partial",
+      "materialize_paths": [
+        "Documentation/arm64",
+        "Documentation/devicetree/bindings",
+        "arch/arm64/boot/dts/qcom",
+        "drivers/clk/qcom",
+        "drivers/firmware/qcom",
+        "drivers/gpu/drm/msm",
+        "drivers/interconnect/qcom",
+        "drivers/irqchip",
+        "drivers/phy/qualcomm",
+        "drivers/pinctrl/qcom",
+        "drivers/regulator",
+        "drivers/soc/qcom",
+        "drivers/thermal",
+        "drivers/ufs/host",
+        "drivers/usb/dwc3",
+        "drivers/usb/phy",
+        "include/dt-bindings"
+      ]
+    },
+    {
+      "name": "qbootctl",
+      "url": "https://github.com/linux-msm/qbootctl.git",
+      "branch": "main",
+      "commit": "39a6e6daaf029fb0a083777679a15ea2c18f72de",
+      "path": "sources/checkouts/qbootctl",
+      "checkout": "shallow-no-worktree"
+    },
+    {
+      "name": "kernel-kaanapali",
+      "url": "https://git.codelinaro.org/clo/linux-kernel/kernel-qcom.git",
+      "branch": "kaanapali",
+      "commit": "d1525d56d8d21bfaf23512033a1fbf23e893bad3",
+      "path": "sources/checkouts/kernel-kaanapali",
+      "checkout": "shallow-no-worktree-partial"
+    },
+    {
+      "name": "kernel-xec",
+      "url": "https://github.com/Xlie-Electronic-Customs/linux.git",
+      "branch": "master",
+      "commit": "a7baf6c8aafc53cf155ec8fbc6cdffc42594ce6f",
+      "path": "sources/checkouts/kernel-xec",
+      "checkout": "shallow-no-worktree-partial"
+    },
+    {
+      "name": "kernel-xec-7.3-rc4",
+      "url": "https://github.com/Xlie-Electronic-Customs/linux.git",
+      "branch": "7.3-rc4",
+      "commit": "6d6be0ba139e89d843e62f56cbd9f829775901d5",
+      "path": "sources/checkouts/kernel-xec-7.3-rc4",
+      "checkout": "shallow-no-worktree-partial"
+    },
+    {
+      "name": "firmware-xec-infiniti",
+      "url": "https://github.com/Xlie-Electronic-Customs/linux-firmware-oplus-infiniti.git",
+      "branch": "main",
+      "commit": "7197ab48bccc3bf2a267d9f3133f1dc4c3c5fed4",
+      "path": "sources/checkouts/firmware-xec-infiniti",
+      "checkout": "shallow-no-worktree-partial"
+    },
+    {
+      "name": "u-boot-infiniti",
+      "url": "https://github.com/infiniti-mainline/u-boot.git",
+      "branch": "main",
+      "commit": "bce42004f0758b477e5bb1affcf38592fe3c4a23",
+      "path": "sources/checkouts/u-boot-infiniti",
+      "checkout": "shallow-no-worktree-partial"
+    },
+    {
+      "name": "kernel-oneplus-sm8850",
+      "url": "https://github.com/OnePlusOSS/android_kernel_oneplus_sm8850.git",
+      "branch": "oneplus/sm8850_b_16.0.0_oneplus_15",
+      "commit": "fc30e54174d254ff7f33622a9278e4435f6718d2",
+      "path": "sources/checkouts/kernel-oneplus-sm8850",
+      "checkout": "shallow-no-worktree-partial"
+    },
+    {
+      "name": "modules-oneplus-sm8850",
+      "url": "https://github.com/OnePlusOSS/android_kernel_modules_and_devicetree_oneplus_sm8850.git",
+      "branch": "oneplus/sm8850_b_16.0.0_oneplus_15",
+      "commit": "5ab2a689ff87d7d28c511f1762cf41c1b90d965a",
+      "path": "sources/checkouts/modules-oneplus-sm8850",
+      "checkout": "shallow-no-worktree-partial"
+    },
+    {
+      "name": "kernel-common-oneplus-sm8850",
+      "url": "https://github.com/OnePlusOSS/android_kernel_common_oneplus_sm8850.git",
+      "branch": "oneplus/sm8850_b_16.0.0_oneplus_15",
+      "commit": "d9053b907db4bb5da938e9cf947d0ae32302ceaf",
+      "path": "sources/checkouts/kernel-common-oneplus-sm8850",
+      "checkout": "shallow-no-worktree-partial"
+    },
+    {
+      "name": "kernel-manifest-oneplus-sm8850",
+      "url": "https://github.com/OnePlusOSS/kernel_manifest.git",
+      "branch": "oneplus/sm8850",
+      "commit": "ecdd4809cbd01fa5f509a4708347026f63498303",
+      "path": "sources/checkouts/kernel-manifest-oneplus-sm8850",
+      "checkout": "shallow-no-worktree-partial"
+    }
+  ]
+}

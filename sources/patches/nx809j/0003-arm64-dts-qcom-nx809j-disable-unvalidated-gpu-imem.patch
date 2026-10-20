@@ -1,0 +1,26 @@
+diff --git a/arch/arm64/boot/dts/qcom/nx809j.dts b/arch/arm64/boot/dts/qcom/nx809j.dts
+index 0e82a3adf..ca3006da5 100644
+--- a/arch/arm64/boot/dts/qcom/nx809j.dts
++++ b/arch/arm64/boot/dts/qcom/nx809j.dts
+@@ -136,3 +136,21 @@ vreg_l14b_3p2: ldo14 {
+ 		};
+ 	};
+ };
++
++/* Probe-safety gate until NX809J graphics and IMEM are validated. */
++&gpu {
++	status = "disabled";
++};
++
++&gmu {
++	status = "disabled";
++};
++
++&adreno_smmu {
++	status = "disabled";
++};
++
++/* Kaanapali IMEM child range exceeds its declared parent range. */
++&{/soc@0/sram@14680000} {
++	status = "disabled";
++};

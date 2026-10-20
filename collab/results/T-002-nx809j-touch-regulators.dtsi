@@ -1,0 +1,59 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * T-002 PROPOSED FRAGMENT -- NON-DEPLOYABLE. DO NOT BUILD INTO A BOOT IMAGE.
+ *
+ * Purpose: define the two NX809J touchscreen rails that T-001's fragment
+ * references (&vreg_l4b_1p8, &vreg_l14b_3p2) on XEC 7.3-rc4 (6d6be0ba139e)
+ * qcom-rpmh-regulator, using only values proven by the capture.
+ * Source of every value: backups/2026-10-19-verified-readback/raw/device-tree.fdt
+ * (sha256 07d1f383...0f7e), nodes
+ *   /soc/rsc@18900000/drv@2/rpmh-regulator-l4b-e0/regulator-pmh0101-l4
+ *   /soc/rsc@18900000/drv@2/rpmh-regulator-l14b-e0/regulator-pmh0101-l14
+ * No OnePlus value is used. See T-002-nx809j-touch-regulators.md for the
+ * justification of each line and what remains unproven.
+ *
+ * Requires kaanapali.dtsi (&apps_rsc) and
+ * <dt-bindings/regulator/qcom,rpmh-regulator.h> (MAINLINE mode numbering).
+ * Compiled only inside a scratch harness; not tested on hardware.
+ *
+ * A real NX809J board DTS must merge these two children into its single
+ * pmh0101 "B_E0" regulators node together with every other B_E0 rail it
+ * uses (the panel needs L11B/L12B/L13B); do not add a second B_E0 node.
+ */
+
+&apps_rsc {
+	regulators-0 {
+		compatible = "qcom,pmh0101-rpmh-regulators";
+		/* XEC formats "L%d%s" -> "L4B_E0"/"L14B_E0", the captured
+		 * qcom,resource-name values */
+		qcom,pmic-id = "B_E0";
+
+		/* vdd-l1-l4-l10-supply / vdd-l2-l13-l14-supply: UNKNOWN.
+		 * The capture declares no "<name>-parent-supply" or "vin-supply"
+		 * for these LDOs, so Android never votes their input rail.
+		 * Omitted: XEC then resolves the dummy supply. */
+
+		/* touch vdd (captured synaptics_tcm@0 vdd-supply = <0x434>) */
+		vreg_l4b_1p8: ldo4 {
+			regulator-name = "vreg_l4b_1p8";
+			/* captured min = max = init-voltage = 0x1b7740 */
+			regulator-min-microvolt = <1800000>;
+			regulator-max-microvolt = <1800000>;
+			/* captured qcom,init-mode = <3> in the VENDOR numbering
+			 * (qcom,rpmh-regulator-levels.h: LPM 2, AUTO 3, HPM 4) is
+			 * AUTO. Do NOT copy the literal 3: in the mainline header
+			 * 3 is HPM. Decoding is a hypothesis; see report. */
+			regulator-initial-mode = <RPMH_REGULATOR_MODE_AUTO>;
+		};
+
+		/* touch avdd (captured synaptics_tcm@0 avdd-supply = <0x43e>) */
+		vreg_l14b_3p2: ldo14 {
+			regulator-name = "vreg_l14b_3p2";
+			/* captured min = max = init-voltage = 0x30d400 */
+			regulator-min-microvolt = <3200000>;
+			regulator-max-microvolt = <3200000>;
+			/* same decoding as ldo4 */
+			regulator-initial-mode = <RPMH_REGULATOR_MODE_AUTO>;
+		};
+	};
+};

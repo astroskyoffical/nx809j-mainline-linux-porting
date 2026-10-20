@@ -1,0 +1,26 @@
+# Device evidence and browser sessions remain local to this project.
+/backups/**
+!/backups/README.md
+/research/browser-profile*/
+/research/raw/
+/research/cache/
+/research/*.sqlite*
+/research/*.db*
+/research/originals/*.7z
+/research/originals/*.pdf
+/research/zte-toolbox-review/extracted/**/*.elf
+/research/zte-toolbox-review/extracted/**/*.mbn
+/*.7z
+/*.pdf
+/sources/checkouts/
+/artifacts/**
+!/artifacts/README.md
+__pycache__/
+*.py[cod]
+.venv/
+*.part
+
+# Claude/Codex bridge run logs (local only)
+collab/bridge/logs/
+collab/bridge/archive/
+collab/bridge/*.pid

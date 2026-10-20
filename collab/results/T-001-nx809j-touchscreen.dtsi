@@ -1,0 +1,77 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * T-001 PROPOSED FRAGMENT -- NON-DEPLOYABLE. DO NOT BUILD INTO A BOOT IMAGE.
+ *
+ * Purpose: show how the captured NX809J `synaptics,tcm-spi` node maps onto
+ * XEC 7.3-rc4 (6d6be0ba139e) `synaptics_tcm_spi` + kaanapali.dtsi labels.
+ * Source of every value: backups/2026-10-19-verified-readback/raw/device-tree.fdt
+ * (sha256 07d1f383...0f7e), node
+ *   /soc/qcom,qupv3_4_geni_se@1ac0000/spi@1a80000/synaptics_tcm@0
+ * cross-checked against vendor overlay
+ *   vendor/qcom/proprietary/zte-devicetree/qwjujube/zte-qwjujube-overlay.dtsi:344-376
+ * No OnePlus 15 value is used. See T-001-nx809j-touchscreen.md for the
+ * justification of each line and what still needs hardware evidence.
+ *
+ * NOT compiled: there is no NX809J board DTS that defines the apps_rsc
+ * regulator labels used below (they exist only in MTP/QRD/OnePlus board
+ * files). It assumes kaanapali.dtsi (provides &spi19, &tlmm) and the
+ * dt-bindings gpio/irq headers are included by a future board DTS.
+ * Not tested on hardware. No claim of working touch.
+ */
+
+&spi19 {
+	/* captured: spi@1a80000 status "ok"; XEC kaanapali.dtsi:2169 is disabled by default */
+	status = "okay";
+
+	touchscreen@0 {
+		/* selects XEC non-HBP path (identify cmd 0x02); controller part number UNVERIFIED */
+		compatible = "synaptics,tcm-spi";
+		reg = <0>;
+		spi-max-frequency = <10000000>;		/* captured 0x989680 */
+
+		/* captured interrupts = <0x9e 0x2008>; 0x2000 = IRQF_ONESHOT (vendor
+		 * driver flag) is masked off by irq_domain_translate_twocell; only
+		 * the type bits (0x8 = IRQ_TYPE_LEVEL_LOW) are meaningful. */
+		interrupt-parent = <&tlmm>;
+		interrupts = <158 IRQ_TYPE_LEVEL_LOW>;
+
+		/* captured vendor property: synaptics,reset-gpio = <&tlmm 66 0x0>
+		 * + synaptics,reset-on-state = <0>. Vendor drivers ignore the flag
+		 * cell and drive the raw level 0 to assert reset. XEC hard-codes a
+		 * logical reset_on_state = 1, so the line must be GPIO_ACTIVE_LOW.
+		 * Copying the captured 0x0 flag would hold the controller in reset. */
+		reset-gpios = <&tlmm 66 GPIO_ACTIVE_LOW>;
+
+		/* PLACEHOLDER LABELS: the captured supplies are RPMh L4B_E0
+		 * (pmh0101_l4, 1.8 V fixed) and L14B_E0 (pmh0101_l14, 3.2 V fixed).
+		 * XEC builds resource "L%d%s" with qcom,pmic-id "B_E0", which
+		 * reproduces those names, but the labels below only exist once an
+		 * NX809J board DTS declares the &apps_rsc pmh0101 regulators with
+		 * those constraints and their parent supplies. */
+		vdd-supply = <&vreg_l4b_1p8>;		/* PLACEHOLDER: board DTS must define */
+		avdd-supply = <&vreg_l14b_3p2>;		/* PLACEHOLDER: board DTS must define */
+
+		/* captured timings (all parsed by XEC synaptics_tcm.c:738-745) */
+		synaptics,power-delay-ms = <200>;
+		synaptics,reset-active-ms = <20>;
+		synaptics,reset-delay-ms = <200>;
+
+		/* captured "ts_active" mapped to the only state XEC applies */
+		pinctrl-0 = <&ts_default>;
+		pinctrl-names = "default";
+
+		/* touchscreen-size-x / touchscreen-size-y: UNKNOWN for NX809J.
+		 * Intentionally omitted so the firmware APPLICATION_INFO max_x/max_y
+		 * is used. Do not use the OnePlus 12640/27800 values. */
+	};
+};
+
+&tlmm {
+	/* from captured /soc/pinctrl@f000000/pmx_ts_active/ts_active */
+	ts_default: ts-default-state {
+		pins = "gpio66", "gpio158";
+		function = "gpio";
+		drive-strength = <8>;
+		bias-pull-up;
+	};
+};

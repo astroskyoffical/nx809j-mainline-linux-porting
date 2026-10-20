@@ -1,0 +1,26 @@
+﻿- 2026-10-19 15:13:32 watcher started (pid 17664)
+- 2026-10-19 15:13:53 DISPATCH (board changed): unclaimed T-002, T-003; claude run log logs\20261019-151353-claude.txt
+- 2026-10-19 15:13:58 watcher started (pid 39556)
+- 2026-10-19 15:13:59 DISPATCH (startup): unclaimed T-002, T-003; claude run log logs\20261019-151359-claude.txt
+- 2026-10-19 15:15:10 watcher started (pid 28172)
+- 2026-10-19 15:18:57 skip (board changed): headless claude pid 44512 still active
+- 2026-10-19 15:19:15 skip (board changed): headless claude pid 44512 still active
+- 2026-10-19 15:22:12 skip (board changed): headless claude pid 44512 still active
+- 2026-10-19 15:25:13 DISPATCH (sweep): unclaimed T-004; claude pid 1524, log logs\20261019-152513-claude.txt
+- 2026-10-19 15:36:14 claude run finished, exit 0
+- 2026-10-19 15:42:13 DISPATCH (board changed): unclaimed T-005; claude pid 35240, log logs\20261019-154213-claude.txt
+- 2026-10-19 15:46:48 claude run finished, exit 0
+- 2026-10-19 21:48:43 DISPATCH (board changed): unclaimed T-006, T-007, T-008, T-009, T-010, T-011; claude pid 32312, log logs\20261019-214843-claude.txt
+- 2026-10-19 22:04:45 claude run finished, exit 0
+- 2026-10-19 22:25:47 DISPATCH (board changed): unclaimed T-012, T-013, T-014; claude pid 23348, log logs\20261019-222547-claude.txt
+- 2026-10-19 22:35:17 claude run finished, exit 0
+- 2026-10-19 22:35:17 DISPATCH (board changed): unclaimed T-013, T-014; claude pid 26148, log logs\20261019-223517-claude.txt
+- 2026-10-19 22:42:56 claude run finished, exit 0
+- 2026-10-19 22:42:56 DISPATCH (board changed): unclaimed T-014; claude pid 22248, log logs\20261019-224256-claude.txt
+- 2026-10-19 22:53:20 claude run finished, exit 0
+- 2026-10-19 23:23:43 DISPATCH (board changed): unclaimed T-015, T-016; claude pid 25344, log logs\20261019-232343-claude.txt
+- 2026-10-19 23:33:18 claude run finished, exit 0
+- 2026-10-19 23:33:18 DISPATCH (board changed): unclaimed T-016; claude pid 13864, log logs\20261019-233318-claude.txt
+- 2026-10-19 23:40:04 claude run finished, exit 0
+- 2026-10-19 23:47:09 DISPATCH (board changed): unclaimed T-017; claude pid 43268, log logs\20261019-234709-claude.txt
+- 2026-10-19 23:54:22 claude run finished, exit 0

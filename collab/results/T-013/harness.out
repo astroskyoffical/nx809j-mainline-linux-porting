@@ -1,0 +1,11 @@
+vendor_populate_rc=0
+vendor_private_rc=0 slice_last_group_size=1 det_thresh_flatness=8 bytes_in_slice=608 bytes_per_pkt=1216 pkt_per_line=1 eol_byte_num=1
+vendor_pps_rc=0
+VCFG ver=1.1 bpc=10 bpp16=128 lbd=11 bp=1 rgb=1 pic=1216x2688 slice=608x16 count=2 chunk=608 ixd=512 idd=561 isv=32 sii=360 sdi=8 flbo=12 nflbo=1639 sbo=1453 io=6144 fo=4352 fminqp=7 fmaxqp=16 rcms=8192 ef=6 ql0=15 ql1=15 tgt=3/3 mux=48
+VCFG rc_range(min,max,bpg): 0,8,2 4,8,0 5,9,0 5,10,-2 7,11,-4 7,11,-6 7,11,-8 7,12,-8 7,13,-8 7,14,-10 9,15,-10 9,16,-12 9,17,-12 11,17,-12 17,19,-12
+VPPS 11 00 00 ab 30 80 0a 80 04 c0 00 10 02 60 02 60 02 00 02 31 00 20 01 68 00 08 00 0c 06 67 05 ad 18 00 11 00 07 10 20 00 06 0f 0f 33 0e 1c 2a 38 46 54 62 69 70 77 79 7b 7d 7e 02 02 22 00 2a 40 2a be 3a fc 3a fa 3a f8 3b 38 3b 78 3b b6 4b f6 4c 34 4c 74 5c 74 8c f4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+mainline_populate_rc=0
+MCFG ver=1.1 bpc=10 bpp16=128 lbd=11 bp=1 rgb=1 pic=1216x2688 slice=608x16 count=2 chunk=608 ixd=512 idd=561 isv=32 sii=360 sdi=8 flbo=12 nflbo=1639 sbo=1453 io=6144 fo=4352 fminqp=7 fmaxqp=16 rcms=8192 ef=6 ql0=15 ql1=15 tgt=3/3 mux=48
+MCFG rc_range(min,max,bpg): 0,4,2 4,8,0 5,9,0 5,10,-2 7,11,-4 7,11,-6 7,11,-8 7,12,-8 7,13,-8 7,14,-10 9,15,-10 9,16,-12 9,17,-12 11,17,-12 17,19,-12
+MPPS 11 00 00 ab 30 80 0a 80 04 c0 00 10 02 60 02 60 02 00 02 31 00 20 01 68 00 08 00 0c 06 67 05 ad 18 00 11 00 07 10 20 00 06 0f 0f 33 0e 1c 2a 38 46 54 62 69 70 77 79 7b 7d 7e 01 02 22 00 2a 40 2a be 3a fc 3a fa 3a f8 3b 38 3b 78 3b b6 4b f6 4c 34 4c 74 5c 74 8c f4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+sizeof_pps=128

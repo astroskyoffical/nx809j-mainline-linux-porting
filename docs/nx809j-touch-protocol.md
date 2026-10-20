@@ -1,0 +1,64 @@
+# NX809J touchscreen protocol correspondence
+
+**Status: partial protocol correspondence established; controller/runtime compatibility remains unproven.** Static evidence now goes beyond the `synaptics,tcm-spi` string: the verified October `vendor_boot_a` readback contains a `zte_tpd.ko` whose bytes match the pinned vendor repository module. That captured module advertises the exact OF modalias, sends TCM-v1 identify command `0x02`, and uses the same command/length/payload layout as XEC's generic TCM SPI path. This makes the XEC path a source-backed candidate for normal application-mode communication. It does not identify the physical NX809J controller or prove that these are the runtime-loaded bytes; the recorded `vendor_dlkm` location is a file-listing match, not loader-path evidence.
+
+## Inputs and binary provenance
+
+The 2026-10-19 Android FDT is `backups/2026-10-19-verified-readback/raw/device-tree.fdt`, SHA-256 `07d1f383d84c554234fe78aefd4c46aaac2926ae43b53bcaf3330424e9a60f7e`. Its touchscreen node uses `compatible = "synaptics,tcm-spi"`; the established resource mapping and reset polarity are recorded in [T-001](../collab/results/T-001-nx809j-touchscreen.md), with regulator context in [T-002](../collab/results/T-002-nx809j-touch-regulators.md).
+
+The pinned vendor source tree contains `/home/rm11build/redmagic-linux/kernel-vendor-src/stock_rom_modules/modules/zte_tpd.ko`. The verified October `vendor_boot_a` CPIO also contains `lib/modules/zte_tpd.ko`; the helper receipt at `artifacts/fan-analysis/october-modules/manifest.json` records the parent image hash and extracted file hash. I independently checked both hashes and `cmp` confirmed the files are byte-identical:
+
+| Property | Observed |
+|---|---|
+| October CPIO provenance | `vendor_boot_a` SHA-256 `10887b16ee1b997561ccec9c87968bb1e1761cc97e3428bf51af68c3269121c1`; member `lib/modules/zte_tpd.ko` |
+| Extracted module SHA-256 / file size | `2ed2fe5a6486247ef72b2d7ee03efbaadc532fb684e2f41b06b9818b0d4babbb` / 613,616 bytes |
+| ELF | ELF64, little-endian, `ET_REL`, AArch64; header entry point is zero |
+| Kernel-module ABI | `vermagic=6.12.23-maybe-dirty-4k SMP preempt mod_unload modversions aarch64`; no user-space interpreter or user-space ABI |
+| Loader symbols | `init_module` is `.init.text + 0x4`; `cleanup_module` is `.exit.text + 0x4` |
+| OF aliases | `of:N*T*Csynaptics,tcm-spi` and `of:N*T*Csynaptics,tcm-spiC*` |
+| Source pins | vendor `efee6f411184886b0fbdaf63fc9db36b3ed96036`; XEC 7.3-rc4 `6d6be0ba139e89d843e62f56cbd9f829775901d5`; both checkouts were clean when read |
+
+The captured inventory lists a `vendor_dlkm` file named `zte_tpd`, without proving its runtime origin; however, the saved partition set contains no `vendor_dlkm` image or hash for that file. The October `vendor_boot_a` copy proves the handset readback contains this exact module in its ramdisk; it does not prove the copy loaded at runtime came from that partition. The July T-004 `full_vendor_boot` sample is a different `zte_tpd.ko` (SHA-256 `a3778a079e8ed2d5fafd2fe0f7f55b814a4a47cb8c9c091b6a09b55865b26342`), so the October hash is the relevant captured module evidence.
+
+The module contains compile-path/name strings `.../synaptics_tcm2_S3910V/...` and `synaptics_3910V`. These support that the captured vendor_boot copy includes S3910V-labelled code. They are not a controller identify response and do not prove the phone's physical part or firmware.
+
+`REA.open_binary` identified the ELF as AArch64, but the configured Windows Ghidra provider rejects ELF targets; Hopper is unsupported on Windows and IDA/Kuna are not configured. WSL `rabin2`, radare2, `llvm-objdump`, `readelf`, and `modinfo` were available. The optional `r2ghidra` plugin was absent, so I used focused AArch64 disassembly and the vendor tree's existing Ghidra-generated per-function reconstruction. I validated the important identify and frame-building sequences against machine code. REA produced no analysis bundle or evidence ID because no deep provider could analyze this ELF.
+
+Because this is `ET_REL`, the original function addresses below are `.text` section offsets (`st_value`), not runtime virtual addresses. `readelf` shows `.text` at file offset `0x7000`; radare2's default `0x08000000` image base is synthetic and is not used as an address claim.
+
+## Protocol correspondence
+
+| Protocol point | NX/vendor reference evidence | XEC generic SPI path | Result |
+|---|---|---|---|
+| Compatible selection | FDT compatible is `synaptics,tcm-spi`; the reference module's `.modinfo` has the matching OF alias | `synaptics_tcm_spi.c:84-90` matches `synaptics,tcm-spi` | Exact compatible/modalias correspondence, but by itself only a binding match |
+| Identify mode | Binary `.text + 0x1a250` (`syna_tcm_identify`) passes command `0x02`; `.text + 0x16c10` (`syna_tcm_v1_detect`) checks response marker `0xa5`, identifies report code `0x10`, and parses ID information after the four-byte header | `synaptics_tcm.c:176-217` uses `0x02` when `use_hbp_mode` is false, checks marker `0xa5`, and accepts report `0x10`; generic compatible leaves `use_hbp_mode` false (`:716-757`) | Strong TCM-v1 identify correspondence |
+| Command framing | Binary `.text + 0x171a8` (`syna_tcm_v1_write_message`) writes command at byte 0, 16-bit length low byte then high byte at bytes 1-2, and payload at byte 3; continuation writes use command byte `0x01` | `synaptics_tcm.c:86-105` writes `[cmd][length_le16][payload]` | Same base frame; vendor supports continuation writes that this XEC helper does not |
+| Read header / SPI clocks | Vendor `syna_tcm_v1_read` checks marker `0xa5`; `syna_spi_read.c` clocks reads with `0xff` bytes | `synaptics_tcm.h:12-13,116-120` defines the same marker and four-byte header; `synaptics_tcm_spi.c:16-42` clocks reads with `0xff` | Same basic read framing and SPI filler |
+| Application commands | Vendor source reconstruction sends GET_APPLICATION_INFO `0x20`, GET_TOUCH_REPORT_CONFIG `0x25`, and ENABLE/DISABLE `0x05`/`0x06`; touch report ID is `0x11` | `synaptics_tcm.h:22-25,36-45`; `synaptics_tcm.c:220-264,378-421,629-636` | Command and report identifiers correspond; identical touch-payload interpretation still needs a live identify/config/report sample |
+| SPI mode | Reference probe sets 8 bits per word and uses parsed SPI mode; captured FDT says mode 0 | `synaptics_tcm_spi.c:52-72` forces mode 0 and 8 bits | Matches the captured mode-0 configuration |
+
+The binary's identification path is direct machine-code evidence, not just a Ghidra string inference: `.text + 0x1a250` contains `mov w1, #0x2` before the indirect TCM writer call. `llvm-objdump` also confirms the vendor frame stores the command byte, writes the two length bytes in little-endian order, and copies payload from offset `+3`; see [the selected disassembly](../artifacts/touch-protocol/vendor-key-disassembly.txt).
+
+XEC has a second TCM2 SPI implementation, but its OF table in `syna_tcm2_spi.c:621-627` matches `synaptics,tcm-spi-hbp`, not the captured generic compatible. The generic NX node therefore maps to `synaptics_tcm_spi.c` / `synaptics_tcm.c`; the OnePlus HBP configuration should not be copied into it. The OnePlus `synaptics-s3910` behavior is a sibling-device reference, not NX809J evidence.
+
+The vendor implementation also negotiates TCM-v1 details that the small XEC driver does not. Vendor `syna_tcm_v1_detect.c:89-126` recognizes the marker/report and parses device ID and read/write limits; the TCM-v1 implementation supports optional CRC and extra response-code bytes. XEC's `has_crc`, `has_rxtra_rc`, and `max_rx_size` fields remain zero-initialized and are not populated from the identify structure (`synaptics_tcm.h:105-151`, `synaptics_tcm.c:176-217`). Its `bus_ops->max_xfer_size` is recorded in `synaptics_tcm_spi.c:67-70`, but the core does not use it to negotiate write chunking. The correspondence is therefore strongest for the short, no-CRC application commands; CRC/extra-RC mode, controller transfer limits, and longer payload behavior remain open.
+
+## Reset, firmware, and suspend/wake behavior
+
+The captured reset mapping is already resolved by T-001: GPIO66 is asserted low, so the XEC candidate must use `reset-gpios = <&tlmm 66 GPIO_ACTIVE_LOW>`. The vendor reference parses the same `synaptics,reset-gpio`, `reset-on-state`, `reset-active-ms`, and `reset-delay-ms` fields (`syna_spi_probe.c:150-163`). In its normal connect path, `syna_dev_connect.c:45-64` calls the hardware-interface power and reset callbacks before TCM-v1 detection. The reconstructed interface layout names these callbacks at `globals.h:909-919`; the reference module relocations at `.data + 0x980` and `.data + 0x988` point to `.text + 0x12178` (`syna_spi_power_on`) and `.text + 0x10680` (`syna_spi_hw_reset`). The reset helper drives the configured raw reset level then its inverse; with captured `reset-on-state = 0`, that is low then high. It waits using its structure timing and has an 80 ms post-release delay. I have not proven that every vendor reset path consumes the captured 200 ms reset-delay value identically to XEC.
+
+The OEM software reset path sends TCM command `0x04` (`syna_tcm_reset.c:31-48`). On resume, `syna_dev_resume.c:87-149` calls the low-level reset callback and polls for identify report `0x10` in 50 ms steps when IRQ control is unavailable. If no hardware reset callback is installed, it uses the software reset command before application setup. During suspend, `syna_dev_suspend.c:29-56` selects low-power gesture sensing when the gesture state requires it; otherwise `syna_tcm_sleep.c:17-24` sends command `0x2c` to enter deep sleep (the inverse branch sends `0x2d`). The normal suspend routine uses the controller's low-power/deep-sleep modes; it does not call XEC's rail-off sequence.
+
+The selected XEC driver uses a different policy. Probe and resume call `synaptics_tcm_power_on` (`synaptics_tcm.c:29-64`), which enables vdd then avdd, waits the configured power delay, pulses reset, and waits the configured reset delay. Suspend disables the IRQ, sends `0x06`, and powers avdd/vdd off (`:853-862`); reset stays deasserted and there is no gesture-wake or deep-sleep command. Resume repowers, reads its saved report config, re-enables IRQ, then sends `0x05` (`:865-880`). This is protocol-compatible at the command level but not behaviorally equivalent to the vendor's screen-off/wake path. Whether this phone needs gestures while suspended or will tolerate reset remaining released while the rails are off needs hardware validation.
+
+The vendor reference has an active firmware-update path: `syna_dev_connect.c:125-130` schedules `syna_dev_reflash_startup_work`; that worker calls `syna_dev_do_reflash` (`syna_dev_reflash_startup_work.c:10-18`), which requests `syna_firmware.img` and calls `syna_tcm_do_fw_update` (`syna_dev_do_reflash.c:13-29`). The update switches to bootloader with `0x1f`, programs/erases flash through the TCM update path, and returns to application firmware with `0x14` (`syna_tcm_switch_fw_mode.c:44-129`). The selected XEC generic driver only parses `firmware-name`; it never calls `request_firmware` or implements those bootloader/flash commands (`synaptics_tcm.c:716-757`, `synaptics_tcm.c`, `synaptics_tcm_spi.c`). The XEC HBP-specific driver is not a compatible match for this node. This distinction does not block normal touch if the controller already runs working application firmware, but it leaves recovery/update behavior uncovered.
+
+## Remaining gates
+
+- The October `.ko` is byte-matched to the verified `vendor_boot_a` CPIO copy, but not to the live `vendor_dlkm` file. The inventory lists a same-named `vendor_dlkm` file, whose bytes were not saved, but neither the runtime path nor backing-file identity is established.
+- The physical controller part and firmware mode have not been read from an identify report. S3910V strings in the captured module identify its build target, not the handset's response.
+- The captured `syna_firmware.img` mention is filename-level evidence from a partial module-firmware listing; no matching firmware bytes or hash are available here.
+- The running CRC/extra-RC mode, max read/write sizes, and report payload configuration are unknown. XEC does not negotiate the vendor implementation's full framing options.
+- No XEC driver probe, touch event, firmware update, suspend/resume, wake gesture, or sustained runtime test has run on NX809J. The review DTS keeps TCM disabled.
+
+The bounded check is [check-correspondence.sh](../artifacts/touch-protocol/check-correspondence.sh). It passed after checking both source pins, the October module hash and byte match, its modalias/symbols, the vendor TCM-v1 reconstruction, and the XEC generic-compatible frame. It is a static correspondence check, not hardware validation. No kernel build or device operation was run.

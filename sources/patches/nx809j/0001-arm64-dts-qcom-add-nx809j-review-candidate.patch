@@ -1,0 +1,153 @@
+diff --git a/arch/arm64/boot/dts/qcom/Makefile b/arch/arm64/boot/dts/qcom/Makefile
+--- a/arch/arm64/boot/dts/qcom/Makefile
++++ b/arch/arm64/boot/dts/qcom/Makefile
+@@ -44,5 +44,6 @@
+ dtb-$(CONFIG_ARCH_QCOM)	+= ipq9650-rdp488.dtb
+ dtb-$(CONFIG_ARCH_QCOM)	+= kaanapali-mtp.dtb
++dtb-$(CONFIG_ARCH_QCOM)	+= nx809j.dtb
+ dtb-$(CONFIG_ARCH_QCOM)	+= kaanapali-qrd.dtb
+ kaanapali-oneplus-infiniti-dtbs += kaanapali-oneplus-infiniti-common.dtb kaanapali-oneplus-infiniti-global.dtbo kaanapali-oneplus-infiniti-china.dtbo
+ dtb-$(CONFIG_ARCH_QCOM)	+= kaanapali-oneplus-infiniti-common.dtb kaanapali-oneplus-infiniti.dtb
+diff --git a/arch/arm64/boot/dts/qcom/nx809j.dts b/arch/arm64/boot/dts/qcom/nx809j.dts
+new file mode 100644
+--- /dev/null
++++ b/arch/arm64/boot/dts/qcom/nx809j.dts
+@@ -0,0 +1,138 @@
++// SPDX-License-Identifier: GPL-2.0-only
++/*
++ * NON-BOOT-VALIDATED NX809J research candidate.
++ * Compile review only. Do not package as a phone boot image, boot, or flash.
++ *
++ * Based on the verified NX809J Android FDT and XEC Kaanapali SoC description.
++ * No Android boot arguments, UART choice, static memory map, board-specific
++ * reserved-memory ranges, or MTP/OnePlus board reservations are added here.
++ *
++ * The touchscreen node stays disabled until its TCM protocol, supply VIN,
++ * power sequencing, and suspend behavior have been validated. Its DT resources
++ * are included only to compile-check the evidence-backed wiring.
++ */
++
++/dts-v1/;
++
++#include <dt-bindings/clock/qcom,rpmh.h>
++#include <dt-bindings/gpio/gpio.h>
++#include <dt-bindings/interrupt-controller/irq.h>
++#include <dt-bindings/regulator/qcom,rpmh-regulator.h>
++
++#include "kaanapali.dtsi"
++
++/ {
++	model = "RedMagic 11 Pro (NX809J)";
++	/* qcom,canoe is present in the captured FDT; Kaanapali is the SoC fallback. */
++	compatible = "qcom,canoe", "qcom,kaanapali";
++
++	clocks {
++		/* Captured at /soc/clocks/xo_board. */
++		xo_board: xo-board {
++			compatible = "fixed-clock";
++			clock-frequency = <76800000>;
++			clock-output-names = "xo_board";
++			#clock-cells = <0>;
++		};
++
++		/* Captured at /soc/clocks/sleep_clk (32 kHz, not the MTP value). */
++		sleep_clk: sleep-clk {
++			compatible = "fixed-clock";
++			clock-frequency = <32000>;
++			clock-output-names = "sleep_clk";
++			#clock-cells = <0>;
++		};
++
++		/* Source-backed Kaanapali reference clock derivations. */
++		bi_tcxo_div2: bi-tcxo-div2-clk {
++			compatible = "fixed-factor-clock";
++			clocks = <&rpmhcc RPMH_CXO_CLK>;
++			clock-mult = <1>;
++			clock-div = <2>;
++			#clock-cells = <0>;
++		};
++
++		bi_tcxo_ao_div2: bi-tcxo-ao-div2-clk {
++			compatible = "fixed-factor-clock";
++			clocks = <&rpmhcc RPMH_CXO_CLK_A>;
++			clock-mult = <1>;
++			clock-div = <2>;
++			#clock-cells = <0>;
++		};
++	};
++};
++
++/* GPIO66 is also hub-I2C0 SDA; preserve the observed disabled state. */
++&i2c_hub_0 {
++	status = "disabled";
++};
++
++&tlmm {
++	nx809j_qup_spi19_data_clk: nx809j-qup-spi19-data-clk-state {
++		pins = "gpio48", "gpio49", "gpio50";
++		function = "qup4_se0";
++		drive-strength = <6>;
++		bias-disable;
++	};
++
++	/* Preserve the captured NX CS pull and startup level; XEC MTP differs. */
++	nx809j_qup_spi19_cs: nx809j-qup-spi19-cs-state {
++		pins = "gpio51";
++		function = "qup4_se0";
++		drive-strength = <6>;
++		bias-pull-down;
++		output-low;
++	};
++
++	nx809j_touch_default: nx809j-touch-default-state {
++		pins = "gpio66", "gpio158";
++		function = "gpio";
++		drive-strength = <8>;
++		bias-pull-up;
++	};
++};
++
++&spi19 {
++	pinctrl-0 = <&nx809j_qup_spi19_data_clk>, <&nx809j_qup_spi19_cs>;
++	pinctrl-names = "default";
++	status = "okay";
++
++	touchscreen@0 {
++		compatible = "synaptics,tcm-spi";
++		reg = <0>;
++		spi-max-frequency = <10000000>;
++		interrupt-parent = <&tlmm>;
++		interrupts = <158 IRQ_TYPE_LEVEL_LOW>;
++		reset-gpios = <&tlmm 66 GPIO_ACTIVE_LOW>;
++		vdd-supply = <&vreg_l4b_1p8>;
++		avdd-supply = <&vreg_l14b_3p2>;
++		synaptics,power-delay-ms = <200>;
++		synaptics,reset-active-ms = <20>;
++		synaptics,reset-delay-ms = <200>;
++		pinctrl-0 = <&nx809j_touch_default>;
++		pinctrl-names = "default";
++		status = "disabled";
++	};
++};
++
++/* L4B_E0/L14B_E0 rails from T-002; input VIN is still unknown. */
++&apps_rsc {
++	regulators-0 {
++		compatible = "qcom,pmh0101-rpmh-regulators";
++		qcom,pmic-id = "B_E0";
++
++		vreg_l4b_1p8: ldo4 {
++			regulator-name = "vreg_l4b_1p8";
++			regulator-min-microvolt = <1800000>;
++			regulator-max-microvolt = <1800000>;
++			regulator-initial-mode = <RPMH_REGULATOR_MODE_AUTO>;
++		};
++
++		vreg_l14b_3p2: ldo14 {
++			regulator-name = "vreg_l14b_3p2";
++			regulator-min-microvolt = <3200000>;
++			regulator-max-microvolt = <3200000>;
++			regulator-initial-mode = <RPMH_REGULATOR_MODE_AUTO>;
++		};
++	};
++};

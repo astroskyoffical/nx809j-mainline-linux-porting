@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "captured_on": "2026-10-19",
+  "capture_method": "selected files extracted with git archive from pinned commits; no source code executed",
+  "sources": [
+    {
+      "name": "tb323fu-linux",
+      "url": "https://github.com/joonhoekim/tb323fu-linux.git",
+      "ref": "main",
+      "commit": "37ada75998cedee2f95007248e71879aca996739"
+    },
+    {
+      "name": "LTBox",
+      "url": "https://github.com/miner7222/LTBox.git",
+      "ref": "v3.3.1",
+      "commit": "36482202b24cfb943cfbfc7cdc16687fad36ec7b"
+    },
+    {
+      "name": "LTBox",
+      "url": "https://github.com/miner7222/LTBox.git",
+      "ref": "v3.3.2",
+      "commit": "d8bba38169a03c1b867ed1549fc75dbc6eba5cc3"
+    }
+  ],
+  "files": [
+    {
+      "path": "ltbox-v3.3.1/crates/ltbox-core/src/crypto.rs",
+      "size_bytes": 7896,
+      "sha256": "02ab2bfa5098800ee492dd05991a4a20e763907b2099f293211c7d61cd69f1dc"
+    },
+    {
+      "path": "ltbox-v3.3.1/crates/ltbox-core/src/model/capabilities.rs",
+      "size_bytes": 10500,
+      "sha256": "d636e4946ba1ffd79854da4a8f2d9e16858dc5e6451a0ecc03f25e9e1f3cec42"
+    },
+    {
+      "path": "ltbox-v3.3.1/crates/ltbox-core/src/partition_lun.rs",
+      "size_bytes": 6226,
+      "sha256": "a9c1bc84064a5714e3d4a7d88b09d37cbcccf284f1b50759d297c48b58fa4759"
+    },
+    {
+      "path": "ltbox-v3.3.1/crates/ltbox-core/src/sahara_xml.rs",
+      "size_bytes": 8195,
+      "sha256": "e03dc529d690ad421c5ef505ec0ce90c1c915559012120fcc408a225a5948075"
+    },
+    {
+      "path": "ltbox-v3.3.1/crates/ltbox-device/src/edl.rs",
+      "size_bytes": 113742,
+      "sha256": "95888c9655be1c127f28633b65f50a670da718c5ed95e7e246c8de82fdf70574"
+    },
+    {
+      "path": "ltbox-v3.3.1/crates/ltbox-device/src/edl/atomic_dump.rs",
+      "size_bytes": 2312,
+      "sha256": "08a27ef46117154b902ccda97929c8338ae47a0eb4ba2f521d3468caab53ec8f"
+    },
+    {
+      "path": "ltbox-v3.3.1/crates/ltbox-gui/src/loader.rs",
+      "size_bytes": 12680,
+      "sha256": "0ec2e49112d6ea669c4a112fa0602d37a4cd803b44efd47465dc4b8e1c2e2696"
+    },
+    {
+      "path": "ltbox-v3.3.1/crates/ltbox-gui/src/workers/root.rs",
+      "size_bytes": 38632,
+      "sha256": "c36891e7720f86b347515408bac1b9add32d259b86856118866d53b6057ea031"
+    },
+    {
+      "path": "ltbox-v3.3.1/LICENSE",
+      "size_bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "ltbox-v3.3.1/README.md",
+      "size_bytes": 7069,
+      "sha256": "47868079e93f9c39aa21bd0eac3b3896bf393305b5c6a1b46591dda1f4c3b065"
+    },
+    {
+      "path": "ltbox-v3.3.2/crates/ltbox-core/src/crypto.rs",
+      "size_bytes": 7896,
+      "sha256": "02ab2bfa5098800ee492dd05991a4a20e763907b2099f293211c7d61cd69f1dc"
+    },
+    {
+      "path": "ltbox-v3.3.2/crates/ltbox-core/src/model/capabilities.rs",
+      "size_bytes": 10533,
+      "sha256": "365fadc9779ef0e5a334a741b82da13b6b4e1173399aeb1b48638ce5ce9e793d"
+    },
+    {
+      "path": "ltbox-v3.3.2/crates/ltbox-core/src/partition_lun.rs",
+      "size_bytes": 6226,
+      "sha256": "a9c1bc84064a5714e3d4a7d88b09d37cbcccf284f1b50759d297c48b58fa4759"
+    },
+    {
+      "path": "ltbox-v3.3.2/crates/ltbox-core/src/sahara_xml.rs",
+      "size_bytes": 8195,
+      "sha256": "e03dc529d690ad421c5ef505ec0ce90c1c915559012120fcc408a225a5948075"
+    },
+    {
+      "path": "ltbox-v3.3.2/crates/ltbox-device/src/edl.rs",
+      "size_bytes": 115703,
+      "sha256": "d42eb94e7c39edaf0567855b57f06b1ab5eafa2867d39bb358dfb92f95adaef7"
+    },
+    {
+      "path": "ltbox-v3.3.2/crates/ltbox-device/src/edl/atomic_dump.rs",
+      "size_bytes": 2312,
+      "sha256": "08a27ef46117154b902ccda97929c8338ae47a0eb4ba2f521d3468caab53ec8f"
+    },
+    {
+      "path": "ltbox-v3.3.2/crates/ltbox-gui/src/loader.rs",
+      "size_bytes": 12698,
+      "sha256": "1beaf3985ea9372db27921c00fb0d9af9994be40decdb64d391e59e6753f5545"
+    },
+    {
+      "path": "ltbox-v3.3.2/crates/ltbox-gui/src/workers/root.rs",
+      "size_bytes": 39489,
+      "sha256": "e7079d63212bc64743d88a6e2bd2999c8af9a5deaae876488bbc35d8ca2a4061"
+    },
+    {
+      "path": "ltbox-v3.3.2/LICENSE",
+      "size_bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "ltbox-v3.3.2/README.md",
+      "size_bytes": 7088,
+      "sha256": "af0fee3e9761007c2faedf69c039cf66ca2b35951bffe0cdf2cdfebfce5ca847"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 1462,
+      "sha256": "7fc68f7e3d2f1c7d777bf269e58014077bd90781275eb60ad6068b25fbf7983b"
+    },
+    {
+      "path": "tb323fu-linux/docs/after-install.md",
+      "size_bytes": 10971,
+      "sha256": "0a01f276855b3cce30abcedb46b9175b24de5f0fc70fcb85f96ef5f7a5a06259"
+    },
+    {
+      "path": "tb323fu-linux/docs/hardware-status.md",
+      "size_bytes": 18214,
+      "sha256": "e703061f166fad369967d0f9df9bc48cc57110326b090009ae0b58a210a7e270"
+    },
+    {
+      "path": "tb323fu-linux/docs/recovery.md",
+      "size_bytes": 8434,
+      "sha256": "4a515a8ec4984ae21cdfd95f9228b883d28b582320d7ce2566d0d13a8f60b4a4"
+    },
+    {
+      "path": "tb323fu-linux/docs/rooting.md",
+      "size_bytes": 23463,
+      "sha256": "48631762fae0523c26b92e6795e29fc3b8b7ece7520c3bf37f9cb99aded43c9d"
+    },
+    {
+      "path": "tb323fu-linux/kernel/PROVENANCE.md",
+      "size_bytes": 26517,
+      "sha256": "5ab8e4ae7f222a28326dad816ed1891d26a717aac69d2eaf8f3c07332cbe1836"
+    },
+    {
+      "path": "tb323fu-linux/LICENSE",
+      "size_bytes": 1068,
+      "sha256": "d1bde8ac983cc54107f95b54bc4eec05bf7713cdfa67a6a177b09f14ee90252d"
+    },
+    {
+      "path": "tb323fu-linux/NOTICE",
+      "size_bytes": 5103,
+      "sha256": "281d981b6b5009f07ad7942f09b8538881e3892605925dc2656a9ac8f9869ee8"
+    },
+    {
+      "path": "tb323fu-linux/README.md",
+      "size_bytes": 8051,
+      "sha256": "f3fb4d4472dd1f8de728d060c51ed7af9be0947580b230fc70567478208eb93c"
+    },
+    {
+      "path": "tb323fu-linux/tools/boot-repack-kernel.py",
+      "size_bytes": 8220,
+      "sha256": "48a1eddea802e3ea3cc8c16a59cb4c51185d05132d65397bc521dc09ee3c49cc"
+    },
+    {
+      "path": "tb323fu-linux/tools/build-boot.sh",
+      "size_bytes": 2983,
+      "sha256": "b9a4fafe78217d67a13b1c7728184a793086525cd7a0adfb323954b5647019dc"
+    }
+  ]
+}

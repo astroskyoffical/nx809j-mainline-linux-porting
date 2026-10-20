@@ -1,0 +1,7 @@
+a4d0df3f61fff2846a94f95928e2267e76f3b2c4c6cd57d2920f7b0dc7367fef  /home/rm11build/redmagic-linux/kernel-mainline-src/drivers/gpu/drm/display/drm_dsc_helper.c
+f57cf45be321cdf4def25491ef54e2adfef9627c18cebc53bd9e2acd0fd2a394  /home/rm11build/redmagic-linux/kernel-mainline-src/include/drm/display/drm_dsc.h
+dd0a8f30ee0c78d5ff61081f7dd928e85fd58436f6f41367e8d927ed36014f08  /home/rm11build/redmagic-linux/kernel-mainline-src/include/drm/display/drm_dsc_helper.h
+26bb3a3c405dd22070011a90a9e8b6607d6766ce1d132f3a06e279b4f7100218  /home/rm11build/redmagic-linux/kernel-vendor-src/vendor/qcom/opensource/display-drivers/msm/sde_dsc_helper.c
+44433f31ead9a34a9a32c8a439ffbfd6d7a31bd087316c27d61bbfef66541afe  /home/rm11build/redmagic-linux/kernel-vendor-src/vendor/qcom/opensource/display-drivers/msm/sde_dsc_helper.h
+f99f5bfaa69a10e138711115c4a3c75090bc626a1c6c5128b4043587cdfcb996  /home/rm11build/redmagic-linux/kernel-vendor-src/vendor/qcom/opensource/display-drivers/msm/msm_drv.h
+20399e90f95d73db48c576b521501f32bc265b0d12ea70aee07c55f7afe2ce1e  /home/rm11build/redmagic-linux/kernel-mainline-src/drivers/gpu/drm/msm/dsi/dsi_host.c

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#111316">
+    <title>RedMagic · Port Atlas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">RM</span>
+          <div>
+            <p class="eyebrow">Local bring-up tracker</p>
+            <h1>RedMagic <span>·</span> Port Atlas</h1>
+          </div>
+        </div>
+        <div class="connection" aria-live="polite">
+          <span id="connection-dot" class="connection-dot" aria-hidden="true"></span>
+          <span id="connection-label">Connecting to local inventory…</span>
+        </div>
+      </header>
+
+      <section class="summary-row" aria-label="Inventory summary">
+        <div class="summary-copy">
+          <p class="eyebrow">NX809J · staged mainline bring-up</p>
+          <p class="summary-note">Each marker covers one reviewed scope. Green confirms only the scope written in its record.</p>
+        </div>
+        <div class="summary-metrics">
+          <div class="metric metric-ready">
+            <span id="ready-count" class="metric-value">—</span>
+            <span class="metric-label">Verified scopes</span>
+          </div>
+          <div class="metric metric-open">
+            <span id="pending-count" class="metric-value">—</span>
+            <span class="metric-label">Open scopes</span>
+          </div>
+          <div class="metric">
+            <span id="hardware-count" class="metric-value">—</span>
+            <span class="metric-label">Phone tests passed</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="backup-strip" aria-label="Backup progress">
+        <div class="backup-heading">
+          <span class="backup-icon" aria-hidden="true">↻</span>
+          <div>
+            <p class="eyebrow">Recovery prerequisite</p>
+            <h2>Backup status</h2>
+          </div>
+        </div>
+        <dl class="backup-facts">
+          <div><dt>State</dt><dd id="backup-state">Waiting for inventory</dd></div>
+          <div><dt>Current batch</dt><dd id="backup-batch">—</dd></div>
+          <div><dt>Verified batches</dt><dd id="backup-verified">—</dd></div>
+          <div><dt>Active output</dt><dd id="backup-bytes">—</dd></div>
+        </dl>
+      </section>
+
+      <section class="workspace" aria-label="Port evidence explorer">
+        <div class="explorer-column">
+          <div class="toolbar">
+            <div class="view-tabs" role="tablist" aria-label="Inventory view">
+              <button class="view-tab" id="tab-overview" role="tab" aria-selected="true" aria-controls="atlas-panel" tabindex="0" data-view="overview">Overview</button>
+              <button class="view-tab" id="tab-evidence" role="tab" aria-selected="false" aria-controls="atlas-panel" tabindex="-1" data-view="evidence">Decoded evidence</button>
+              <button class="view-tab" id="tab-modules" role="tab" aria-selected="false" aria-controls="atlas-panel" tabindex="-1" data-view="module">Driver files</button>
+              <button class="view-tab" id="tab-hardware" role="tab" aria-selected="false" aria-controls="atlas-panel" tabindex="-1" data-view="hardware">Phone tests</button>
+            </div>
+            <div class="filters" aria-label="Filter scopes">
+              <button class="filter-button" type="button" aria-pressed="true" data-filter="all">All</button>
+              <button class="filter-button" type="button" aria-pressed="false" data-filter="ready">Verified</button>
+              <button class="filter-button" type="button" aria-pressed="false" data-filter="pending">Needs work</button>
+            </div>
+          </div>
+
+          <div class="search-row">
+            <label class="search-box">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <span class="visually-hidden">Search visible scopes</span>
+              <input id="search-input" type="search" autocomplete="off" placeholder="Search scopes, blockers, evidence…">
+              <kbd>/</kbd>
+            </label>
+            <label class="names-toggle">
+              <input id="names-toggle" type="checkbox">
+              <span class="toggle-track" aria-hidden="true"><span></span></span>
+              <span>Names</span>
+            </label>
+            <p id="last-refresh" class="last-refresh">No inventory refresh yet</p>
+          </div>
+
+          <div id="notice-area" class="notice-area" hidden></div>
+          <p id="inventory-note" class="inventory-note" hidden></p>
+
+          <section id="atlas-panel" role="tabpanel" aria-labelledby="tab-overview" tabindex="0" class="atlas-panel">
+            <div id="group-board" class="group-board" aria-label="Subsystem scopes"></div>
+            <div id="empty-state" class="empty-state" hidden>
+              <span class="empty-glyph" aria-hidden="true">⌁</span>
+              <h2>No scopes in this view</h2>
+              <p id="empty-message">Try another view or clear the filters.</p>
+            </div>
+          </section>
+          <footer class="legend-row">
+            <span class="legend-item"><span class="legend-swatch legend-ready" aria-hidden="true">✓</span>Verified stated scope</span>
+            <span class="legend-item"><span class="legend-swatch legend-pending" aria-hidden="true">–</span>Open or unresolved</span>
+            <span class="legend-caption">No overall completion score</span>
+          </footer>
+        </div>
+
+        <aside id="inspector" class="inspector" aria-labelledby="inspector-title" aria-live="polite">
+          <div class="inspector-topline">
+            <p class="eyebrow">Scope record</p>
+            <span id="inspector-state" class="state-pill state-empty">No selection</span>
+          </div>
+          <h2 id="inspector-title">Select a marker</h2>
+          <p id="inspector-hint" class="inspector-hint">Choose a block to see its exact claim, blockers and source evidence.</p>
+          <div id="inspector-content" class="inspector-content" hidden>
+            <div class="detail-field">
+              <span class="detail-label">Subsystem · type</span>
+              <p id="detail-meta" class="detail-meta"></p>
+            </div>
+            <div class="detail-field">
+              <span class="detail-label">Exact scope</span>
+              <p id="detail-scope"></p>
+            </div>
+            <div class="detail-field">
+              <span class="detail-label">Status reason</span>
+              <p id="detail-reason"></p>
+            </div>
+            <div id="blockers-field" class="detail-field" hidden>
+              <span class="detail-label">Blockers</span>
+              <ul id="detail-blockers" class="detail-list"></ul>
+            </div>
+            <div class="detail-field">
+              <span class="detail-label">Hashed evidence</span>
+              <ul id="detail-evidence" class="evidence-list"></ul>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="page-footer">
+        <span>Inventory from the local project collector</span>
+        <span>Refreshes every 30 seconds · no device probe</span>
+      </footer>
+    </main>
+  </body>
+</html>

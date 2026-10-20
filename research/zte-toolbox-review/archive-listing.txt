@@ -1,0 +1,2868 @@
+
+7-Zip 22.01 (x64) : Copyright (c) 1999-2022 Igor Pavlov : 2022-07-15
+
+Scanning the drive for archives:
+1 file, 47724368 bytes (46 MiB)
+
+Listing archive: C:\Users\astro\OneDrive\Documents\ChatGPT\Porting Linux To RedMagic 11 pro\_______1.2.9-beta1.7z
+
+--
+Path = C:\Users\astro\OneDrive\Documents\ChatGPT\Porting Linux To RedMagic 11 pro\_______1.2.9-beta1.7z
+Type = 7z
+Physical Size = 47724368
+Headers Size = 4866
+Method = LZMA2:26 LZMA:20 BCJ2
+Solid = +
+Blocks = 2
+
+----------
+Path = (____.____)
+Size = 0
+Packed Size = 0
+Modified = 2024-02-14 03:17:20.8084522
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 10:10:38.3577045
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\conf
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 10:10:58.5858766
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\log
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 10:10:39.0881656
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\pic
+Size = 0
+Packed Size = 0
+Modified = 2026-03-02 22:15:58.6151369
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 00:56:26.6449015
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\ailsa_ii
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:14:21.7171573
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NP01J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:14:27.4244878
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NP02J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:14:30.8526646
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NP03J
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 03:43:01.0214334
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NP03J\bak
+Size = 0
+Packed Size = 0
+Modified = 2025-09-25 00:49:21.2421805
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NP05J
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 04:03:41.1872268
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX563J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:14:43.4733485
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX606J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:14:47.8628929
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX609J
+Size = 0
+Packed Size = 0
+Modified = 2025-09-04 08:54:33.8635797
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX616J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:14:51.7436635
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX619J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:14:55.4131128
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX629J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:14:59.2779326
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX651J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:03.1700828
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX659J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:06.7949892
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX669J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:10.2370000
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX679J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:14.0653442
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX679S
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:17.7949160
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX701J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:21.4194978
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX709S
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:25.1014764
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX721J
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 01:26:49.7693495
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX721J\bak
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 01:18:13.1290424
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX729J
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:29.1272190
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX733J
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 04:56:43.1962781
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX733J\bak
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 04:56:43.1956241
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX737J
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 03:51:45.0976198
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX741J
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 04:22:31.8596741
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX741J\bak
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 04:22:31.8556733
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX741J\devprg
+Size = 0
+Packed Size = 0
+Modified = 2026-04-04 09:54:52.6481857
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX769J
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 04:26:19.4642746
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX769J\bak
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 04:26:19.4642746
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX779J
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 03:39:38.0617996
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX789J
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 04:54:56.3801260
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX789J\bak
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 04:54:56.3801260
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX799J
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 04:02:46.8273400
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX809J
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 04:09:08.9900521
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX809J\bak
+Size = 0
+Packed Size = 0
+Modified = 2026-03-03 00:06:42.6737358
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\NX809J\devprg
+Size = 0
+Packed Size = 0
+Modified = 2026-03-26 11:46:09.4238851
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\P636A01
+Size = 0
+Packed Size = 0
+Modified = 2026-04-07 10:26:35.7811014
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\P725A12
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:37.5576535
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\P768A02
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:46.9602242
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\P845A02
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:50.7082984
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\P855A01
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:15:54.3479351
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\P855A23
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:16:05.3772140
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\P865A02
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:16:09.5720770
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\P870A01
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:16:13.3741976
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\P875A02
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:16:18.1226795
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\res\TP1803
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 13:16:29.5080966
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tmp
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 10:12:55.1922763
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 11:24:52.1658607
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Android
+Size = 0
+Packed Size = 0
+Modified = 2025-07-09 11:24:45.4468352
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Other
+Size = 0
+Packed Size = 0
+Modified = 2026-05-16 09:19:33.2400839
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Other\8e5gbl
+Size = 0
+Packed Size = 0
+Modified = 2026-03-26 11:58:16.5475057
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Other\avbexploit
+Size = 0
+Packed Size = 0
+Modified = 2026-07-07 22:06:12.5273604
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Other\avbexploit\anonymous1
+Size = 0
+Packed Size = 0
+Modified = 2026-06-02 09:19:37.2518988
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Other\avbexploit\Littlenine
+Size = 0
+Packed Size = 0
+Modified = 2026-05-16 09:47:21.6556715
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Win
+Size = 0
+Packed Size = 0
+Modified = 2026-09-24 03:19:23.8428715
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Win\Notepad3
+Size = 0
+Packed Size = 0
+Modified = 2024-02-05 10:24:48.1446240
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Win\Notepad3\Favorites
+Size = 0
+Packed Size = 0
+Modified = 2023-05-31 21:08:51.9171330
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Win\Notepad3\lng
+Size = 0
+Packed Size = 0
+Modified = 2024-02-05 10:24:48.0092045
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Win\Notepad3\lng\zh-CN
+Size = 0
+Packed Size = 0
+Modified = 2024-02-05 10:24:48.0723780
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Win\Notepad3\Themes
+Size = 0
+Packed Size = 0
+Modified = 2024-02-05 10:24:48.2298740
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Win\scrcpy
+Size = 0
+Packed Size = 0
+Modified = 2024-12-01 20:45:54.4016644
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\tool\Win\Vieas
+Size = 0
+Packed Size = 0
+Modified = 2024-02-05 10:25:53.5454133
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = bin\calc.bat
+Size = 8051
+Packed Size = 34077745
+Modified = 2025-02-23 10:33:24.0830393
+Attributes = A
+CRC = EC478C41
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\chkdev.bat
+Size = 12529
+Packed Size = 
+Modified = 2025-07-09 11:09:47.6121451
+Attributes = A
+CRC = C1BA56ED
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\clean.bat
+Size = 10409
+Packed Size = 
+Modified = 2025-06-28 12:25:18.8969509
+Attributes = A
+CRC = 2C8257BF
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\conf\dev.csv
+Size = 3648
+Packed Size = 
+Modified = 2026-09-24 10:05:20.4645203
+Attributes = A
+CRC = B8DC3E54
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\conf\fixed.bat
+Size = 49
+Packed Size = 
+Modified = 2026-09-24 04:25:39.0460220
+Attributes = A
+CRC = 934BD791
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\dl.bat
+Size = 16598
+Packed Size = 
+Modified = 2025-07-08 09:31:00.3601476
+Attributes = A
+CRC = 2A62B29F
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\framework.bat
+Size = 21204
+Packed Size = 
+Modified = 2025-07-09 11:13:56.0457089
+Attributes = A
+CRC = B75009FB
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\imgkit.bat
+Size = 173449
+Packed Size = 
+Modified = 2025-02-23 08:53:37.0529911
+Attributes = A
+CRC = D9F454A9
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\info.bat
+Size = 20303
+Packed Size = 
+Modified = 2026-05-31 07:24:09.3734107
+Attributes = A
+CRC = 4469CF4E
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\input.bat
+Size = 2172
+Packed Size = 
+Modified = 2025-02-23 10:33:24.0820387
+Attributes = A
+CRC = 85D9E307
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\log.bat
+Size = 623
+Packed Size = 
+Modified = 2025-02-23 10:33:24.0820387
+Attributes = A
+CRC = 7FA3F9A6
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\open.bat
+Size = 1293
+Packed Size = 
+Modified = 2025-02-23 10:33:24.0820387
+Attributes = A
+CRC = 90071181
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\partable.bat
+Size = 18507
+Packed Size = 
+Modified = 2025-06-28 12:26:36.5147808
+Attributes = A
+CRC = 0DFC9B6A
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\pic\blunlockedfeatures.jpg
+Size = 154846
+Packed Size = 
+Modified = 2024-04-17 01:26:15.8870372
+Attributes = A
+CRC = 9E2C2ED0
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\pic\fastboot.jpg
+Size = 373935
+Packed Size = 
+Modified = 2024-03-02 22:45:44.2379608
+Attributes = A
+CRC = CC3C7213
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\pic\magiskqa.jpg
+Size = 559439
+Packed Size = 
+Modified = 2024-04-17 03:11:45.0765552
+Attributes = A
+CRC = 0086C40D
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\pic\unlockbl.jpg
+Size = 117979
+Packed Size = 
+Modified = 2024-02-14 02:20:56.3891962
+Attributes = A
+CRC = FA4DF85F
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\pic\unlockbl_efisp.jpg
+Size = 172873
+Packed Size = 
+Modified = 2026-03-02 22:14:59.4811310
+Attributes = A
+CRC = 8A0F17E1
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\random.bat
+Size = 1253
+Packed Size = 
+Modified = 2025-02-23 10:33:24.0820387
+Attributes = A
+CRC = B9FB2226
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\read.bat
+Size = 10784
+Packed Size = 
+Modified = 2025-07-09 11:19:05.9035756
+Attributes = A
+CRC = 9B0FB7B1
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\reboot.bat
+Size = 7585
+Packed Size = 
+Modified = 2025-02-23 08:53:37.3659878
+Attributes = A
+CRC = 79F702F9
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\ailsa_ii\aboot_unlock.mbn
+Size = 1048576
+Packed Size = 
+Modified = 2013-03-24 20:22:00.0000000
+Attributes = A
+CRC = D7E5E239
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\ailsa_ii\devprg
+Size = 442516
+Packed Size = 
+Modified = 2013-03-24 20:22:00.0000000
+Attributes = A
+CRC = 02598E97
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\ailsa_ii\fbop_unlock.img
+Size = 9516
+Packed Size = 
+Modified = 2013-03-24 20:22:00.0000000
+Attributes = A
+CRC = 4CA5F525
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NP01J\devprg
+Size = 1491364
+Packed Size = 
+Modified = 2024-12-05 12:39:00.3469273
+Attributes = A
+CRC = 4AC08229
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NP02J\devprg
+Size = 1633124
+Packed Size = 
+Modified = 2024-12-13 03:23:59.0000000
+Attributes = A
+CRC = BB380A8F
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NP03J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2024-12-05 12:53:03.1681066
+Attributes = A
+CRC = 53D13DC7
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NP03J\devprg
+Size = 1553396
+Packed Size = 
+Modified = 2025-07-09 04:43:57.7755936
+Attributes = A
+CRC = 5A6CD630
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NP03J\edition.csv
+Size = 140
+Packed Size = 
+Modified = 2026-09-24 03:42:32.5241297
+Attributes = A
+CRC = C0A55C97
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NP05J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2026-07-06 10:19:56.0867513
+Attributes = A
+CRC = 13796BDE
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NP05J\abl_unlock.txt
+Size = 31
+Packed Size = 
+Modified = 2026-07-06 10:22:15.8367847
+Attributes = A
+CRC = 7663F55E
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NP05J\devprg
+Size = 1659300
+Packed Size = 
+Modified = 2025-09-12 12:17:14.7616697
+Attributes = A
+CRC = 490D50B7
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NP05J\edition.csv
+Size = 233
+Packed Size = 
+Modified = 2026-09-24 04:05:53.9655828
+Attributes = A
+CRC = 1F1C334E
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX563J\devprg
+Size = 598320
+Packed Size = 
+Modified = 2017-07-03 07:25:36.0000000
+Attributes = A
+CRC = C5929AD9
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX606J\abl_unlock.elf
+Size = 151552
+Packed Size = 
+Modified = 2023-02-01 07:20:29.0000000
+Attributes = A
+CRC = 71E6C4EA
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX606J\devprg
+Size = 680417
+Packed Size = 
+Modified = 2018-12-06 23:52:02.0000000
+Attributes = A
+CRC = 56E86893
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX609J\devprg
+Size = 595424
+Packed Size = 
+Modified = 2025-09-04 08:28:26.3248720
+Attributes = A
+CRC = 6D0D0902
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX616J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2024-04-23 09:13:31.8647598
+Attributes = A
+CRC = 1E6E8021
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX616J\devprg
+Size = 680417
+Packed Size = 
+Modified = 2019-01-25 22:31:28.9568459
+Attributes = A
+CRC = 56E86893
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX619J\devprg
+Size = 680425
+Packed Size = 
+Modified = 2019-12-31 22:19:29.7899463
+Attributes = A
+CRC = 6FEACC65
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX629J\devprg
+Size = 716216
+Packed Size = 
+Modified = 2023-07-22 23:41:08.6325353
+Attributes = RA
+CRC = A454CDD2
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX651J\devprg
+Size = 677496
+Packed Size = 
+Modified = 2020-12-03 16:46:37.0000000
+Attributes = A
+CRC = A96069C9
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX659J\devprg
+Size = 700624
+Packed Size = 
+Modified = 2020-12-28 18:06:15.0000000
+Attributes = A
+CRC = 0D8A4C76
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX669J\devprg
+Size = 964232
+Packed Size = 
+Modified = 2021-08-19 02:35:36.0000000
+Attributes = A
+CRC = 7ED4A465
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX679J\devprg
+Size = 1580132
+Packed Size = 
+Modified = 2023-04-25 04:36:13.0246242
+Attributes = RA
+CRC = 5A576E6D
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX679S\devprg
+Size = 1567540
+Packed Size = 
+Modified = 2023-04-25 04:51:28.8656322
+Attributes = A
+CRC = DD7CA182
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX701J\devprg
+Size = 1539124
+Packed Size = 
+Modified = 2024-05-18 08:04:32.4351156
+Attributes = A
+CRC = 0E20B735
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX709S\devprg
+Size = 1567540
+Packed Size = 
+Modified = 2022-09-28 02:25:01.0000000
+Attributes = A
+CRC = 9CF235AD
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX721J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2024-04-16 10:15:34.8389993
+Attributes = A
+CRC = 4FC52A55
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX721J\devprg
+Size = 1553396
+Packed Size = 
+Modified = 2024-01-23 04:25:02.3235884
+Attributes = A
+CRC = 158F0E95
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX721J\edition.csv
+Size = 320
+Packed Size = 
+Modified = 2026-09-24 07:39:09.8924846
+Attributes = A
+CRC = 17CA2B6B
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX729J\abl_unlock.elf
+Size = 212792
+Packed Size = 
+Modified = 2023-07-14 05:06:00.0000000
+Attributes = A
+CRC = AF3FD7E5
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX729J\devprg
+Size = 1768340
+Packed Size = 
+Modified = 2023-01-13 07:28:00.0000000
+Attributes = A
+CRC = 45331FC9
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX733J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2026-07-06 10:03:39.1340805
+Attributes = A
+CRC = D9EC8946
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX733J\abl_unlock.txt
+Size = 98
+Packed Size = 
+Modified = 2026-07-06 10:05:36.8599846
+Attributes = A
+CRC = B7C15264
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX733J\devprg
+Size = 1679780
+Packed Size = 
+Modified = 2025-07-09 05:04:22.9546079
+Attributes = A
+CRC = 5856393D
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX733J\edition.csv
+Size = 242
+Packed Size = 
+Modified = 2026-09-24 08:36:12.3030580
+Attributes = A
+CRC = 7B10C714
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX737J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2026-07-06 10:12:36.1694068
+Attributes = A
+CRC = 72F7214A
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX737J\abl_unlock.txt
+Size = 106
+Packed Size = 
+Modified = 2026-07-06 10:13:10.1580076
+Attributes = A
+CRC = 8503843C
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX737J\devprg
+Size = 1659300
+Packed Size = 
+Modified = 2026-05-14 23:52:02.7191995
+Attributes = A
+CRC = 490D50B7
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX737J\edition.csv
+Size = 140
+Packed Size = 
+Modified = 2026-09-24 03:52:41.1125173
+Attributes = A
+CRC = C0A55C97
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2026-05-29 22:01:59.2287856
+Attributes = A
+CRC = 2BCEAA84
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\abl_unlock.txt
+Size = 112
+Packed Size = 
+Modified = 2026-05-29 22:03:59.4520421
+Attributes = A
+CRC = A65EA73D
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\devprg\multi_image.mbn
+Size = 12088
+Packed Size = 
+Modified = 2025-11-02 10:40:27.7885472
+Attributes = A
+CRC = CE0F97E2
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\devprg\multi_image_qti.mbn
+Size = 12088
+Packed Size = 
+Modified = 2025-11-02 10:40:27.7885472
+Attributes = A
+CRC = 200E8CC6
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\devprg\prog_firehose_ddr.elf
+Size = 307924
+Packed Size = 
+Modified = 2025-11-02 10:40:27.7725471
+Attributes = A
+CRC = 8B0BA1D0
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\devprg\qsahara_device_programmer.xml
+Size = 564
+Packed Size = 
+Modified = 2026-03-16 21:43:00.7130168
+Attributes = A
+CRC = 159FBDCE
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\devprg\sequencer_ram.elf
+Size = 4864
+Packed Size = 
+Modified = 2025-11-02 10:40:27.7875471
+Attributes = A
+CRC = 0BB2CB29
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\devprg\signed_firmware_soc_view.elf
+Size = 203840
+Packed Size = 
+Modified = 2025-11-02 10:40:27.7885472
+Attributes = A
+CRC = A628E5AD
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\devprg\tme_config.elf
+Size = 43760
+Packed Size = 
+Modified = 2025-11-02 10:40:27.7885472
+Attributes = A
+CRC = 0164A819
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\devprg\xbl_config_devprg.elf
+Size = 189120
+Packed Size = 
+Modified = 2025-11-02 10:40:27.7825471
+Attributes = A
+CRC = A2D63D47
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\devprg\xbl_sc.elf
+Size = 1170400
+Packed Size = 
+Modified = 2025-11-02 10:40:27.7635470
+Attributes = A
+CRC = 8D36D979
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX741J\edition.csv
+Size = 420
+Packed Size = 
+Modified = 2026-09-24 04:18:39.0314567
+Attributes = A
+CRC = E9388322
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX769J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2024-04-16 10:15:34.8389993
+Attributes = A
+CRC = 4FC52A55
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX769J\devprg
+Size = 1553396
+Packed Size = 
+Modified = 2024-01-23 04:25:02.3235884
+Attributes = A
+CRC = 158F0E95
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX769J\edition.csv
+Size = 456
+Packed Size = 
+Modified = 2026-09-24 10:00:31.3312909
+Attributes = A
+CRC = 32CD8F5C
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX779J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2026-07-06 09:43:37.4549704
+Attributes = A
+CRC = 01E637D8
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX779J\abl_unlock.txt
+Size = 38
+Packed Size = 
+Modified = 2026-07-06 09:44:52.4448129
+Attributes = A
+CRC = 70AD5904
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX779J\devprg
+Size = 1553396
+Packed Size = 
+Modified = 2026-05-16 08:46:52.6492595
+Attributes = A
+CRC = EEEE9DFB
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX779J\edition.csv
+Size = 140
+Packed Size = 
+Modified = 2026-09-24 03:42:32.5241297
+Attributes = A
+CRC = C0A55C97
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX789J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2026-07-06 10:06:47.8040355
+Attributes = A
+CRC = 15F2D557
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX789J\abl_unlock.txt
+Size = 87
+Packed Size = 
+Modified = 2026-07-06 10:07:10.0358087
+Attributes = A
+CRC = 694E2886
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX789J\devprg
+Size = 1679780
+Packed Size = 
+Modified = 2025-07-09 05:04:22.9546079
+Attributes = A
+CRC = 5856393D
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX789J\edition.csv
+Size = 236
+Packed Size = 
+Modified = 2026-09-24 04:01:39.3005782
+Attributes = A
+CRC = F5D6659D
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX799J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2026-07-06 10:14:45.2437226
+Attributes = A
+CRC = 93DE7C36
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX799J\abl_unlock.txt
+Size = 55
+Packed Size = 
+Modified = 2026-07-06 10:15:08.1621016
+Attributes = A
+CRC = C105086F
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX799J\devprg
+Size = 1659300
+Packed Size = 
+Modified = 2026-05-14 23:52:02.7191995
+Attributes = A
+CRC = 490D50B7
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX799J\edition.csv
+Size = 140
+Packed Size = 
+Modified = 2026-09-24 04:02:53.5174599
+Attributes = A
+CRC = C0A55C97
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2026-05-22 11:58:05.8515737
+Attributes = A
+CRC = E95AD102
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\abl_unlock.txt
+Size = 49
+Packed Size = 
+Modified = 2026-05-22 12:37:06.4691048
+Attributes = A
+CRC = BBC2F9BC
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\devprg\multi_image.mbn
+Size = 12088
+Packed Size = 
+Modified = 2026-01-15 07:28:03.7338862
+Attributes = A
+CRC = 25136AB9
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\devprg\multi_image_qti.mbn
+Size = 12088
+Packed Size = 
+Modified = 2026-01-15 07:28:04.1105000
+Attributes = A
+CRC = 200E8CC6
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\devprg\prog_firehose_ddr.elf
+Size = 307924
+Packed Size = 
+Modified = 2026-01-15 07:28:03.8616646
+Attributes = A
+CRC = 04D15888
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\devprg\qsahara_device_programmer.xml
+Size = 564
+Packed Size = 
+Modified = 2026-03-16 21:43:00.7130168
+Attributes = A
+CRC = 159FBDCE
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\devprg\sequencer_ram.elf
+Size = 4864
+Packed Size = 
+Modified = 2026-01-15 07:28:04.0445079
+Attributes = A
+CRC = 0BB2CB29
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\devprg\signed_firmware_soc_view.elf
+Size = 203840
+Packed Size = 
+Modified = 2026-01-15 07:28:04.3106913
+Attributes = A
+CRC = 095BE829
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\devprg\tme_config.elf
+Size = 43760
+Packed Size = 
+Modified = 2026-01-15 07:28:04.2417021
+Attributes = A
+CRC = 6B1D16D5
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\devprg\xbl_config_devprg.elf
+Size = 189120
+Packed Size = 
+Modified = 2026-01-15 07:28:04.4595764
+Attributes = A
+CRC = 0E09A2D5
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\devprg\xbl_sc.elf
+Size = 1170400
+Packed Size = 
+Modified = 2026-01-15 07:28:05.0361873
+Attributes = A
+CRC = B6DB2EEB
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\NX809J\edition.csv
+Size = 240
+Packed Size = 
+Modified = 2026-09-24 04:11:24.2333264
+Attributes = A
+CRC = 7650A0DC
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P636A01\devprg
+Size = 605776
+Packed Size = 
+Modified = 2026-04-07 10:26:24.6800339
+Attributes = A
+CRC = 2D4AAD48
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P725A12\abl_unlock.elf
+Size = 159744
+Packed Size = 
+Modified = 2024-02-25 08:07:33.0000000
+Attributes = A
+CRC = 1A97E6CF
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P725A12\devprg
+Size = 679612
+Packed Size = 
+Modified = 2024-02-25 08:07:33.0000000
+Attributes = A
+CRC = AB07A3A0
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P768A02\abl_unlock.elf
+Size = 159744
+Packed Size = 
+Modified = 2024-02-25 08:07:33.0000000
+Attributes = A
+CRC = 1A97E6CF
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P768A02\devprg
+Size = 679612
+Packed Size = 
+Modified = 2024-02-25 08:07:33.0000000
+Attributes = A
+CRC = AB07A3A0
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P845A02\abl_unlock.elf
+Size = 135168
+Packed Size = 
+Modified = 2018-09-25 14:28:30.0000000
+Attributes = A
+CRC = DAF3F1E1
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P845A02\devprg
+Size = 683905
+Packed Size = 
+Modified = 2019-02-27 09:23:05.0000000
+Attributes = A
+CRC = FCCAA6ED
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P855A01\abl_unlock.elf
+Size = 151552
+Packed Size = 
+Modified = 2019-04-25 06:52:23.0000000
+Attributes = A
+CRC = 42CF1FD6
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P855A01\devprg
+Size = 721000
+Packed Size = 
+Modified = 2019-08-04 19:55:07.0000000
+Attributes = A
+CRC = 798AB377
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P855A23\abl_unlock.elf
+Size = 151552
+Packed Size = 
+Modified = 2019-04-25 06:52:23.0000000
+Attributes = A
+CRC = 42CF1FD6
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P855A23\devprg
+Size = 721000
+Packed Size = 
+Modified = 2019-08-04 19:55:07.0000000
+Attributes = A
+CRC = 798AB377
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P865A02\abl_unlock.elf
+Size = 1048576
+Packed Size = 
+Modified = 2024-12-05 10:49:36.3498827
+Attributes = A
+CRC = 825EB5B6
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P865A02\devprg
+Size = 703296
+Packed Size = 
+Modified = 2024-12-04 07:28:07.5515131
+Attributes = A
+CRC = 78090FB4
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P870A01\devprg
+Size = 685520
+Packed Size = 
+Modified = 2024-12-13 03:26:29.0000000
+Attributes = A
+CRC = B2732806
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P875A02\abl_unlock.elf
+Size = 159744
+Packed Size = 
+Modified = 2023-12-15 07:35:28.4691426
+Attributes = A
+CRC = 972BE108
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\P875A02\devprg
+Size = 956040
+Packed Size = 
+Modified = 2024-02-13 11:30:31.8196255
+Attributes = A
+CRC = 646CCB27
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\res\TP1803\devprg
+Size = 724720
+Packed Size = 
+Modified = 2022-12-24 06:28:28.3816700
+Attributes = A
+CRC = 4572029A
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\scrcpy.bat
+Size = 1708
+Packed Size = 
+Modified = 2025-02-23 10:33:24.0810393
+Attributes = A
+CRC = FACEBAAD
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\sel.bat
+Size = 3911
+Packed Size = 
+Modified = 2025-02-23 10:33:24.0810393
+Attributes = A
+CRC = D7B0020C
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\slot.bat
+Size = 11928
+Packed Size = 
+Modified = 2025-07-09 12:12:43.9430141
+Attributes = A
+CRC = B7A0B109
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Android\bootctl
+Size = 19832
+Packed Size = 
+Modified = 2023-02-01 07:20:28.0000000
+Attributes = A
+CRC = 05F74EAF
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Android\busybox
+Size = 1885888
+Packed Size = 
+Modified = 2023-06-18 10:38:18.0000000
+Attributes = A
+CRC = 259CC3B7
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Android\frp_unlock.img
+Size = 524288
+Packed Size = 
+Modified = 2024-03-12 08:49:00.0196952
+Attributes = A
+CRC = 3C9DF111
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Android\misc_tofastbootd.img
+Size = 8192
+Packed Size = 
+Modified = 2024-04-06 12:14:31.7025179
+Attributes = A
+CRC = B477DB78
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Android\misc_tofastbootd_2.img
+Size = 8192
+Packed Size = 
+Modified = 2024-06-27 09:02:23.6391699
+Attributes = A
+CRC = 7C51C88B
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Android\misc_torecovery.img
+Size = 8192
+Packed Size = 
+Modified = 2023-06-04 20:12:30.5312577
+Attributes = A
+CRC = 1312FFB6
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Android\misc_wipedata.img
+Size = 8192
+Packed Size = 
+Modified = 2024-02-13 23:53:58.7705592
+Attributes = A
+CRC = F5D3D207
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Android\mke2fs
+Size = 1149064
+Packed Size = 
+Modified = 2023-02-01 07:20:29.0000000
+Attributes = A
+CRC = 54613744
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Android\mkfs.exfat
+Size = 731240
+Packed Size = 
+Modified = 2024-11-20 12:16:40.0189807
+Attributes = A
+CRC = E7DD128D
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Android\mkfs.fat
+Size = 682776
+Packed Size = 
+Modified = 2023-07-26 20:27:39.0162909
+Attributes = A
+CRC = 9A0E27CB
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Android\mkntfs
+Size = 977984
+Packed Size = 
+Modified = 2021-06-28 19:22:54.0000000
+Attributes = A
+CRC = 975367D6
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\logo.txt
+Size = 670
+Packed Size = 
+Modified = 2026-04-07 10:55:51.5554781
+Attributes = A
+CRC = 650AAAB4
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\8e5gbl\efisp_empty.img
+Size = 3145728
+Packed Size = 
+Modified = 2026-03-26 11:38:03.6212284
+Attributes = A
+CRC = 79724FC6
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\8e5gbl\gbl_lock.efi
+Size = 40960
+Packed Size = 
+Modified = 2026-03-04 10:14:06.9900880
+Attributes = A
+CRC = 8D6E6150
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\8e5gbl\gbl_superfastboot.efi
+Size = 200704
+Packed Size = 
+Modified = 2026-03-26 11:57:34.8435399
+Attributes = A
+CRC = 6B4E94C3
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\8e5gbl\gbl_unlock.efi
+Size = 40960
+Packed Size = 
+Modified = 2026-03-04 10:14:09.5262839
+Attributes = A
+CRC = 81449106
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\8e5gbl\readme.md
+Size = 101
+Packed Size = 
+Modified = 2026-03-26 12:00:05.8822079
+Attributes = A
+CRC = C515A188
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\avbexploit\anonymous1\LICENSE
+Size = 1937
+Packed Size = 
+Modified = 2026-04-26 05:40:06.4952506
+Attributes = A
+CRC = 49908CB2
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\avbexploit\anonymous1\readme.md
+Size = 1008
+Packed Size = 
+Modified = 2026-05-16 09:57:30.7515673
+Attributes = A
+CRC = 8640AE2E
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\avbexploit\anonymous1\uefi_unlock_8e.img
+Size = 2707456
+Packed Size = 
+Modified = 2026-04-21 05:34:53.3661279
+Attributes = A
+CRC = C16FC8D9
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\avbexploit\anonymous1\uefi_unlock_8e_new.img
+Size = 2707456
+Packed Size = 
+Modified = 2026-05-08 10:58:26.1127956
+Attributes = A
+CRC = 0B22DF67
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\avbexploit\Littlenine\readme.md
+Size = 1073
+Packed Size = 
+Modified = 2026-05-16 09:52:18.8679620
+Attributes = A
+CRC = C21A8637
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\avbexploit\Littlenine\uefi_unlock_8e.img
+Size = 2244608
+Packed Size = 
+Modified = 2026-04-23 23:08:32.1955092
+Attributes = A
+CRC = 0B9DBC8F
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\avbexploit\Littlenine\uefi_unlock_8gen2.img
+Size = 2113536
+Packed Size = 
+Modified = 2026-04-23 23:08:33.8639369
+Attributes = A
+CRC = 030D5CB7
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\avbexploit\Littlenine\uefi_unlock_8gen3.img
+Size = 2039808
+Packed Size = 
+Modified = 2026-05-16 08:55:16.4364353
+Attributes = A
+CRC = A8F87555
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\avbexploit\Littlenine\uefi_unlock_8sgen3.img
+Size = 2367488
+Packed Size = 
+Modified = 2026-05-16 09:21:46.8257426
+Attributes = A
+CRC = 52B04544
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\frp_empty.img
+Size = 524288
+Packed Size = 
+Modified = 2026-05-08 11:21:22.4686368
+Attributes = A
+CRC = 75660AAC
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\qualcomm_config.py
+Size = 28710
+Packed Size = 
+Modified = 2025-05-20 07:01:56.5559630
+Attributes = A
+CRC = 8B1D2157
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\ReadAllFunc_Readme_Chs.txt
+Size = 1713
+Packed Size = 
+Modified = 2025-07-09 11:32:20.8506711
+Attributes = A
+CRC = 0708562F
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Other\ReadAllFunc_Readme_Eng.txt
+Size = 2853
+Packed Size = 
+Modified = 2025-06-28 14:33:31.3007581
+Attributes = A
+CRC = 37558B3C
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\Notepad3\lng\zh-CN\mplng.dll.mui
+Size = 146824
+Packed Size = 
+Modified = 2023-06-04 20:12:52.8722148
+Attributes = A
+CRC = BB6FDB73
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\Notepad3\lng\zh-CN\np3lng.dll.mui
+Size = 314760
+Packed Size = 
+Modified = 2023-06-04 20:12:52.8872251
+Attributes = A
+CRC = 03B3E4EF
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\Notepad3\minipath.ini
+Size = 4604
+Packed Size = 
+Modified = 2023-06-04 20:12:51.3906459
+Attributes = A
+CRC = 3E2F1063
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\Notepad3\Notepad3.ini
+Size = 5578
+Packed Size = 
+Modified = 2026-09-24 10:23:43.7921919
+Attributes = A
+CRC = 0C54DACC
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\Notepad3\Themes\Dark.ini
+Size = 8981
+Packed Size = 
+Modified = 2023-06-04 20:12:52.6025070
+Attributes = A
+CRC = 7726C8BE
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\Notepad3\Themes\Obsidian.ini
+Size = 8491
+Packed Size = 
+Modified = 2023-06-04 20:12:52.5034362
+Attributes = A
+CRC = EE0A13BB
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\Notepad3\Themes\Sombra.ini
+Size = 1859
+Packed Size = 
+Modified = 2026-09-24 10:23:43.9248628
+Attributes = A
+CRC = 933B987D
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\scrcpy\icon.png
+Size = 6530
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = A018CDE0
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\scrcpy\open_a_terminal_here.bat
+Size = 5
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = 1609E877
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\scrcpy\scrcpy-console.bat
+Size = 51
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = D8AE1F20
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\scrcpy\scrcpy-noconsole.vbs
+Size = 212
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = 91D6ADD3
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\scrcpy\scrcpy-server
+Size = 71200
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = 991B5ECA
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\Vieas\Vieas.ini
+Size = 2378
+Packed Size = 
+Modified = 2024-04-17 03:19:13.1257340
+Attributes = A
+CRC = 51DB4EF9
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\write.bat
+Size = 34521
+Packed Size = 
+Modified = 2026-05-31 22:21:42.7556680
+Attributes = A
+CRC = 99B14D32
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\ztetoolbox.bat
+Size = 14216
+Packed Size = 
+Modified = 2026-09-24 10:05:48.0772885
+Attributes = A
+CRC = B099BEA4
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = Magisk29.0.apk
+Size = 11801932
+Packed Size = 
+Modified = 2025-05-21 09:23:16.5560569
+Attributes = A
+CRC = 0D74903E
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = _______.bat
+Size = 74298
+Packed Size = 
+Modified = 2026-09-24 10:22:49.1745178
+Attributes = A
+CRC = C86D64AA
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = ________.txt
+Size = 116
+Packed Size = 
+Modified = 2024-07-13 12:42:19.1207040
+Attributes = A
+CRC = 1F747303
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = __BUG,____,____.txt
+Size = 202
+Packed Size = 
+Modified = 2024-02-26 05:01:47.2135852
+Attributes = A
+CRC = 67319CFD
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = ___.bat
+Size = 4384
+Packed Size = 
+Modified = 2025-02-23 10:33:23.7410435
+Attributes = A
+CRC = 05B50D3B
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = ________.txt
+Size = 2733
+Packed Size = 
+Modified = 2026-03-03 10:31:05.5925239
+Attributes = A
+CRC = 61C2E8B4
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = _______.bat
+Size = 239
+Packed Size = 
+Modified = 2024-02-29 04:53:22.2006015
+Attributes = A
+CRC = E11982F3
+Encrypted = -
+Method = LZMA2:26
+Block = 0
+
+Path = bin\tool\Win\7z.dll
+Size = 1314816
+Packed Size = 13641757
+Modified = 2025-02-23 09:38:29.7289883
+Attributes = A
+CRC = 3EC124A5
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\7z.exe
+Size = 349696
+Packed Size = 
+Modified = 2025-02-23 09:38:31.5274625
+Attributes = A
+CRC = D86618BD
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\adb.exe
+Size = 5969000
+Packed Size = 
+Modified = 2024-07-26 11:55:58.0000000
+Attributes = A
+CRC = 773B1C97
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\AdbWinApi.dll
+Size = 108136
+Packed Size = 
+Modified = 2024-07-26 11:55:54.0000000
+Attributes = A
+CRC = F1F0DA26
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\AdbWinUsbApi.dll
+Size = 73320
+Packed Size = 
+Modified = 2024-07-26 11:55:58.0000000
+Attributes = A
+CRC = 54C23C76
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\busybox-bfflogviewer.exe
+Size = 579072
+Packed Size = 
+Modified = 2023-06-04 20:12:50.5760677
+Attributes = A
+CRC = C9C0736B
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\busybox.exe
+Size = 579072
+Packed Size = 
+Modified = 2023-06-04 20:12:50.5760677
+Attributes = A
+CRC = C9C0736B
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\calc.exe
+Size = 692736
+Packed Size = 
+Modified = 2024-03-06 10:15:12.8873840
+Attributes = A
+CRC = 62C50FD6
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\devcon.exe
+Size = 76288
+Packed Size = 
+Modified = 2023-06-04 20:12:39.0819506
+Attributes = A
+CRC = 788A3861
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\ECHOC.exe
+Size = 54272
+Packed Size = 
+Modified = 2023-06-04 20:12:39.0000000
+Attributes = A
+CRC = 30E7BE65
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\fastboot.exe
+Size = 1874536
+Packed Size = 
+Modified = 2024-07-26 11:55:56.0000000
+Attributes = A
+CRC = 7FC58676
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\fh_loader.exe
+Size = 480768
+Packed Size = 
+Modified = 2025-06-12 09:32:52.8890294
+Attributes = A
+CRC = 4C396977
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\filedialog.exe
+Size = 256512
+Packed Size = 
+Modified = 2024-07-28 22:59:27.3776511
+Attributes = A
+CRC = 96AF47EA
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\gap.exe
+Size = 10240
+Packed Size = 
+Modified = 2025-05-26 03:36:56.4801367
+Attributes = A
+CRC = BCFDDACB
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\gettime.exe
+Size = 230912
+Packed Size = 
+Modified = 2024-07-20 03:08:53.2187775
+Attributes = A
+CRC = 638D3486
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\gpttool.exe
+Size = 98816
+Packed Size = 
+Modified = 2025-06-08 04:58:06.9943726
+Attributes = A
+CRC = 5EF51BB3
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\HexTool.exe
+Size = 66560
+Packed Size = 
+Modified = 2022-06-09 22:56:56.9164392
+Attributes = A
+CRC = 0CCAC647
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\magiskboot.exe
+Size = 652288
+Packed Size = 
+Modified = 2023-10-22 00:31:17.7468418
+Attributes = A
+CRC = C558E7B8
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\Notepad3\grepWinNP3.exe
+Size = 1131912
+Packed Size = 
+Modified = 2023-06-04 20:12:50.9788530
+Attributes = A
+CRC = 3D449ECF
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\Notepad3\lng\mplng.dll
+Size = 19336
+Packed Size = 
+Modified = 2023-06-04 20:12:52.7000930
+Attributes = A
+CRC = FAE7CB5B
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\Notepad3\lng\np3lng.dll
+Size = 19336
+Packed Size = 
+Modified = 2023-06-04 20:12:52.6905841
+Attributes = A
+CRC = 84FD59AC
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\Notepad3\minipath.exe
+Size = 960392
+Packed Size = 
+Modified = 2023-06-04 20:12:51.2775651
+Attributes = A
+CRC = 145DB81B
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\Notepad3\Notepad3.exe
+Size = 3921800
+Packed Size = 
+Modified = 2023-06-04 20:12:52.5159451
+Attributes = A
+CRC = 6D392D28
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\numcomp.exe
+Size = 184320
+Packed Size = 
+Modified = 2024-07-20 00:45:23.3630532
+Attributes = A
+CRC = CAB6C179
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\qcedlcmdhelper.exe
+Size = 19456
+Packed Size = 
+Modified = 2024-07-19 14:03:36.3430562
+Attributes = A
+CRC = 5C6AA64D
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\qcedlxmlhelper.exe
+Size = 17920
+Packed Size = 
+Modified = 2024-10-26 23:58:54.6249345
+Attributes = A
+CRC = 3DEF2AC5
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\QCNTool.exe
+Size = 5686784
+Packed Size = 
+Modified = 2024-03-13 05:22:36.5121991
+Attributes = A
+CRC = 1B5B5C90
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\QMSL_MSVC10R.dll
+Size = 17894400
+Packed Size = 
+Modified = 2023-02-01 07:20:32.0000000
+Attributes = A
+CRC = D8960312
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\QSaharaServer.exe
+Size = 214016
+Packed Size = 
+Modified = 2025-06-08 04:04:24.5035414
+Attributes = A
+CRC = E9C568B1
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\resizecmdwindow.exe
+Size = 63488
+Packed Size = 
+Modified = 2023-04-08 20:55:45.7383661
+Attributes = A
+CRC = E59D7AA3
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\scrcpy\adb.exe
+Size = 5848352
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = 3567C644
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\scrcpy\AdbWinApi.dll
+Size = 108320
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = 53BBC9AF
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\scrcpy\AdbWinUsbApi.dll
+Size = 73504
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = B27E73A1
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\scrcpy\avcodec-61.dll
+Size = 2993678
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = B2EDEED1
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\scrcpy\avformat-61.dll
+Size = 706062
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = C4C37E69
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\scrcpy\avutil-59.dll
+Size = 943630
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = 18F9000D
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\scrcpy\libusb-1.0.dll
+Size = 238166
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = 79E03086
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\scrcpy\scrcpy.exe
+Size = 706670
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = ABEDB7BF
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\scrcpy\SDL2.dll
+Size = 1902094
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = EA18B3A0
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\scrcpy\swresample-5.dll
+Size = 129038
+Packed Size = 
+Modified = 2024-09-15 12:25:02.0000000
+Attributes = A
+CRC = 66BF6E0B
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\simg_dump.exe
+Size = 14336
+Packed Size = 
+Modified = 2024-10-26 01:03:15.0121352
+Attributes = A
+CRC = 1D6D4A7A
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\strtofile.exe
+Size = 5632
+Packed Size = 
+Modified = 2024-04-16 07:51:15.2838538
+Attributes = A
+CRC = 238959EB
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\Vieas\ChineseTraditional.dll
+Size = 31232
+Packed Size = 
+Modified = 2015-06-26 10:00:00.0000000
+Attributes = A
+CRC = 2156D590
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+
+Path = bin\tool\Win\Vieas\Vieas.exe
+Size = 1000960
+Packed Size = 
+Modified = 2015-06-26 10:00:00.0000000
+Attributes = A
+CRC = 6F8E3A63
+Encrypted = -
+Method = BCJ2 LZMA2:26 LZMA:20:lc0:lp2 LZMA:20:lc0:lp2
+Block = 1
+

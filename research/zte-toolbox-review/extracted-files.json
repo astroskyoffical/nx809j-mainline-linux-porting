@@ -1,0 +1,157 @@
+[
+  {
+    "path": "中兴家族工具箱.bat",
+    "size_bytes": 74298,
+    "sha256": "92ec7b176390ae9244023432bf24a8501492e8bdb5574adfdc2ce143a172b346"
+  },
+  {
+    "path": "刷机驱动和运行库.txt",
+    "size_bytes": 116,
+    "sha256": "a1fc973972472c1ce85d4414975ffdb043a55b5625a42b17b6920b31af243c4e"
+  },
+  {
+    "path": "反馈BUG，适配机型，聊天交流.txt",
+    "size_bytes": 202,
+    "sha256": "7dae0a365c088922f3478d354b2cdd292f2921a19716a171d53c01300b0423df"
+  },
+  {
+    "path": "bin\\calc.bat",
+    "size_bytes": 8051,
+    "sha256": "8e1b9b79fabae478e720c3a204298c88c6644159c0ad13bbf29ff3db332a8865"
+  },
+  {
+    "path": "bin\\chkdev.bat",
+    "size_bytes": 12529,
+    "sha256": "6d1e1268192393b78035dac50fc4586c0bdd89e897d492577d3df01f163e7df6"
+  },
+  {
+    "path": "bin\\clean.bat",
+    "size_bytes": 10409,
+    "sha256": "9423732feebbea9297d10d0fda5e6ef94c639b80b6b0e43764de5e41f55e48f4"
+  },
+  {
+    "path": "bin\\dl.bat",
+    "size_bytes": 16598,
+    "sha256": "21fd563da92b9e3493f350f1b35a184c433150c02bd16fc0c8437ed54447054d"
+  },
+  {
+    "path": "bin\\framework.bat",
+    "size_bytes": 21204,
+    "sha256": "b9e238eca3f318222af96dc7c7501afe743e453a93c77ab8c567c335d2f068c4"
+  },
+  {
+    "path": "bin\\info.bat",
+    "size_bytes": 20303,
+    "sha256": "7884559d5a2d0f54343e1c14c962b7a304880a65dd98cb6da6ed5ce7d2af7f05"
+  },
+  {
+    "path": "bin\\open.bat",
+    "size_bytes": 1293,
+    "sha256": "b96e82932efb40caa09cc2ce4b259a70115099f61db01975138af817858ae964"
+  },
+  {
+    "path": "bin\\partable.bat",
+    "size_bytes": 18507,
+    "sha256": "6cff7e28f7a947b730999db50e8e1b430a1eb9ce16b3d7e985b46d608093993d"
+  },
+  {
+    "path": "bin\\read.bat",
+    "size_bytes": 10784,
+    "sha256": "f0b918ea0c4ae8db809c16c3c21dadc5a629a84947a2562a9c83b9e3e6a625ce"
+  },
+  {
+    "path": "bin\\slot.bat",
+    "size_bytes": 11928,
+    "sha256": "4250add02e8378800dad0b6e085be00c7669c42bc76af1ea01652d629b15dfe5"
+  },
+  {
+    "path": "bin\\write.bat",
+    "size_bytes": 34521,
+    "sha256": "12557be161bbc970302be85e90f90fa0a4da44eed42276a814c0b874c808c07a"
+  },
+  {
+    "path": "bin\\ztetoolbox.bat",
+    "size_bytes": 14216,
+    "sha256": "70b1abe7bb711f18a726532036c7d787c585a25c23f069424f9ad085982aeb8f"
+  },
+  {
+    "path": "bin\\conf\\dev.csv",
+    "size_bytes": 3648,
+    "sha256": "dcd83bf3d40e3f12832a837d427f62ab525e64c4ebd889116520a0d55757581e"
+  },
+  {
+    "path": "bin\\conf\\fixed.bat",
+    "size_bytes": 49,
+    "sha256": "6f4494195bf841a38e9ec465d95abff2b0c08d6677a69a89ecc95f87338b2e5a"
+  },
+  {
+    "path": "bin\\res\\NX809J\\abl_unlock.elf",
+    "size_bytes": 1048576,
+    "sha256": "e6ae2a6c08abc3dde5430cf93a06a606ce208a570e69b1a9c4c7625592045e6d"
+  },
+  {
+    "path": "bin\\res\\NX809J\\abl_unlock.txt",
+    "size_bytes": 49,
+    "sha256": "f3b2d9ca0c57b3212f1a8914c8d285a92ea305a6de2666b8bd47395a76b4ab56"
+  },
+  {
+    "path": "bin\\res\\NX809J\\edition.csv",
+    "size_bytes": 240,
+    "sha256": "2196493b45c3acaa7db934ac79a902d32577d6d38d83ad928bd83ed6cfc1c38a"
+  },
+  {
+    "path": "bin\\res\\NX809J\\devprg\\multi_image_qti.mbn",
+    "size_bytes": 12088,
+    "sha256": "a98c7ae167f5d0daf947dc707e3c3679ea438f30ea6ebc510edf15655a14d223"
+  },
+  {
+    "path": "bin\\res\\NX809J\\devprg\\multi_image.mbn",
+    "size_bytes": 12088,
+    "sha256": "c3d2ad9c38c5e6b03f87421473b8c00680b11df7bc8f5804e85164fa3e768544"
+  },
+  {
+    "path": "bin\\res\\NX809J\\devprg\\prog_firehose_ddr.elf",
+    "size_bytes": 307924,
+    "sha256": "333a05c1039aa3bcdfc1e9688765b20c93438b3faf6e7c42cb25ed415806b2a6"
+  },
+  {
+    "path": "bin\\res\\NX809J\\devprg\\qsahara_device_programmer.xml",
+    "size_bytes": 564,
+    "sha256": "433749ae084aa0f1b4016b29619b0b0c377d4b2cd22d8a48b423ca6d9cbc83ca"
+  },
+  {
+    "path": "bin\\res\\NX809J\\devprg\\sequencer_ram.elf",
+    "size_bytes": 4864,
+    "sha256": "d7dc67ddd77332e558d14b7acb82bc42e1be66a07786403c96b655f46d019636"
+  },
+  {
+    "path": "bin\\res\\NX809J\\devprg\\signed_firmware_soc_view.elf",
+    "size_bytes": 203840,
+    "sha256": "2df5b3bddadf72c3dd0149a9413eb72fca9083ec39a2c77fa3e02fd45fd041da"
+  },
+  {
+    "path": "bin\\res\\NX809J\\devprg\\tme_config.elf",
+    "size_bytes": 43760,
+    "sha256": "ee127e978eb6ad389f176f8aaff166d4afae9ab6b75ef3b914d6e975a4e308c4"
+  },
+  {
+    "path": "bin\\res\\NX809J\\devprg\\xbl_config_devprg.elf",
+    "size_bytes": 189120,
+    "sha256": "3027f0174fd70c3354ec3c29d0b6e06d4f3f772879eb113fb2892b13931b6352"
+  },
+  {
+    "path": "bin\\res\\NX809J\\devprg\\xbl_sc.elf",
+    "size_bytes": 1170400,
+    "sha256": "877e7f4433cb9ba34d07f993dc8edc3accae1ff67b5ed50d478c42c229cc2281"
+  },
+  {
+    "path": "bin\\tool\\Other\\ReadAllFunc_Readme_Chs.txt",
+    "size_bytes": 1713,
+    "sha256": "15143599cfa2491cd31b674519943e292d578e050950122cc6d51c57d25ba92b"
+  },
+  {
+    "path": "bin\\tool\\Other\\ReadAllFunc_Readme_Eng.txt",
+    "size_bytes": 2853,
+    "sha256": "395641ad63a59bcf41125c5728155fe3705c343a13c15ea525a4ff5d6405e95c"
+  }
+]
