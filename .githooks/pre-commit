@@ -1,0 +1,9 @@
+#!/bin/sh
+# Regenerate PROGRESS.md and progress/progress.svg from the Port Atlas data
+# so the GitHub view always matches the local tracker.
+root=$(git rev-parse --show-toplevel) || exit 1
+py="$root/.venv/Scripts/python.exe"
+[ -x "$py" ] || py="$root/.venv/bin/python"
+[ -x "$py" ] || { echo "pre-commit: project .venv not found; PROGRESS.md not refreshed" >&2; exit 0; }
+"$py" "$root/tools/export_progress.py" --root "$root" >/dev/null || { echo "pre-commit: export_progress failed" >&2; exit 1; }
+git add "$root/PROGRESS.md" "$root/progress/progress.svg"

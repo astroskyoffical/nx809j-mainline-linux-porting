@@ -1,0 +1,571 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="332" viewBox="0 0 880 332" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="100%" height="100%" rx="8" fill="#0d1117"/>
+<text x="10" y="20" font-size="13" fill="#e6edf3" font-weight="600">NX809J port scopes: 13 verified / 559</text>
+<text x="10" y="43" font-size="11" fill="#9da7b3">Boot &amp; recovery</text>
+<rect x="150" y="34" width="10" height="10" rx="2" fill="#2ea043"><title>Android A return path</title></rect>
+<rect x="162" y="34" width="10" height="10" rx="2" fill="#2ea043"><title>EFISP boot callback analysis</title></rect>
+<rect x="174" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Android/Linux switching contract</title></rect>
+<rect x="186" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Full same-device restore</title></rect>
+<rect x="198" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Internal Linux root storage</title></rect>
+<rect x="210" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Linux image handoff</title></rect>
+<rect x="222" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Boot chain, AVB and boot control</title></rect>
+<rect x="234" y="34" width="10" height="10" rx="2" fill="#da3633"><title>UFS and Linux root storage</title></rect>
+<rect x="246" y="34" width="10" height="10" rx="2" fill="#da3633"><title>cqhci</title></rect>
+<rect x="258" y="34" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_ufs</title></rect>
+<rect x="270" y="34" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_ufs_qmp_v4_canoe</title></rect>
+<rect x="282" y="34" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_ufs_qrbtc_sdm845</title></rect>
+<rect x="294" y="34" width="10" height="10" rx="2" fill="#da3633"><title>sdhci_msm</title></rect>
+<rect x="306" y="34" width="10" height="10" rx="2" fill="#da3633"><title>sg</title></rect>
+<rect x="318" y="34" width="10" height="10" rx="2" fill="#da3633"><title>ufs_qcom</title></rect>
+<rect x="330" y="34" width="10" height="10" rx="2" fill="#da3633"><title>zram</title></rect>
+<rect x="342" y="34" width="10" height="10" rx="2" fill="#da3633"><title>zsmalloc</title></rect>
+<text x="10" y="69" font-size="11" fill="#9da7b3">Platform</text>
+<rect x="150" y="60" width="10" height="10" rx="2" fill="#2ea043"><title>Pinned mainline reference build</title></rect>
+<rect x="162" y="60" width="10" height="10" rx="2" fill="#2ea043"><title>RPMh mode index 3 mapping</title></rect>
+<rect x="174" y="60" width="10" height="10" rx="2" fill="#2ea043"><title>Saved firmware file inventory</title></rect>
+<rect x="186" y="60" width="10" height="10" rx="2" fill="#2ea043"><title>Six-pin Canoe register map</title></rect>
+<rect x="198" y="60" width="10" height="10" rx="2" fill="#da3633"><title>NX809J board DTS foundation</title></rect>
+<rect x="210" y="60" width="10" height="10" rx="2" fill="#da3633"><title>NX809J Linux firmware availability</title></rect>
+<rect x="222" y="60" width="10" height="10" rx="2" fill="#da3633"><title>NX809J vendor driver ports</title></rect>
+<rect x="234" y="60" width="10" height="10" rx="2" fill="#da3633"><title>CPU, memory, interrupts, board DT</title></rect>
+<rect x="246" y="60" width="10" height="10" rx="2" fill="#da3633"><title>8021q</title></rect>
+<rect x="258" y="60" width="10" height="10" rx="2" fill="#da3633"><title>9pnet</title></rect>
+<rect x="270" y="60" width="10" height="10" rx="2" fill="#da3633"><title>9pnet_fd</title></rect>
+<rect x="282" y="60" width="10" height="10" rx="2" fill="#da3633"><title>arm_smmu</title></rect>
+<rect x="294" y="60" width="10" height="10" rx="2" fill="#da3633"><title>arm_smmu_pmu</title></rect>
+<rect x="306" y="60" width="10" height="10" rx="2" fill="#da3633"><title>bam_dma</title></rect>
+<rect x="318" y="60" width="10" height="10" rx="2" fill="#da3633"><title>boot_stats</title></rect>
+<rect x="330" y="60" width="10" height="10" rx="2" fill="#da3633"><title>bsd_comp</title></rect>
+<rect x="342" y="60" width="10" height="10" rx="2" fill="#da3633"><title>bwmon</title></rect>
+<rect x="354" y="60" width="10" height="10" rx="2" fill="#da3633"><title>cambistmclkcc_canoe</title></rect>
+<rect x="366" y="60" width="10" height="10" rx="2" fill="#da3633"><title>camcc_alor</title></rect>
+<rect x="378" y="60" width="10" height="10" rx="2" fill="#da3633"><title>camcc_canoe</title></rect>
+<rect x="390" y="60" width="10" height="10" rx="2" fill="#da3633"><title>can</title></rect>
+<rect x="402" y="60" width="10" height="10" rx="2" fill="#da3633"><title>can_dev</title></rect>
+<rect x="414" y="60" width="10" height="10" rx="2" fill="#da3633"><title>cctrng</title></rect>
+<rect x="426" y="60" width="10" height="10" rx="2" fill="#da3633"><title>clk_dummy</title></rect>
+<rect x="438" y="60" width="10" height="10" rx="2" fill="#da3633"><title>clk_gate_test</title></rect>
+<rect x="450" y="60" width="10" height="10" rx="2" fill="#da3633"><title>clk_kunit_helpers</title></rect>
+<rect x="462" y="60" width="10" height="10" rx="2" fill="#da3633"><title>clk_qcom</title></rect>
+<rect x="474" y="60" width="10" height="10" rx="2" fill="#da3633"><title>clk_rpmh</title></rect>
+<rect x="486" y="60" width="10" height="10" rx="2" fill="#da3633"><title>clk_scmi</title></rect>
+<rect x="498" y="60" width="10" height="10" rx="2" fill="#da3633"><title>clk_test</title></rect>
+<rect x="510" y="60" width="10" height="10" rx="2" fill="#da3633"><title>cmd_db</title></rect>
+<rect x="522" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight</title></rect>
+<rect x="534" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_csr</title></rect>
+<rect x="546" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_cti</title></rect>
+<rect x="558" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_dummy</title></rect>
+<rect x="570" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_funnel</title></rect>
+<rect x="582" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_qmi</title></rect>
+<rect x="594" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_remote_etm</title></rect>
+<rect x="606" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_replicator</title></rect>
+<rect x="618" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_stm</title></rect>
+<rect x="630" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_tgu</title></rect>
+<rect x="642" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_tmc</title></rect>
+<rect x="654" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_tmc_sec</title></rect>
+<rect x="666" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_tpda</title></rect>
+<rect x="678" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_tpdm</title></rect>
+<rect x="690" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_trace_noc</title></rect>
+<rect x="702" y="60" width="10" height="10" rx="2" fill="#da3633"><title>coresight_uetm</title></rect>
+<rect x="714" y="60" width="10" height="10" rx="2" fill="#da3633"><title>cpu_hotplug</title></rect>
+<rect x="726" y="60" width="10" height="10" rx="2" fill="#da3633"><title>cpu_mpam</title></rect>
+<rect x="738" y="60" width="10" height="10" rx="2" fill="#da3633"><title>cpucp_fast</title></rect>
+<rect x="750" y="60" width="10" height="10" rx="2" fill="#da3633"><title>cpucp_log</title></rect>
+<rect x="762" y="60" width="10" height="10" rx="2" fill="#da3633"><title>cpuss_telemetry</title></rect>
+<rect x="774" y="60" width="10" height="10" rx="2" fill="#da3633"><title>dcc_v2</title></rect>
+<rect x="786" y="60" width="10" height="10" rx="2" fill="#da3633"><title>dcvs_fp</title></rect>
+<rect x="798" y="60" width="10" height="10" rx="2" fill="#da3633"><title>debug_symbol</title></rect>
+<rect x="810" y="60" width="10" height="10" rx="2" fill="#da3633"><title>debugcc_alor</title></rect>
+<rect x="822" y="60" width="10" height="10" rx="2" fill="#da3633"><title>debugcc_canoe</title></rect>
+<rect x="834" y="60" width="10" height="10" rx="2" fill="#da3633"><title>deferred_free_helper</title></rect>
+<rect x="846" y="60" width="10" height="10" rx="2" fill="#da3633"><title>dev_addr_lists_test</title></rect>
+<rect x="858" y="60" width="10" height="10" rx="2" fill="#da3633"><title>dispcc_canoe</title></rect>
+<rect x="150" y="72" width="10" height="10" rx="2" fill="#da3633"><title>dmesg_dumper</title></rect>
+<rect x="162" y="72" width="10" height="10" rx="2" fill="#da3633"><title>eud</title></rect>
+<rect x="174" y="72" width="10" height="10" rx="2" fill="#da3633"><title>evacc_canoe</title></rect>
+<rect x="186" y="72" width="10" height="10" rx="2" fill="#da3633"><title>ext4_inode_test</title></rect>
+<rect x="198" y="72" width="10" height="10" rx="2" fill="#da3633"><title>f_fs_ipc_log</title></rect>
+<rect x="210" y="72" width="10" height="10" rx="2" fill="#da3633"><title>fat_test</title></rect>
+<rect x="222" y="72" width="10" height="10" rx="2" fill="#da3633"><title>ftmmod</title></rect>
+<rect x="234" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gcc_alor</title></rect>
+<rect x="246" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gcc_canoe</title></rect>
+<rect x="258" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_arm_drv</title></rect>
+<rect x="270" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_ctrl</title></rect>
+<rect x="282" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_dbl</title></rect>
+<rect x="294" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_irq_lend</title></rect>
+<rect x="306" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_mem_notifier</title></rect>
+<rect x="318" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_msgq</title></rect>
+<rect x="330" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_panic_notifier</title></rect>
+<rect x="342" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_rm_booster</title></rect>
+<rect x="354" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_rm_drv</title></rect>
+<rect x="366" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_rm_heap_manager</title></rect>
+<rect x="378" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_tlmm_vm_mem_access</title></rect>
+<rect x="390" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gh_vcpu_mgr</title></rect>
+<rect x="402" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gic_intr_routing</title></rect>
+<rect x="414" y="72" width="10" height="10" rx="2" fill="#da3633"><title>glink_pkt</title></rect>
+<rect x="426" y="72" width="10" height="10" rx="2" fill="#da3633"><title>glink_probe</title></rect>
+<rect x="438" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gpucc_canoe</title></rect>
+<rect x="450" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gsim</title></rect>
+<rect x="462" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gunyah_trace</title></rect>
+<rect x="474" y="72" width="10" height="10" rx="2" fill="#da3633"><title>gzvm</title></rect>
+<rect x="486" y="72" width="10" height="10" rx="2" fill="#da3633"><title>heap_mem_ext_v01</title></rect>
+<rect x="498" y="72" width="10" height="10" rx="2" fill="#da3633"><title>hid_uclogic_test</title></rect>
+<rect x="510" y="72" width="10" height="10" rx="2" fill="#da3633"><title>hung_task_enh</title></rect>
+<rect x="522" y="72" width="10" height="10" rx="2" fill="#da3633"><title>hvc_gunyah</title></rect>
+<rect x="534" y="72" width="10" height="10" rx="2" fill="#da3633"><title>hwmon</title></rect>
+<rect x="546" y="72" width="10" height="10" rx="2" fill="#da3633"><title>i2c_msm_geni</title></rect>
+<rect x="558" y="72" width="10" height="10" rx="2" fill="#da3633"><title>i3c_master_msm_geni</title></rect>
+<rect x="570" y="72" width="10" height="10" rx="2" fill="#da3633"><title>icc_bcm_voter</title></rect>
+<rect x="582" y="72" width="10" height="10" rx="2" fill="#da3633"><title>icc_clk</title></rect>
+<rect x="594" y="72" width="10" height="10" rx="2" fill="#da3633"><title>icc_debug</title></rect>
+<rect x="606" y="72" width="10" height="10" rx="2" fill="#da3633"><title>icc_rpmh</title></rect>
+<rect x="618" y="72" width="10" height="10" rx="2" fill="#da3633"><title>ieee802154</title></rect>
+<rect x="630" y="72" width="10" height="10" rx="2" fill="#da3633"><title>ieee802154_6lowpan</title></rect>
+<rect x="642" y="72" width="10" height="10" rx="2" fill="#da3633"><title>ieee802154_socket</title></rect>
+<rect x="654" y="72" width="10" height="10" rx="2" fill="#da3633"><title>ifas</title></rect>
+<rect x="666" y="72" width="10" height="10" rx="2" fill="#da3633"><title>ifas_inner</title></rect>
+<rect x="678" y="72" width="10" height="10" rx="2" fill="#da3633"><title>iio_test_format</title></rect>
+<rect x="690" y="72" width="10" height="10" rx="2" fill="#da3633"><title>input_test</title></rect>
+<rect x="702" y="72" width="10" height="10" rx="2" fill="#da3633"><title>iommu_logger</title></rect>
+<rect x="714" y="72" width="10" height="10" rx="2" fill="#da3633"><title>ipclite</title></rect>
+<rect x="726" y="72" width="10" height="10" rx="2" fill="#da3633"><title>kmparam</title></rect>
+<rect x="738" y="72" width="10" height="10" rx="2" fill="#da3633"><title>kunit</title></rect>
+<rect x="750" y="72" width="10" height="10" rx="2" fill="#da3633"><title>kunit_example_test</title></rect>
+<rect x="762" y="72" width="10" height="10" rx="2" fill="#da3633"><title>kunit_test</title></rect>
+<rect x="774" y="72" width="10" height="10" rx="2" fill="#da3633"><title>l2tp_core</title></rect>
+<rect x="786" y="72" width="10" height="10" rx="2" fill="#da3633"><title>l2tp_ppp</title></rect>
+<rect x="798" y="72" width="10" height="10" rx="2" fill="#da3633"><title>leds_qcom_flash</title></rect>
+<rect x="810" y="72" width="10" height="10" rx="2" fill="#da3633"><title>leds_qcom_lpg</title></rect>
+<rect x="822" y="72" width="10" height="10" rx="2" fill="#da3633"><title>ledtrig_pattern</title></rect>
+<rect x="834" y="72" width="10" height="10" rx="2" fill="#da3633"><title>lib_test</title></rect>
+<rect x="846" y="72" width="10" height="10" rx="2" fill="#da3633"><title>llcc_heuristics</title></rect>
+<rect x="858" y="72" width="10" height="10" rx="2" fill="#da3633"><title>llcc_qcom</title></rect>
+<rect x="150" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mac802154</title></rect>
+<rect x="162" y="84" width="10" height="10" rx="2" fill="#da3633"><title>macsec</title></rect>
+<rect x="174" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mdt_loader</title></rect>
+<rect x="186" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mem_buf</title></rect>
+<rect x="198" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mem_buf_dev</title></rect>
+<rect x="210" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mem_buf_msgq</title></rect>
+<rect x="222" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mem_hooks</title></rect>
+<rect x="234" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mem_object</title></rect>
+<rect x="246" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mem_offline</title></rect>
+<rect x="258" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mem_prot</title></rect>
+<rect x="270" y="84" width="10" height="10" rx="2" fill="#da3633"><title>memlat</title></rect>
+<rect x="282" y="84" width="10" height="10" rx="2" fill="#da3633"><title>memory_dump_v2</title></rect>
+<rect x="294" y="84" width="10" height="10" rx="2" fill="#da3633"><title>microdump_collector</title></rect>
+<rect x="306" y="84" width="10" height="10" rx="2" fill="#da3633"><title>minidump</title></rect>
+<rect x="318" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mpam</title></rect>
+<rect x="330" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mpam_msc</title></rect>
+<rect x="342" y="84" width="10" height="10" rx="2" fill="#da3633"><title>mpam_msc_slc</title></rect>
+<rect x="354" y="84" width="10" height="10" rx="2" fill="#da3633"><title>msm_dma_iommu_mapping</title></rect>
+<rect x="366" y="84" width="10" height="10" rx="2" fill="#da3633"><title>msm_geni_serial</title></rect>
+<rect x="378" y="84" width="10" height="10" rx="2" fill="#da3633"><title>msm_gpi</title></rect>
+<rect x="390" y="84" width="10" height="10" rx="2" fill="#da3633"><title>msm_hw_fence</title></rect>
+<rect x="402" y="84" width="10" height="10" rx="2" fill="#da3633"><title>msm_mmrm</title></rect>
+<rect x="414" y="84" width="10" height="10" rx="2" fill="#da3633"><title>msm_performance</title></rect>
+<rect x="426" y="84" width="10" height="10" rx="2" fill="#da3633"><title>msm_qmp</title></rect>
+<rect x="438" y="84" width="10" height="10" rx="2" fill="#da3633"><title>msm_show_epoch</title></rect>
+<rect x="450" y="84" width="10" height="10" rx="2" fill="#da3633"><title>msm_show_resume_irq</title></rect>
+<rect x="462" y="84" width="10" height="10" rx="2" fill="#da3633"><title>msm_sysstats</title></rect>
+<rect x="474" y="84" width="10" height="10" rx="2" fill="#da3633"><title>nb7vpq904m</title></rect>
+<rect x="486" y="84" width="10" height="10" rx="2" fill="#da3633"><title>netfs</title></rect>
+<rect x="498" y="84" width="10" height="10" rx="2" fill="#da3633"><title>nubia_hw_version</title></rect>
+<rect x="510" y="84" width="10" height="10" rx="2" fill="#da3633"><title>nvmem_qfprom</title></rect>
+<rect x="522" y="84" width="10" height="10" rx="2" fill="#da3633"><title>of_kunit_helpers</title></rect>
+<rect x="534" y="84" width="10" height="10" rx="2" fill="#da3633"><title>open_dice</title></rect>
+<rect x="546" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pcie_pdc</title></rect>
+<rect x="558" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pdr_interface</title></rect>
+<rect x="570" y="84" width="10" height="10" rx="2" fill="#da3633"><title>phy_generic</title></rect>
+<rect x="582" y="84" width="10" height="10" rx="2" fill="#da3633"><title>phy_msm_m31_eusb2</title></rect>
+<rect x="594" y="84" width="10" height="10" rx="2" fill="#da3633"><title>phy_msm_ssusb_qmp</title></rect>
+<rect x="606" y="84" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_emu</title></rect>
+<rect x="618" y="84" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_eusb2_repeater</title></rect>
+<rect x="630" y="84" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_m31_eusb2</title></rect>
+<rect x="642" y="84" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_qmp_combo</title></rect>
+<rect x="654" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pinctrl_alor</title></rect>
+<rect x="666" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pinctrl_canoe</title></rect>
+<rect x="678" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pinctrl_chora</title></rect>
+<rect x="690" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pinctrl_msm</title></rect>
+<rect x="702" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pinctrl_spmi_gpio</title></rect>
+<rect x="714" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pinctrl_spmi_mpp</title></rect>
+<rect x="726" y="84" width="10" height="10" rx="2" fill="#da3633"><title>platform_mpam</title></rect>
+<rect x="738" y="84" width="10" height="10" rx="2" fill="#da3633"><title>platform_test</title></rect>
+<rect x="750" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pm_debug</title></rect>
+<rect x="762" y="84" width="10" height="10" rx="2" fill="#da3633"><title>ppp_deflate</title></rect>
+<rect x="774" y="84" width="10" height="10" rx="2" fill="#da3633"><title>ppp_generic</title></rect>
+<rect x="786" y="84" width="10" height="10" rx="2" fill="#da3633"><title>ppp_mppe</title></rect>
+<rect x="798" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pppox</title></rect>
+<rect x="810" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pps_core</title></rect>
+<rect x="822" y="84" width="10" height="10" rx="2" fill="#da3633"><title>pptp</title></rect>
+<rect x="834" y="84" width="10" height="10" rx="2" fill="#da3633"><title>psvr2_dsc</title></rect>
+<rect x="846" y="84" width="10" height="10" rx="2" fill="#da3633"><title>ptp</title></rect>
+<rect x="858" y="84" width="10" height="10" rx="2" fill="#da3633"><title>qce50_dlkm</title></rect>
+<rect x="150" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcedev_mod_dlkm</title></rect>
+<rect x="162" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_aoss</title></rect>
+<rect x="174" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_cache_allocation</title></rect>
+<rect x="186" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_cpu_vendor_hooks</title></rect>
+<rect x="198" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_cpucp</title></rect>
+<rect x="210" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_cpuss_sleep_stats_v4</title></rect>
+<rect x="222" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_dcvs</title></rect>
+<rect x="234" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_dload_mode</title></rect>
+<rect x="246" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_dma_heaps</title></rect>
+<rect x="258" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_dynamic_ramoops</title></rect>
+<rect x="270" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_edac</title></rect>
+<rect x="282" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_fdcvs</title></rect>
+<rect x="294" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_glink</title></rect>
+<rect x="306" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_glink_smem</title></rect>
+<rect x="318" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_glink_spss</title></rect>
+<rect x="330" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_hwspinlock</title></rect>
+<rect x="342" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_ice</title></rect>
+<rect x="354" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_iommu_debug</title></rect>
+<rect x="366" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_iommu_util</title></rect>
+<rect x="378" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_ipc_logging</title></rect>
+<rect x="390" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_ipcc</title></rect>
+<rect x="402" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_llcc_pmu</title></rect>
+<rect x="414" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_logbuf_boot_log</title></rect>
+<rect x="426" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_logbuf_vendor_hooks</title></rect>
+<rect x="438" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_lpm</title></rect>
+<rect x="450" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_lpm_monitor</title></rect>
+<rect x="462" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_pd_mapper</title></rect>
+<rect x="474" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_pdc</title></rect>
+<rect x="486" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_pdr_msg</title></rect>
+<rect x="498" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_pil_info</title></rect>
+<rect x="510" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_pmu_lib</title></rect>
+<rect x="522" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_q6v5</title></rect>
+<rect x="534" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_q6v5_pas</title></rect>
+<rect x="546" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_ramdump</title></rect>
+<rect x="558" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_reboot_reason</title></rect>
+<rect x="570" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_rng</title></rect>
+<rect x="582" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_rpmh</title></rect>
+<rect x="594" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_scm</title></rect>
+<rect x="606" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_scmi_client</title></rect>
+<rect x="618" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_scmi_vendor</title></rect>
+<rect x="630" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_sdei</title></rect>
+<rect x="642" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_smd</title></rect>
+<rect x="654" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_soc_wdt</title></rect>
+<rect x="666" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_spss</title></rect>
+<rect x="678" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_stats</title></rect>
+<rect x="690" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_sysmon</title></rect>
+<rect x="702" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_tzmem</title></rect>
+<rect x="714" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_va_minidump</title></rect>
+<rect x="726" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcom_wdt_core</title></rect>
+<rect x="738" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qcrypto_msm_dlkm</title></rect>
+<rect x="750" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qmi_helpers</title></rect>
+<rect x="762" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qnoc_alor</title></rect>
+<rect x="774" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qnoc_canoe</title></rect>
+<rect x="786" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qnoc_qos</title></rect>
+<rect x="798" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qpace_drv</title></rect>
+<rect x="810" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qptf</title></rect>
+<rect x="822" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qrng_dlkm</title></rect>
+<rect x="834" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qrtr</title></rect>
+<rect x="846" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qrtr_gunyah</title></rect>
+<rect x="858" y="96" width="10" height="10" rx="2" fill="#da3633"><title>qrtr_mhi</title></rect>
+<rect x="150" y="108" width="10" height="10" rx="2" fill="#da3633"><title>qrtr_smd</title></rect>
+<rect x="162" y="108" width="10" height="10" rx="2" fill="#da3633"><title>qsee_ipc_irq_bridge</title></rect>
+<rect x="174" y="108" width="10" height="10" rx="2" fill="#da3633"><title>qseecom_proxy</title></rect>
+<rect x="186" y="108" width="10" height="10" rx="2" fill="#da3633"><title>qti_ptd_share</title></rect>
+<rect x="198" y="108" width="10" height="10" rx="2" fill="#da3633"><title>rdbg</title></rect>
+<rect x="210" y="108" width="10" height="10" rx="2" fill="#da3633"><title>redriver</title></rect>
+<rect x="222" y="108" width="10" height="10" rx="2" fill="#da3633"><title>regmap_kunit</title></rect>
+<rect x="234" y="108" width="10" height="10" rx="2" fill="#da3633"><title>regmap_ram</title></rect>
+<rect x="246" y="108" width="10" height="10" rx="2" fill="#da3633"><title>regmap_raw_ram</title></rect>
+<rect x="258" y="108" width="10" height="10" rx="2" fill="#da3633"><title>repeater</title></rect>
+<rect x="270" y="108" width="10" height="10" rx="2" fill="#da3633"><title>repeater_qti_pmic_eusb2</title></rect>
+<rect x="282" y="108" width="10" height="10" rx="2" fill="#da3633"><title>rproc_qcom_common</title></rect>
+<rect x="294" y="108" width="10" height="10" rx="2" fill="#da3633"><title>sched_walt</title></rect>
+<rect x="306" y="108" width="10" height="10" rx="2" fill="#da3633"><title>secure_buffer</title></rect>
+<rect x="318" y="108" width="10" height="10" rx="2" fill="#da3633"><title>si_core_module</title></rect>
+<rect x="330" y="108" width="10" height="10" rx="2" fill="#da3633"><title>slc_mpam</title></rect>
+<rect x="342" y="108" width="10" height="10" rx="2" fill="#da3633"><title>slc_perfmon</title></rect>
+<rect x="354" y="108" width="10" height="10" rx="2" fill="#da3633"><title>slcan</title></rect>
+<rect x="366" y="108" width="10" height="10" rx="2" fill="#da3633"><title>slhc</title></rect>
+<rect x="378" y="108" width="10" height="10" rx="2" fill="#da3633"><title>smcinvoke_dlkm</title></rect>
+<rect x="390" y="108" width="10" height="10" rx="2" fill="#da3633"><title>smem</title></rect>
+<rect x="402" y="108" width="10" height="10" rx="2" fill="#da3633"><title>smem_mailbox</title></rect>
+<rect x="414" y="108" width="10" height="10" rx="2" fill="#da3633"><title>smmu_proxy_dlkm</title></rect>
+<rect x="426" y="108" width="10" height="10" rx="2" fill="#da3633"><title>smp2p</title></rect>
+<rect x="438" y="108" width="10" height="10" rx="2" fill="#da3633"><title>smp2p_sleepstate</title></rect>
+<rect x="450" y="108" width="10" height="10" rx="2" fill="#da3633"><title>soc_topology_test</title></rect>
+<rect x="462" y="108" width="10" height="10" rx="2" fill="#da3633"><title>soc_utils_test</title></rect>
+<rect x="474" y="108" width="10" height="10" rx="2" fill="#da3633"><title>socinfo</title></rect>
+<rect x="486" y="108" width="10" height="10" rx="2" fill="#da3633"><title>spcom</title></rect>
+<rect x="498" y="108" width="10" height="10" rx="2" fill="#da3633"><title>spi_msm_geni</title></rect>
+<rect x="510" y="108" width="10" height="10" rx="2" fill="#da3633"><title>sps_drv</title></rect>
+<rect x="522" y="108" width="10" height="10" rx="2" fill="#da3633"><title>spss_utils</title></rect>
+<rect x="534" y="108" width="10" height="10" rx="2" fill="#da3633"><title>stm_console</title></rect>
+<rect x="546" y="108" width="10" height="10" rx="2" fill="#da3633"><title>stm_core</title></rect>
+<rect x="558" y="108" width="10" height="10" rx="2" fill="#da3633"><title>stm_ftrace</title></rect>
+<rect x="570" y="108" width="10" height="10" rx="2" fill="#da3633"><title>stm_heartbeat</title></rect>
+<rect x="582" y="108" width="10" height="10" rx="2" fill="#da3633"><title>stm_p_ost</title></rect>
+<rect x="594" y="108" width="10" height="10" rx="2" fill="#da3633"><title>synx_driver</title></rect>
+<rect x="606" y="108" width="10" height="10" rx="2" fill="#da3633"><title>sys_pm_vx</title></rect>
+<rect x="618" y="108" width="10" height="10" rx="2" fill="#da3633"><title>tcsrcc_canoe</title></rect>
+<rect x="630" y="108" width="10" height="10" rx="2" fill="#da3633"><title>thermal_pause</title></rect>
+<rect x="642" y="108" width="10" height="10" rx="2" fill="#da3633"><title>time_test</title></rect>
+<rect x="654" y="108" width="10" height="10" rx="2" fill="#da3633"><title>tipc</title></rect>
+<rect x="666" y="108" width="10" height="10" rx="2" fill="#da3633"><title>tipc_diag</title></rect>
+<rect x="678" y="108" width="10" height="10" rx="2" fill="#da3633"><title>tls</title></rect>
+<rect x="690" y="108" width="10" height="10" rx="2" fill="#da3633"><title>tmecom_intf_dlkm</title></rect>
+<rect x="702" y="108" width="10" height="10" rx="2" fill="#da3633"><title>tz_log_dlkm</title></rect>
+<rect x="714" y="108" width="10" height="10" rx="2" fill="#da3633"><title>ufshcd_crypto_qti</title></rect>
+<rect x="726" y="108" width="10" height="10" rx="2" fill="#da3633"><title>vcan</title></rect>
+<rect x="738" y="108" width="10" height="10" rx="2" fill="#da3633"><title>vcpu_stall_detector</title></rect>
+<rect x="750" y="108" width="10" height="10" rx="2" fill="#da3633"><title>videocc_canoe</title></rect>
+<rect x="762" y="108" width="10" height="10" rx="2" fill="#da3633"><title>virtio_balloon</title></rect>
+<rect x="774" y="108" width="10" height="10" rx="2" fill="#da3633"><title>virtio_blk</title></rect>
+<rect x="786" y="108" width="10" height="10" rx="2" fill="#da3633"><title>virtio_console</title></rect>
+<rect x="798" y="108" width="10" height="10" rx="2" fill="#da3633"><title>virtio_pci</title></rect>
+<rect x="810" y="108" width="10" height="10" rx="2" fill="#da3633"><title>virtio_pci_legacy_dev</title></rect>
+<rect x="822" y="108" width="10" height="10" rx="2" fill="#da3633"><title>virtio_pci_modern_dev</title></rect>
+<rect x="834" y="108" width="10" height="10" rx="2" fill="#da3633"><title>vmw_vsock_virtio_transport</title></rect>
+<rect x="846" y="108" width="10" height="10" rx="2" fill="#da3633"><title>zte_imem_info</title></rect>
+<rect x="858" y="108" width="10" height="10" rx="2" fill="#da3633"><title>zte_ir</title></rect>
+<rect x="150" y="120" width="10" height="10" rx="2" fill="#da3633"><title>zte_misc</title></rect>
+<rect x="162" y="120" width="10" height="10" rx="2" fill="#da3633"><title>zte_ramdisk_reboot</title></rect>
+<rect x="174" y="120" width="10" height="10" rx="2" fill="#da3633"><title>zte_reboot_ext</title></rect>
+<rect x="186" y="120" width="10" height="10" rx="2" fill="#da3633"><title>zte_stats_info</title></rect>
+<text x="10" y="155" font-size="11" fill="#9da7b3">Display &amp; input</text>
+<rect x="150" y="146" width="10" height="10" rx="2" fill="#2ea043"><title>Captured touch module identity</title></rect>
+<rect x="162" y="146" width="10" height="10" rx="2" fill="#2ea043"><title>Panel command-table extraction</title></rect>
+<rect x="174" y="146" width="10" height="10" rx="2" fill="#da3633"><title>Panel driver power and timing</title></rect>
+<rect x="186" y="146" width="10" height="10" rx="2" fill="#da3633"><title>Phone and dock display output</title></rect>
+<rect x="198" y="146" width="10" height="10" rx="2" fill="#da3633"><title>Touchscreen input</title></rect>
+<rect x="210" y="146" width="10" height="10" rx="2" fill="#da3633"><title>Internal display and backlight</title></rect>
+<rect x="222" y="146" width="10" height="10" rx="2" fill="#da3633"><title>Touchscreen, buttons and rotation sensors</title></rect>
+<rect x="234" y="146" width="10" height="10" rx="2" fill="#da3633"><title>USB-C DisplayPort output and dock</title></rect>
+<rect x="246" y="146" width="10" height="10" rx="2" fill="#da3633"><title>altmode_glink</title></rect>
+<rect x="258" y="146" width="10" height="10" rx="2" fill="#da3633"><title>drm_display_helper</title></rect>
+<rect x="270" y="146" width="10" height="10" rx="2" fill="#da3633"><title>gpio_keys_nubia</title></rect>
+<rect x="282" y="146" width="10" height="10" rx="2" fill="#da3633"><title>hdcp_qseecom_dlkm</title></rect>
+<rect x="294" y="146" width="10" height="10" rx="2" fill="#da3633"><title>lt9611uxc</title></rect>
+<rect x="306" y="146" width="10" height="10" rx="2" fill="#da3633"><title>msm_drm</title></rect>
+<rect x="318" y="146" width="10" height="10" rx="2" fill="#da3633"><title>msm_ext_display</title></rect>
+<rect x="330" y="146" width="10" height="10" rx="2" fill="#da3633"><title>panel_event_notifier</title></rect>
+<rect x="342" y="146" width="10" height="10" rx="2" fill="#da3633"><title>qti_amoled_ecm</title></rect>
+<rect x="354" y="146" width="10" height="10" rx="2" fill="#da3633"><title>qti_ocp_notifier</title></rect>
+<rect x="366" y="146" width="10" height="10" rx="2" fill="#da3633"><title>sync_fence</title></rect>
+<rect x="378" y="146" width="10" height="10" rx="2" fill="#da3633"><title>zte_tpd</title></rect>
+<text x="10" y="181" font-size="11" fill="#9da7b3">Graphics</text>
+<rect x="150" y="172" width="10" height="10" rx="2" fill="#2ea043"><title>Conditional A840 chip-ID mapping</title></rect>
+<rect x="162" y="172" width="10" height="10" rx="2" fill="#2ea043"><title>Mesa ARM64 package path</title></rect>
+<rect x="174" y="172" width="10" height="10" rx="2" fill="#da3633"><title>NX809J GPU readiness</title></rect>
+<rect x="186" y="172" width="10" height="10" rx="2" fill="#da3633"><title>Adreno GPU and accelerated graphics</title></rect>
+<rect x="198" y="172" width="10" height="10" rx="2" fill="#da3633"><title>governor_gpubw_mon</title></rect>
+<rect x="210" y="172" width="10" height="10" rx="2" fill="#da3633"><title>governor_msm_adreno_ro</title></rect>
+<rect x="222" y="172" width="10" height="10" rx="2" fill="#da3633"><title>governor_msm_adreno_tz</title></rect>
+<rect x="234" y="172" width="10" height="10" rx="2" fill="#da3633"><title>msm_kgsl</title></rect>
+<text x="10" y="207" font-size="11" fill="#9da7b3">Radio &amp; network</text>
+<rect x="150" y="198" width="10" height="10" rx="2" fill="#da3633"><title>Cellular, IMS and GNSS</title></rect>
+<rect x="162" y="198" width="10" height="10" rx="2" fill="#da3633"><title>Wi-Fi and Bluetooth</title></rect>
+<rect x="174" y="198" width="10" height="10" rx="2" fill="#da3633"><title>Cellular modem, calls, IMS and data</title></rect>
+<rect x="186" y="198" width="10" height="10" rx="2" fill="#da3633"><title>GNSS</title></rect>
+<rect x="198" y="198" width="10" height="10" rx="2" fill="#da3633"><title>NFC</title></rect>
+<rect x="210" y="198" width="10" height="10" rx="2" fill="#da3633"><title>USB host, gadget and USB-C data</title></rect>
+<rect x="222" y="198" width="10" height="10" rx="2" fill="#da3633"><title>Wi-Fi and Bluetooth</title></rect>
+<rect x="234" y="198" width="10" height="10" rx="2" fill="#da3633"><title>6lowpan</title></rect>
+<rect x="246" y="198" width="10" height="10" rx="2" fill="#da3633"><title>aqc111</title></rect>
+<rect x="258" y="198" width="10" height="10" rx="2" fill="#da3633"><title>asix</title></rect>
+<rect x="270" y="198" width="10" height="10" rx="2" fill="#da3633"><title>ax88179_178a</title></rect>
+<rect x="282" y="198" width="10" height="10" rx="2" fill="#da3633"><title>bluetooth</title></rect>
+<rect x="294" y="198" width="10" height="10" rx="2" fill="#da3633"><title>bt_fm_swr</title></rect>
+<rect x="306" y="198" width="10" height="10" rx="2" fill="#da3633"><title>btbcm</title></rect>
+<rect x="318" y="198" width="10" height="10" rx="2" fill="#da3633"><title>btfm_slim_codec</title></rect>
+<rect x="330" y="198" width="10" height="10" rx="2" fill="#da3633"><title>btfmcodec</title></rect>
+<rect x="342" y="198" width="10" height="10" rx="2" fill="#da3633"><title>btpower</title></rect>
+<rect x="354" y="198" width="10" height="10" rx="2" fill="#da3633"><title>btqca</title></rect>
+<rect x="366" y="198" width="10" height="10" rx="2" fill="#da3633"><title>btsdio</title></rect>
+<rect x="378" y="198" width="10" height="10" rx="2" fill="#da3633"><title>cdc_acm</title></rect>
+<rect x="390" y="198" width="10" height="10" rx="2" fill="#da3633"><title>cdc_eem</title></rect>
+<rect x="402" y="198" width="10" height="10" rx="2" fill="#da3633"><title>cdc_ether</title></rect>
+<rect x="414" y="198" width="10" height="10" rx="2" fill="#da3633"><title>cdc_ncm</title></rect>
+<rect x="426" y="198" width="10" height="10" rx="2" fill="#da3633"><title>cfg80211</title></rect>
+<rect x="438" y="198" width="10" height="10" rx="2" fill="#da3633"><title>cnss2</title></rect>
+<rect x="450" y="198" width="10" height="10" rx="2" fill="#da3633"><title>cnss_nl</title></rect>
+<rect x="462" y="198" width="10" height="10" rx="2" fill="#da3633"><title>cnss_plat_ipc_qmi_svc</title></rect>
+<rect x="474" y="198" width="10" height="10" rx="2" fill="#da3633"><title>cnss_prealloc</title></rect>
+<rect x="486" y="198" width="10" height="10" rx="2" fill="#da3633"><title>cnss_utils</title></rect>
+<rect x="498" y="198" width="10" height="10" rx="2" fill="#da3633"><title>dwc3_msm</title></rect>
+<rect x="510" y="198" width="10" height="10" rx="2" fill="#da3633"><title>ftdi_sio</title></rect>
+<rect x="522" y="198" width="10" height="10" rx="2" fill="#da3633"><title>gnss</title></rect>
+<rect x="534" y="198" width="10" height="10" rx="2" fill="#da3633"><title>hci_uart</title></rect>
+<rect x="546" y="198" width="10" height="10" rx="2" fill="#da3633"><title>hidp</title></rect>
+<rect x="558" y="198" width="10" height="10" rx="2" fill="#da3633"><title>ipam</title></rect>
+<rect x="570" y="198" width="10" height="10" rx="2" fill="#da3633"><title>ipanetm</title></rect>
+<rect x="582" y="198" width="10" height="10" rx="2" fill="#da3633"><title>libarc4</title></rect>
+<rect x="594" y="198" width="10" height="10" rx="2" fill="#da3633"><title>mac80211</title></rect>
+<rect x="606" y="198" width="10" height="10" rx="2" fill="#da3633"><title>mhi</title></rect>
+<rect x="618" y="198" width="10" height="10" rx="2" fill="#da3633"><title>mhi_dev_satellite</title></rect>
+<rect x="630" y="198" width="10" height="10" rx="2" fill="#da3633"><title>mhi_dev_uci</title></rect>
+<rect x="642" y="198" width="10" height="10" rx="2" fill="#da3633"><title>mii</title></rect>
+<rect x="654" y="198" width="10" height="10" rx="2" fill="#da3633"><title>msm_memshare</title></rect>
+<rect x="666" y="198" width="10" height="10" rx="2" fill="#da3633"><title>msm_sharedmem</title></rect>
+<rect x="678" y="198" width="10" height="10" rx="2" fill="#da3633"><title>nfc</title></rect>
+<rect x="690" y="198" width="10" height="10" rx="2" fill="#da3633"><title>nhc_dest</title></rect>
+<rect x="702" y="198" width="10" height="10" rx="2" fill="#da3633"><title>nhc_fragment</title></rect>
+<rect x="714" y="198" width="10" height="10" rx="2" fill="#da3633"><title>nhc_hop</title></rect>
+<rect x="726" y="198" width="10" height="10" rx="2" fill="#da3633"><title>nhc_ipv6</title></rect>
+<rect x="738" y="198" width="10" height="10" rx="2" fill="#da3633"><title>nhc_mobility</title></rect>
+<rect x="750" y="198" width="10" height="10" rx="2" fill="#da3633"><title>nhc_routing</title></rect>
+<rect x="762" y="198" width="10" height="10" rx="2" fill="#da3633"><title>nhc_udp</title></rect>
+<rect x="774" y="198" width="10" height="10" rx="2" fill="#da3633"><title>pci_msm_drv</title></rect>
+<rect x="786" y="198" width="10" height="10" rx="2" fill="#da3633"><title>qca_cld3_peach_v2</title></rect>
+<rect x="798" y="198" width="10" height="10" rx="2" fill="#da3633"><title>qti_pmic_glink</title></rect>
+<rect x="810" y="198" width="10" height="10" rx="2" fill="#da3633"><title>r8152</title></rect>
+<rect x="822" y="198" width="10" height="10" rx="2" fill="#da3633"><title>r8153_ecm</title></rect>
+<rect x="834" y="198" width="10" height="10" rx="2" fill="#da3633"><title>radio_i2c_rtc6226_qca</title></rect>
+<rect x="846" y="198" width="10" height="10" rx="2" fill="#da3633"><title>rfcomm</title></rect>
+<rect x="858" y="198" width="10" height="10" rx="2" fill="#da3633"><title>rfkill</title></rect>
+<rect x="150" y="210" width="10" height="10" rx="2" fill="#da3633"><title>rmnet_aps</title></rect>
+<rect x="162" y="210" width="10" height="10" rx="2" fill="#da3633"><title>rmnet_core</title></rect>
+<rect x="174" y="210" width="10" height="10" rx="2" fill="#da3633"><title>rmnet_ctl</title></rect>
+<rect x="186" y="210" width="10" height="10" rx="2" fill="#da3633"><title>rmnet_mem</title></rect>
+<rect x="198" y="210" width="10" height="10" rx="2" fill="#da3633"><title>rmnet_offload</title></rect>
+<rect x="210" y="210" width="10" height="10" rx="2" fill="#da3633"><title>rmnet_perf</title></rect>
+<rect x="222" y="210" width="10" height="10" rx="2" fill="#da3633"><title>rmnet_perf_tether</title></rect>
+<rect x="234" y="210" width="10" height="10" rx="2" fill="#da3633"><title>rmnet_sch</title></rect>
+<rect x="246" y="210" width="10" height="10" rx="2" fill="#da3633"><title>rmnet_shs</title></rect>
+<rect x="258" y="210" width="10" height="10" rx="2" fill="#da3633"><title>rmnet_wlan</title></rect>
+<rect x="270" y="210" width="10" height="10" rx="2" fill="#da3633"><title>rtl8150</title></rect>
+<rect x="282" y="210" width="10" height="10" rx="2" fill="#da3633"><title>st54jese</title></rect>
+<rect x="294" y="210" width="10" height="10" rx="2" fill="#da3633"><title>st54jnfc</title></rect>
+<rect x="306" y="210" width="10" height="10" rx="2" fill="#da3633"><title>ucsi_qti_glink</title></rect>
+<rect x="318" y="210" width="10" height="10" rx="2" fill="#da3633"><title>usb_f_ccid</title></rect>
+<rect x="330" y="210" width="10" height="10" rx="2" fill="#da3633"><title>usb_f_cdev</title></rect>
+<rect x="342" y="210" width="10" height="10" rx="2" fill="#da3633"><title>usb_f_gsi</title></rect>
+<rect x="354" y="210" width="10" height="10" rx="2" fill="#da3633"><title>usb_f_qdss</title></rect>
+<rect x="366" y="210" width="10" height="10" rx="2" fill="#da3633"><title>usbmon</title></rect>
+<rect x="378" y="210" width="10" height="10" rx="2" fill="#da3633"><title>usbnet</title></rect>
+<rect x="390" y="210" width="10" height="10" rx="2" fill="#da3633"><title>usbserial</title></rect>
+<rect x="402" y="210" width="10" height="10" rx="2" fill="#da3633"><title>wlan_firmware_service</title></rect>
+<rect x="414" y="210" width="10" height="10" rx="2" fill="#da3633"><title>wwan</title></rect>
+<text x="10" y="245" font-size="11" fill="#9da7b3">Audio &amp; cameras</text>
+<rect x="150" y="236" width="10" height="10" rx="2" fill="#da3633"><title>Audio and audio routing</title></rect>
+<rect x="162" y="236" width="10" height="10" rx="2" fill="#da3633"><title>Cameras and ISP</title></rect>
+<rect x="174" y="236" width="10" height="10" rx="2" fill="#da3633"><title>Audio</title></rect>
+<rect x="186" y="236" width="10" height="10" rx="2" fill="#da3633"><title>Cameras and image processing</title></rect>
+<rect x="198" y="236" width="10" height="10" rx="2" fill="#da3633"><title>adsp_loader_dlkm</title></rect>
+<rect x="210" y="236" width="10" height="10" rx="2" fill="#da3633"><title>adsp_sleepmon</title></rect>
+<rect x="222" y="236" width="10" height="10" rx="2" fill="#da3633"><title>audio_pkt_dlkm</title></rect>
+<rect x="234" y="236" width="10" height="10" rx="2" fill="#da3633"><title>audio_prm_dlkm</title></rect>
+<rect x="246" y="236" width="10" height="10" rx="2" fill="#da3633"><title>audpkt_ion_dlkm</title></rect>
+<rect x="258" y="236" width="10" height="10" rx="2" fill="#da3633"><title>aw882xx_dlkm</title></rect>
+<rect x="270" y="236" width="10" height="10" rx="2" fill="#da3633"><title>camera</title></rect>
+<rect x="282" y="236" width="10" height="10" rx="2" fill="#da3633"><title>cdsprm</title></rect>
+<rect x="294" y="236" width="10" height="10" rx="2" fill="#da3633"><title>frpc_adsprpc</title></rect>
+<rect x="306" y="236" width="10" height="10" rx="2" fill="#da3633"><title>gpr_dlkm</title></rect>
+<rect x="318" y="236" width="10" height="10" rx="2" fill="#da3633"><title>hdmi_dlkm</title></rect>
+<rect x="330" y="236" width="10" height="10" rx="2" fill="#da3633"><title>lpass_bt_swr_dlkm</title></rect>
+<rect x="342" y="236" width="10" height="10" rx="2" fill="#da3633"><title>lpass_cdc_dlkm</title></rect>
+<rect x="354" y="236" width="10" height="10" rx="2" fill="#da3633"><title>lpass_cdc_rx_macro_dlkm</title></rect>
+<rect x="366" y="236" width="10" height="10" rx="2" fill="#da3633"><title>lpass_cdc_tx_macro_dlkm</title></rect>
+<rect x="378" y="236" width="10" height="10" rx="2" fill="#da3633"><title>lpass_cdc_va_macro_dlkm</title></rect>
+<rect x="390" y="236" width="10" height="10" rx="2" fill="#da3633"><title>lpass_cdc_wsa2_macro_dlkm</title></rect>
+<rect x="402" y="236" width="10" height="10" rx="2" fill="#da3633"><title>lpass_cdc_wsa_macro_dlkm</title></rect>
+<rect x="414" y="236" width="10" height="10" rx="2" fill="#da3633"><title>machine_dlkm</title></rect>
+<rect x="426" y="236" width="10" height="10" rx="2" fill="#da3633"><title>mbhc_dlkm</title></rect>
+<rect x="438" y="236" width="10" height="10" rx="2" fill="#da3633"><title>msm_eva</title></rect>
+<rect x="450" y="236" width="10" height="10" rx="2" fill="#da3633"><title>msm_hfi_core</title></rect>
+<rect x="462" y="236" width="10" height="10" rx="2" fill="#da3633"><title>msm_video</title></rect>
+<rect x="474" y="236" width="10" height="10" rx="2" fill="#da3633"><title>pinctrl_lpi_dlkm</title></rect>
+<rect x="486" y="236" width="10" height="10" rx="2" fill="#da3633"><title>q6_dlkm</title></rect>
+<rect x="498" y="236" width="10" height="10" rx="2" fill="#da3633"><title>q6_notifier_dlkm</title></rect>
+<rect x="510" y="236" width="10" height="10" rx="2" fill="#da3633"><title>q6_pdr_dlkm</title></rect>
+<rect x="522" y="236" width="10" height="10" rx="2" fill="#da3633"><title>qmp_dlkm</title></rect>
+<rect x="534" y="236" width="10" height="10" rx="2" fill="#da3633"><title>sdca_registers_dlkm</title></rect>
+<rect x="546" y="236" width="10" height="10" rx="2" fill="#da3633"><title>simple_amp_dlkm</title></rect>
+<rect x="558" y="236" width="10" height="10" rx="2" fill="#da3633"><title>slim_qcom_ngd_ctrl</title></rect>
+<rect x="570" y="236" width="10" height="10" rx="2" fill="#da3633"><title>slimbus</title></rect>
+<rect x="582" y="236" width="10" height="10" rx="2" fill="#da3633"><title>smartpa_stat_dlkm</title></rect>
+<rect x="594" y="236" width="10" height="10" rx="2" fill="#da3633"><title>snd_event_dlkm</title></rect>
+<rect x="606" y="236" width="10" height="10" rx="2" fill="#da3633"><title>snd_usb_audio_qmi</title></rect>
+<rect x="618" y="236" width="10" height="10" rx="2" fill="#da3633"><title>spf_core_dlkm</title></rect>
+<rect x="630" y="236" width="10" height="10" rx="2" fill="#da3633"><title>stub_dlkm</title></rect>
+<rect x="642" y="236" width="10" height="10" rx="2" fill="#da3633"><title>swr_ctrl_dlkm</title></rect>
+<rect x="654" y="236" width="10" height="10" rx="2" fill="#da3633"><title>swr_dlkm</title></rect>
+<rect x="666" y="236" width="10" height="10" rx="2" fill="#da3633"><title>swr_dmic_dlkm</title></rect>
+<rect x="678" y="236" width="10" height="10" rx="2" fill="#da3633"><title>swr_haptics_dlkm</title></rect>
+<rect x="690" y="236" width="10" height="10" rx="2" fill="#da3633"><title>sysmon_subsystem_stats</title></rect>
+<rect x="702" y="236" width="10" height="10" rx="2" fill="#da3633"><title>wcd9378_dlkm</title></rect>
+<rect x="714" y="236" width="10" height="10" rx="2" fill="#da3633"><title>wcd9378_slave_dlkm</title></rect>
+<rect x="726" y="236" width="10" height="10" rx="2" fill="#da3633"><title>wcd938x_dlkm</title></rect>
+<rect x="738" y="236" width="10" height="10" rx="2" fill="#da3633"><title>wcd938x_slave_dlkm</title></rect>
+<rect x="750" y="236" width="10" height="10" rx="2" fill="#da3633"><title>wcd939x_dlkm</title></rect>
+<rect x="762" y="236" width="10" height="10" rx="2" fill="#da3633"><title>wcd939x_slave_dlkm</title></rect>
+<rect x="774" y="236" width="10" height="10" rx="2" fill="#da3633"><title>wcd9xxx_dlkm</title></rect>
+<rect x="786" y="236" width="10" height="10" rx="2" fill="#da3633"><title>wcd_core_dlkm</title></rect>
+<rect x="798" y="236" width="10" height="10" rx="2" fill="#da3633"><title>wcd_usbss_i2c</title></rect>
+<rect x="810" y="236" width="10" height="10" rx="2" fill="#da3633"><title>wsa883x_dlkm</title></rect>
+<rect x="822" y="236" width="10" height="10" rx="2" fill="#da3633"><title>wsa884x_dlkm</title></rect>
+<text x="10" y="271" font-size="11" fill="#9da7b3">Sensors &amp; power</text>
+<rect x="150" y="262" width="10" height="10" rx="2" fill="#2ea043"><title>Captured charger module identity</title></rect>
+<rect x="162" y="262" width="10" height="10" rx="2" fill="#2ea043"><title>Captured fan module identity</title></rect>
+<rect x="174" y="262" width="10" height="10" rx="2" fill="#da3633"><title>Battery, thermal and cooling safety</title></rect>
+<rect x="186" y="262" width="10" height="10" rx="2" fill="#da3633"><title>Sensors, biometrics and haptics</title></rect>
+<rect x="198" y="262" width="10" height="10" rx="2" fill="#da3633"><title>Battery, charging and power</title></rect>
+<rect x="210" y="262" width="10" height="10" rx="2" fill="#da3633"><title>Fan and gaming controls</title></rect>
+<rect x="222" y="262" width="10" height="10" rx="2" fill="#da3633"><title>Sensors, haptics and fingerprint</title></rect>
+<rect x="234" y="262" width="10" height="10" rx="2" fill="#da3633"><title>Suspend and resume</title></rect>
+<rect x="246" y="262" width="10" height="10" rx="2" fill="#da3633"><title>Thermal sensors, cooling and watchdog</title></rect>
+<rect x="258" y="262" width="10" height="10" rx="2" fill="#da3633"><title>aw86320</title></rect>
+<rect x="270" y="262" width="10" height="10" rx="2" fill="#da3633"><title>aw9620x</title></rect>
+<rect x="282" y="262" width="10" height="10" rx="2" fill="#da3633"><title>awp1921</title></rect>
+<rect x="294" y="262" width="10" height="10" rx="2" fill="#da3633"><title>bcl_pmic5</title></rect>
+<rect x="306" y="262" width="10" height="10" rx="2" fill="#da3633"><title>bcl_soc</title></rect>
+<rect x="318" y="262" width="10" height="10" rx="2" fill="#da3633"><title>charger_ulog_glink</title></rect>
+<rect x="330" y="262" width="10" height="10" rx="2" fill="#da3633"><title>crm_v2</title></rect>
+<rect x="342" y="262" width="10" height="10" rx="2" fill="#da3633"><title>ddr_cdev</title></rect>
+<rect x="354" y="262" width="10" height="10" rx="2" fill="#da3633"><title>debug_regulator</title></rect>
+<rect x="366" y="262" width="10" height="10" rx="2" fill="#da3633"><title>fp_goodix</title></rect>
+<rect x="378" y="262" width="10" height="10" rx="2" fill="#da3633"><title>gdsc_regulator</title></rect>
+<rect x="390" y="262" width="10" height="10" rx="2" fill="#da3633"><title>haptic_86938</title></rect>
+<rect x="402" y="262" width="10" height="10" rx="2" fill="#da3633"><title>leds_qpnp_vibrator_ldo</title></rect>
+<rect x="414" y="262" width="10" height="10" rx="2" fill="#da3633"><title>lmh_stats</title></rect>
+<rect x="426" y="262" width="10" height="10" rx="2" fill="#da3633"><title>nvmem_qcom_spmi_sdam</title></rect>
+<rect x="438" y="262" width="10" height="10" rx="2" fill="#da3633"><title>pm8941_pwrkey</title></rect>
+<rect x="450" y="262" width="10" height="10" rx="2" fill="#da3633"><title>pmic_glink_debug</title></rect>
+<rect x="462" y="262" width="10" height="10" rx="2" fill="#da3633"><title>pmic_pon_log</title></rect>
+<rect x="474" y="262" width="10" height="10" rx="2" fill="#da3633"><title>proxy_consumer</title></rect>
+<rect x="486" y="262" width="10" height="10" rx="2" fill="#da3633"><title>pwrseq_core</title></rect>
+<rect x="498" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qbt_handler</title></rect>
+<rect x="510" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qcom_amoled_regulator</title></rect>
+<rect x="522" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qcom_i2c_pmic</title></rect>
+<rect x="534" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qcom_pmic_ecid</title></rect>
+<rect x="546" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qcom_pon</title></rect>
+<rect x="558" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qcom_spmi_adc5_gen3</title></rect>
+<rect x="570" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qcom_spmi_pmic</title></rect>
+<rect x="582" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qcom_spmi_temp_alarm</title></rect>
+<rect x="594" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qcom_tsens</title></rect>
+<rect x="606" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qcom_vadc_common</title></rect>
+<rect x="618" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qcom_voltage_adj</title></rect>
+<rect x="630" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_battery_charger</title></rect>
+<rect x="642" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_battery_debug</title></rect>
+<rect x="654" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_btl</title></rect>
+<rect x="666" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_cpufreq_cdev</title></rect>
+<rect x="678" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_devfreq_cdev</title></rect>
+<rect x="690" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_dynamic_hw_trip</title></rect>
+<rect x="702" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_fixed_regulator</title></rect>
+<rect x="714" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_glink_adc</title></rect>
+<rect x="726" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_power_telemetry</title></rect>
+<rect x="738" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_qmi_cdev</title></rect>
+<rect x="750" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_qmi_sensor_v2</title></rect>
+<rect x="762" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_regmap_debugfs</title></rect>
+<rect x="774" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_thermal_vendor_hooks</title></rect>
+<rect x="786" y="262" width="10" height="10" rx="2" fill="#da3633"><title>qti_userspace_cdev</title></rect>
+<rect x="798" y="262" width="10" height="10" rx="2" fill="#da3633"><title>reboot_mode</title></rect>
+<rect x="810" y="262" width="10" height="10" rx="2" fill="#da3633"><title>rpmh_regulator</title></rect>
+<rect x="822" y="262" width="10" height="10" rx="2" fill="#da3633"><title>rtc_pm8xxx</title></rect>
+<rect x="834" y="262" width="10" height="10" rx="2" fill="#da3633"><title>soc_fan</title></rect>
+<rect x="846" y="262" width="10" height="10" rx="2" fill="#da3633"><title>spmi_pmic_arb</title></rect>
+<rect x="858" y="262" width="10" height="10" rx="2" fill="#da3633"><title>spmi_pmic_arb_debug</title></rect>
+<rect x="150" y="274" width="10" height="10" rx="2" fill="#da3633"><title>stub_regulator</title></rect>
+<rect x="162" y="274" width="10" height="10" rx="2" fill="#da3633"><title>thermal_config</title></rect>
+<rect x="174" y="274" width="10" height="10" rx="2" fill="#da3633"><title>zte_charger_policy</title></rect>
+<rect x="186" y="274" width="10" height="10" rx="2" fill="#da3633"><title>zte_led</title></rect>
+<rect x="198" y="274" width="10" height="10" rx="2" fill="#da3633"><title>zte_power_supply</title></rect>
+<rect x="210" y="274" width="10" height="10" rx="2" fill="#da3633"><title>zte_sensor_sensitivity</title></rect>
+<text x="10" y="309" font-size="11" fill="#9da7b3">Desktop</text>
+<rect x="150" y="300" width="10" height="10" rx="2" fill="#2ea043"><title>Denial ARM64 rootfs integration</title></rect>
+<rect x="162" y="300" width="10" height="10" rx="2" fill="#da3633"><title>Denial login and seat provisioning</title></rect>
+<rect x="174" y="300" width="10" height="10" rx="2" fill="#da3633"><title>Denial phone and dock session</title></rect>
+<rect x="186" y="300" width="10" height="10" rx="2" fill="#da3633"><title>Denial desktop and system services</title></rect>
+</svg>
