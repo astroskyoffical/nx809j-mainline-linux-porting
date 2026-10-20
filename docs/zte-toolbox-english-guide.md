@@ -3,7 +3,7 @@
 **English copy:** `ZTE-Family-Toolbox-1.2.9-beta1-EN/` next to the original folder (local only, not in Git).
 The original `中兴家族工具箱1.2.9-beta1/` is untouched.
 
-> **Tip:** copy the English folder to a short path with no spaces and outside OneDrive, for example
+> **Run it from `C:ZTE-Toolbox-EN`** (already copied there). It refuses to start from any path with spaces or ASCII parentheses, such as this project folder. Otherwise copy the English folder to a short path with no spaces and outside OneDrive, for example
 > `C:\ZTE-Toolbox-EN\`. The toolbox rejects spaces in paths it uses, and XDA users report fewer EDL
 > failures from short plain paths.
 
@@ -18,7 +18,7 @@ The original `中兴家族工具箱1.2.9-beta1/` is untouched.
 | `Drivers_and_runtimes_download_links.txt` | Links to the Qualcomm 9008 USB driver and the Visual C++ runtimes |
 | `Bug_reports_device_support_and_chat.txt` | The author's chat-group links |
 | `Magisk29.0.apk` | Magisk root app (not needed; this phone uses KernelSU) |
-| `(Completely free - resale prohibited)` | An empty folder; the name is the author's notice |
+| `Completely_free_resale_prohibited` | An empty folder; the name is the author's notice |
 | `bin\` | The toolbox's scripts, tools and per-phone files; don't run anything in here directly |
 
 Programs inside `bin\tool\Win\` (all used by the menu, none need to be opened):
