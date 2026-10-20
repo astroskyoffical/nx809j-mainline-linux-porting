@@ -24,3 +24,9 @@ __pycache__/
 collab/bridge/logs/
 collab/bridge/archive/
 collab/bridge/*.pid
+
+# Full toolbox extraction for audit (third-party binaries, local only)
+research/zte-toolbox-review/full-extract/
+research/zte-toolbox-review/english/*.7z
+/中兴家族工具箱1.2.9-beta1/
+/ZTE-Family-Toolbox-1.2.9-beta1-EN/
