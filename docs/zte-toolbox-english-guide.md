@@ -1,8 +1,35 @@
 # ZTE Family Toolbox 1.2.9-beta1: English copy, safety audit and menu guide
 
 **English copy:** `ZTE-Family-Toolbox-1.2.9-beta1-EN/` next to the original folder (local only, not in Git).
-Start it with the main script in that folder (it keeps its Chinese file name, `中兴家族工具箱.bat`,
-because other scripts refer to it by name). The original `中兴家族工具箱1.2.9-beta1/` is untouched.
+The original `中兴家族工具箱1.2.9-beta1/` is untouched.
+
+> **Tip:** copy the English folder to a short path with no spaces and outside OneDrive, for example
+> `C:\ZTE-Toolbox-EN\`. The toolbox rejects spaces in paths it uses, and XDA users report fewer EDL
+> failures from short plain paths.
+
+## What to open
+
+| File | What it is |
+|---|---|
+| **`1_START_HERE_ZTE_Family_Toolbox.bat`** | **The toolbox.** Double-click; it asks for admin rights, then shows the menu |
+| `2_Command_Line.bat` | A command window with adb/fastboot ready, for manual commands |
+| `3_Open_Backup_Folder.bat` | Opens the folder where backups for the selected phone are saved |
+| `How_to_enter_each_mode_EDL_Fastboot_Recovery.txt` | Key combos and commands for EDL (9008), Fastboot and Recovery |
+| `Drivers_and_runtimes_download_links.txt` | Links to the Qualcomm 9008 USB driver and the Visual C++ runtimes |
+| `Bug_reports_device_support_and_chat.txt` | The author's chat-group links |
+| `Magisk29.0.apk` | Magisk root app (not needed; this phone uses KernelSU) |
+| `(Completely free - resale prohibited)` | An empty folder; the name is the author's notice |
+| `bin\` | The toolbox's scripts, tools and per-phone files; don't run anything in here directly |
+
+Programs inside `bin\tool\Win\` (all used by the menu, none need to be opened):
+`adb`/`fastboot` (Google's phone tools), `QSaharaServer` + `fh_loader` (Qualcomm EDL loader and
+reader/writer), `QCNTool` (radio calibration backup), `gpttool` (partition tables), `magiskboot`
+(boot image patching), `7z` (archives), `scrcpy` (screen mirroring), `busybox` (Unix commands),
+`devcon` (device list), `gap` (asks for admin rights), `ECHOC` (coloured text), small helpers
+(`numcomp`, `gettime`, `strtofile`, `filedialog`, `qcedl*helper`, `simg_dump`, `HexTool`, `calc`).
+
+Files were renamed from Chinese; no script refers to them by name, and the main script relaunches
+itself under whatever name it has.
 
 ## Is it safe? (static audit, 2026-10-20)
 
@@ -44,7 +71,7 @@ Your phone is **already unlocked and rooted**. For the port, the toolbox is need
 | **C, E, F, G** | Update check, chat group, resource site, about | Opens websites only |
 
 ## Before running option 4
-1. Install the Qualcomm 9008 USB driver (the toolbox links one in `刷机驱动和运行库.txt`; it is not bundled).
+1. Install the Qualcomm 9008 USB driver (link in `Drivers_and_runtimes_download_links.txt`; it is not bundled).
 2. Free space: the toolbox dump (without `userdata`) is reported at about **22 GB** on XDA.
 3. XDA warnings: change the COM port if detection fails (darkidz555), and keep the program in a short,
    plain-English path (borygo77). One NX809J 11.5.8 user saw the **512 KiB GPT read fail** with 1.2.8-beta2.
