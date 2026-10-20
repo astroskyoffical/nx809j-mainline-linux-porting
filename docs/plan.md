@@ -1,0 +1,53 @@
+# Mainline Linux and Denial on RedMagic 11 Pro
+
+## Goal and current gate
+
+Bring up Debian ARM64 on the NX809J phone and dock with a mainline-based Linux kernel, Denial desktop, and a reversible way to switch between Linux and the existing Android installation. Full support for every inventoried phone feature is the completion target; until each feature has a hardware test, support remains incomplete.
+
+A read-only capture on 2026-10-19 records NX809J-UN, Android 16, and KernelSU root. The authorized USB fastboot check confirms `product:canoe`, `unlocked:yes`, `secure:yes`, `is-userspace:no`, current slot A, and two slots. Android booted back to A with root, the existing kernel unchanged, and boot completion verified. Android properties still report locked/green. Fastboot's `unlocked:yes` establishes its reported state, but saved EFISP analysis identifies a separate permission gate; it does not prove flash acceptance. See [the boot-chain findings](boot-chain.md). A temporary Linux boot has not been tried: no NX809J Linux image exists yet, and `fastboot boot` acceptance is untested. A verified partition and GPT readback is kept privately on the owner's PC; it is not part of this repository. No flash, slot change, or Linux boot test has occurred.
+
+The verified readback covers 91 partition images and the GPT CRCs for all six LUNs. The Android FDT and its companion configuration are hash-verified. `userdata` is shared, encrypted with FBE, and uses Virtual A/B. No safe internal Debian root area is proven: `sda` has no unallocated GPT space, and the largest GPT gaps on the other LUNs are under 364 MiB. The later all-slot super-metadata review confirms unused extents and valid stale OTA/COW metadata; it does not prove a safe Linux reservation. See [the complete metadata review](../collab/results/T-005-super-metadata-validation.md). Use external root storage until a safe internal layout is proven. Fastboot reports `has-slot:boot=yes` and `has-slot:system=no`; `unsupported` for other queried names is not evidence those partitions are absent. The current boot-control service is Android AIDL; the legacy HIDL client fails, so evaluate the present interface rather than treating that client failure as missing boot control.
+
+SM8850 already has mainline SoC support: Nura marks the SoC supported, and the pinned Linux 7.3 tree includes Kaanapali SoC/MTP/QRD support. The Nura pages were reviewed on 2026-10-19 and report a OnePlus 15 test port, but its device package is not yet available in Nura repositories. XEC's Nura-tested 7.3-rc4 fork has a OnePlus board DTS and a Synaptics TCM SPI driver whose compatible matches the NX809J FDT; this is a source candidate, not a tested RedMagic driver. Upstream Linux still has no Canoe/NX809J board DTS, and the phone panel also needs its own integration. The upstream 7.3 kernel and reference DTBs already build. An isolated NX809J review DTS now compiles against pinned XEC sources and passes structural checks; touch stays disabled, the four-patch review series resolves the NX-only binding gaps and six inherited errors, leaving three shared warnings; unvalidated GPU/IMEM probes are disabled and inherited UFS remains disabled, and no NX809J boot image or hardware boot is established. See [board-foundation evidence](nx809j-board-foundation.md). See [mainline readiness](mainline-readiness.md) and [source provenance](source-provenance.md). Android GKI modules remain reference sources, not drop-in mainline modules; Linux does not promise a stable in-kernel module ABI. [Nura SM8850](https://wiki.nura.eco/wiki/Qualcomm_Snapdragon_8_Elite_Gen_5_%28SM8850-AC%29), [Nura OnePlus 15](https://wiki.nura.eco/wiki/OnePlus_15_%28oneplus-infiniti%29), [XEC 7.3-rc4](https://github.com/Xlie-Electronic-Customs/linux/commit/6d6be0ba139e89d843e62f56cbd9f829775901d5), [kernel driver interface](https://docs.kernel.org/process/stable-api-nonsense.html), [NX809J driver reconstruction status](https://github.com/Coding-BR/zte-kernel-nx809j-drivers).
+
+## Milestones
+
+| Milestone | Work | Exit evidence |
+|---|---|---|
+| 0. State and recovery gate | Fastboot unlock and Android A boot are verified. Keep the verified partition/GPT readback and record the boot chain, current firmware, slot metadata and recovery route. The fastboot temporary-image path remains untested; a full device backup is not yet complete. | Image format, bootloader capabilities, readback baseline and a credible same-device recovery route are reviewed. Complete a full device backup before any destructive operation. This gate precedes a Linux boot, flash or switch tool; off-device builds can proceed. |
+| 1. Kernel baseline | Use the already built Linux 7.3 reference baseline and compare XEC 7.3-rc4. Build an NX809J-specific Canoe DTS from the verified FDT; begin with board identity and TCM SPI integration, then address panel and power separately. | NX809J DTS compiles and passes schema checks. After milestone 0, make the first controlled temporary boot with a finished phone image, console/log capture and an intact Android A return path. |
+| 2. Safe foundation | Bring up UFS and USB, then battery/charging, thermal sensors, cooling and watchdog. Develop with an external Linux root filesystem where possible. | Storage is reliable without Android writes; temperature and battery readings are credible; thermal and watchdog limits work before sustained load. |
+| 3. Phone and dock hardware | Follow [`hardware-support.csv`](hardware-support.csv): internal display, touch and controls, USB-C display output, GPU, wireless, audio, modem, GNSS, cameras, sensors, biometrics, haptics, fan and gaming controls. Prefer upstream drivers, then adapt source; reverse engineer only a specific missing interface. | Each feature has a named test and a result tied to kernel, firmware and device revision. A loaded module or device node is not a pass. |
+| 4. Denial desktop | Build and package Denial for Debian ARM64 from its pinned source and matching sysroot. The corrected ARM64 Debian packages now co-install in the Debian/Mesa rootfs and pass offline dependency, ELF and unit checks; phone login, hardware and session operation remain untested. See [integration validation](denial-rootfs-validation.md). Use the supported `denial-session` entry point; integrate logind/seat, D-Bus, portals, audio, network and Bluetooth services as their hardware support becomes available. | ARM64 compositor, shell, Settings and services install from a reproducible package set. Touch, on-screen keyboard, authorization, portrait layout, dock outputs, audio/network controls, hotplug, lock and suspend/resume are exercised. [Denial build guide](https://github.com/denialwm/denial/blob/main/CROSS_BUILDING.md), [session startup](https://github.com/denialwm/denial/blob/main/docs/SESSION_STARTUP.md), [package contents and supported packages](https://github.com/denialwm/denial/blob/main/docs/packaging/arch/INSTALL.md). |
+| 5. Dual boot and switching | Keep Android slot A intact. Slot B is not currently a proven Linux target: it is not marked successful and has zero retry count. Start with a minimal initramfs and external root after the image contract is proven. No suitable internal root area is currently available, and shared encrypted `userdata` is not a spare root partition. Inspect the active Android boot-control AIDL contract before designing a Linux switch path; the legacy HIDL client failure does not establish AIDL failure. | Five consecutive Android→Linux→Android cycles; missing external-root recovery; Android data and A boot still work; update procedure tested. Do not add switch tools or raw writes before the control contract is proven. |
+| 6. Completion | Close the acceptance checks for all rows in the hardware matrix. | Every inventoried feature passes its hardware test. Any unsupported or unresolved blocker leaves the full-support goal incomplete, even if earlier milestones work. |
+
+An Android slot is not an independent Linux disk. The current capture confirms shared encrypted `userdata`, Virtual A/B, no available `sda` gap, and less than 364 MiB in the largest gaps on other LUNs. `qbootctl` is only a reference implementation; the current Android AIDL boot-control service exists, but Linux-side compatibility and slot-switch behavior remain untested. [AOSP Virtual A/B](https://source.android.com/docs/core/ota/virtual_ab), [qbootctl](https://github.com/linux-msm/qbootctl).
+
+## Project boundaries
+
+The latest host-only reviews refine the next driver work:
+
+- ADC gen4 needs bus-index addressing, 16-bit ratiometric scaling and a matching
+  thermal-threshold writer. A gen3-compatible name alone is insufficient. See
+  [the ADC review](nx809j-adc-gen4-review.md); no board enablement is implied.
+- [The DSC/PPS comparison](nx809j-dsc-pps-review.md) reproduces one generated
+  byte difference for the captured inputs. It does not close panel power,
+  reset, TE, link-timing or visible-output requirements.
+- [The UFS clock review](nx809j-ufs-clock-review.md) supports the configured
+  38.4 MHz reference path. Current device attributes, device model, extra supply
+  votes and PHY sequencing remain unresolved; keep storage probing disabled.
+- Claude's [remoteproc inventory](../collab/results/T-016-modem-remoteproc-inventory.md)
+  identifies 115 additional saved files. Segment coverage, firmware identity,
+  reserved-memory fit, PAS acceptance and working remote processors are separate
+  checks. The GPU firmware bytes are still missing.
+
+- Do not mirror boot images into both Android slots; that removes the slot distinction needed for the requested switch.
+- Do not add raw partition writes or OS-switch tools until this handset's boot-control and slot contract is proven.
+- Do not infer that blank XML filenames make an EDL package safe, or that historic GSI directions install Linux.
+- Do not treat EDL as guaranteed recovery, and do not write another device's calibration, identity, or key partitions.
+- Treat reported irreversible update “fuses” as unverified until device-specific evidence establishes what changed and how it is observed.
+- Prevent unattended Android OTA from overwriting experimental boot state during development. Document and verify the Android update and Linux redeployment path before enabling updates.
+- Keep all dated device backups inside `backups/<date>/`, with hashes and restore notes. Keep private captures out of public findings and source control.
+
+The XDA evidence and disputed claims are summarized in [`research/findings.md`](../research/findings.md). The August 2026 archive contains 3,192 posts; its source commit, hash, coverage date and per-post model/firmware gaps are recorded there.
