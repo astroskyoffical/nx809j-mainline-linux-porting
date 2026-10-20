@@ -47,7 +47,6 @@ def render_markdown(state, milestones, groups):
     ready = [i for i in items if i["state"] == "ready"]
     hardware = [i for i in items if i["kind"] == "hardware"]
     hw_ready = sum(1 for i in hardware if i["state"] == "ready")
-    backup = state.get("backup") or {}
     out = [
         "# NX809J port progress",
         "",
@@ -94,13 +93,7 @@ def render_markdown(state, milestones, groups):
                 f"[{e['path']}]({e['path']}) `{(e.get('sha256') or '')[:12]}`"
                 for e in i.get("evidence", []) if e.get("path"))
             out.append(f"| {group} | **{i['label']}**: {i['scope']} | {ev} |")
-    out += [
-        "", "## Recovery prerequisite: phone backup", "",
-        f"State: **{backup.get('state', 'unknown')}** · batches {backup.get('current_batch', '?')} · "
-        f"verified {backup.get('verified_batches', '?')}",
-        "", "Backup batch states are capture reports; a full restore has not been demonstrated.",
-    ]
-    errors = state.get("errors") or []
+    errors = [e for e in (state.get("errors") or []) if not e.startswith("backup")]
     if errors:
         out += ["", "**Open warnings:** " + "; ".join(errors)]
     out += ["", f"_Data generated {state['generated_at']}._", ""]

@@ -31,3 +31,24 @@ research/zte-toolbox-review/english/*.7z
 /中兴家族工具箱1.2.9-beta1/
 /ZTE-Family-Toolbox-1.2.9-beta1-EN/
 /research/xda-swarm-2026-10-20/slices/
+
+# Personal / device-specific material: kept locally, never published (2026-10-20 owner decision)
+/AGENTS.local.md
+/docs/storage-audit.md
+/docs/backup-capture-gaps.md
+/docs/ce-backup-review.md
+/research/full-backup.md
+/tools/backup_data.py
+/tools/test_backup_data.py
+/tools/recompress_backup.py
+/tools/test_recompress_backup.py
+/Refrences To Study.txt
+/web scraping pathway.txt
+/Tools to handle this project.txt
+/research/originals/Refrences To Study.txt
+/research/originals/web scraping pathway.txt
+/research/originals/Tools to handle this project.txt
+/collab/bridge/archive/
+/docs/usb-fast-transfer-notes.md
+/tools/cpipe/
+/research/xda-swarm-2026-10-20/*.json

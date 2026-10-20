@@ -1,0 +1,780 @@
+{
+ "schema_version": 1,
+ "items": [
+  {
+   "id": "android-a-return-path",
+   "kind": "evidence",
+   "group": "Boot & recovery",
+   "label": "Android A return path",
+   "scope": "The saved USB Fastboot check entered the bootloader and returned to Android slot A with the kernel unchanged.",
+   "review_state": "verified",
+   "reason": "This verifies the captured Android A recovery path only; it does not test Linux boot or flashing.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "docs/recovery.md",
+     "sha256": "192842b15bf23270609a84bfad6094f12474049b8d63eebc8e6370c373b195be",
+     "note": "Read-only Fastboot and Android return evidence."
+    }
+   ]
+  },
+  {
+   "id": "efisp-v4-callback-analysis",
+   "kind": "evidence",
+   "group": "Boot & recovery",
+   "label": "EFISP boot callback analysis",
+   "scope": "Static review of the callback handling the Android boot-image v4 wrapper and passing its kernel field to UEFI image loading.",
+   "review_state": "verified",
+   "reason": "The reviewed code path is bounded static evidence; runtime acceptance and a Linux handoff remain untested.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "docs/boot-chain.md",
+     "sha256": "8a9303699cc739d6cd2c430cf1ff63372a64149b97c8cdf123d6d1c5f642451d",
+     "note": "Static EFISP callback analysis and limitations."
+    },
+    {
+     "path": "artifacts/boot-analysis/efisp-evidence.json",
+     "sha256": "dca58c508dfc23b9801fdc8b9d7d3d903d1137b9a708d0f075b112f029d50bdd",
+     "note": "Saved analysis evidence index."
+    }
+   ]
+  },
+  {
+   "id": "linux-boot-handoff",
+   "kind": "evidence",
+   "group": "Boot & recovery",
+   "label": "Linux image handoff",
+   "scope": "A usable NX809J EFI/UKI or other verified Linux handoff, including valid kernel, initramfs, DTB and command line.",
+   "review_state": "pending",
+   "reason": "The host fixture checks wrapper structure with synthetic payloads; it is not a bootable image or phone test.",
+   "blockers": [
+    "No validated NX809J kernel, initramfs, DTB fixup policy, image policy or successful Linux boot."
+   ],
+   "evidence": [
+    {
+     "path": "docs/efi-linux-handoff.md",
+     "sha256": "fe718bfa68d90e707193f705a17469d9fb382640c6b9b212366a37fb88a4fd34",
+     "note": "Candidate handoff and explicit gaps."
+    },
+    {
+     "path": "artifacts/boot-analysis/handoff/host-format-check.json",
+     "sha256": "5891e490ac148ba557b4a4ec385bfac857e7712f6d49af3677d7e5fbd0e3f9ef",
+     "note": "Synthetic host-format check only."
+    }
+   ]
+  },
+  {
+   "id": "android-linux-switch-contract",
+   "kind": "evidence",
+   "group": "Boot & recovery",
+   "label": "Android/Linux switching contract",
+   "scope": "Safe slot selection, Linux identity, success marking, retry/fallback behavior and reversible switching while preserving Android A.",
+   "review_state": "pending",
+   "reason": "Saved GPT flag interpretation is not runtime qbootctl compatibility, and Android B is not a known-good fallback.",
+   "blockers": [
+    "Vendor boot-control behavior and UFS boot-LUN relationship are unresolved.",
+    "Linux slot identity, success marking and failure fallback are untested.",
+    "No reviewed write-and-restore procedure or repeated OS switch test exists."
+   ],
+   "evidence": [
+    {
+     "path": "docs/boot-slot-compatibility.md",
+     "sha256": "3e3fc0a3086c117a3b2a44b1eb11ebf58c48fb5b5a20409c8e6f7938b29d7582",
+     "note": "Saved metadata review; no boot-control writes."
+    },
+    {
+     "path": "docs/recovery.md",
+     "sha256": "192842b15bf23270609a84bfad6094f12474049b8d63eebc8e6370c373b195be",
+     "note": "Known recovery limits and Android A preservation gate."
+    }
+   ]
+  },
+  {
+   "id": "pinned-mainline-reference-build",
+   "kind": "evidence",
+   "group": "Platform",
+   "label": "Pinned mainline reference build",
+   "scope": "Host build of the pinned upstream Linux revision producing its Image and Kaanapali reference DTBs.",
+   "review_state": "verified",
+   "reason": "This confirms a reproducible upstream reference build only; it is not an NX809J device tree, image or boot test.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "docs/mainline-readiness.md",
+     "sha256": "b0cc15728e748b7a2180f0a82fee105473761d20f84656f1264e13807bc338c5",
+     "note": "Pinned source build status and NX809J boundary."
+    },
+    {
+     "path": "artifacts/kernel/c03c1a14507dfaf8b856c2608f9ac216021fc222/20261019T182449Z/build-info.txt",
+     "sha256": "a375e3dcd7f9c213c74a9da73c90d38f624610f9958e208cd24cd7b1ee206d21",
+     "note": "Recorded host build inputs and result."
+    },
+    {
+     "path": "artifacts/kernel/c03c1a14507dfaf8b856c2608f9ac216021fc222/20261019T182449Z/SHA256SUMS",
+     "sha256": "4332165717a47d9ab36ba8dc5ba0f5e72611f6d1a3215ea9cc6c91ed0ad7b9b8",
+     "note": "Build artifact checksum record."
+    }
+   ]
+  },
+  {
+   "id": "nx809j-board-dts-foundation",
+   "kind": "evidence",
+   "group": "Platform",
+   "label": "NX809J board DTS foundation",
+   "scope": "A board description with validated memory reservations, console, peripherals and boot-time behavior for NX809J.",
+   "review_state": "pending",
+   "reason": "The candidate DTS compiles against the pinned XEC tree, but it is a review candidate with missing boot-critical validation.",
+   "blockers": [
+    "Static memory ranges, firmware reservations and ownership are unresolved.",
+    "No UART stdout path or validated boot arguments are present.",
+    "dtbs_check and a phone boot have not been completed.",
+    "The candidate does not yet describe the GPU platform node."
+   ],
+   "evidence": [
+    {
+     "path": "docs/nx809j-board-foundation.md",
+     "sha256": "669a1e43430d986aa5c94bc581af6ec915b75732d9d3324b759b76b57dd0efbe",
+     "note": "Candidate status and missing memory/console validation."
+    },
+    {
+     "path": "docs/mainline-readiness.md",
+     "sha256": "b0cc15728e748b7a2180f0a82fee105473761d20f84656f1264e13807bc338c5",
+     "note": "Mainline device-tree readiness boundary."
+    }
+   ]
+  },
+  {
+   "id": "canoe-six-pin-register-map",
+   "kind": "evidence",
+   "group": "Platform",
+   "label": "Six-pin Canoe register map",
+   "scope": "Absolute TLMM register-address equivalence and mux mapping for GPIO 48-51, 66 and 158 only.",
+   "review_state": "verified",
+   "reason": "Static source and module analysis proves this bounded six-pin mapping; it is not a complete Canoe pinctrl map or hardware test.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "artifacts/pinctrl-analysis/canoe-register-comparison.md",
+     "sha256": "18740565d62a97c314c25cc6b34314a6e2b3f0b018d76cf39fc69c6ac2e964c9",
+     "note": "Address, selector and source-anchor calculation for six pins."
+    },
+    {
+     "path": "docs/nx809j-board-foundation.md",
+     "sha256": "669a1e43430d986aa5c94bc581af6ec915b75732d9d3324b759b76b57dd0efbe",
+     "note": "Reviewed six-pin mapping and scope."
+    }
+   ]
+  },
+  {
+   "id": "rpmh-init-mode-three-map",
+   "kind": "evidence",
+   "group": "Platform",
+   "label": "RPMh mode index 3 mapping",
+   "scope": "Static mapping of the reviewed raw regulator init-mode index 3 to the vendor tuple and XEC AUTO selector.",
+   "review_state": "verified",
+   "reason": "The numeric mode mapping is bounded and source-proven; rail voltage/current behavior and runtime regulator operation are outside this scope.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "artifacts/pinctrl-analysis/rpmh-mode-map.md",
+     "sha256": "27027b3c16e88b4b27fea772458836ece89f38313c2c05b15822cb7f8c39d232",
+     "note": "Vendor-to-XEC init-mode mapping and unresolved VIN boundary."
+    },
+    {
+     "path": "docs/nx809j-board-foundation.md",
+     "sha256": "669a1e43430d986aa5c94bc581af6ec915b75732d9d3324b759b76b57dd0efbe",
+     "note": "Board-level context for the bounded regulator mapping."
+    }
+   ]
+  },
+  {
+   "id": "nx809j-vendor-driver-ports",
+   "kind": "evidence",
+   "group": "Platform",
+   "label": "NX809J vendor driver ports",
+   "scope": "A reviewed set of source-level ports or compatible upstream drivers for the phone-specific vendor hardware.",
+   "review_state": "pending",
+   "reason": "Android vendor modules are reference material, not drop-in mainline modules; no complete NX809J driver port set is validated.",
+   "blockers": [
+    "Required source-level ports or upstream replacements remain incomplete.",
+    "Per-driver probe, firmware, power and hardware validation is outstanding."
+   ],
+   "evidence": [
+    {
+     "path": "docs/mainline-readiness.md",
+     "sha256": "b0cc15728e748b7a2180f0a82fee105473761d20f84656f1264e13807bc338c5",
+     "note": "Mainline board and driver readiness."
+    },
+    {
+     "path": "docs/hardware-support.csv",
+     "sha256": "a221285e2f1bdf780cf6c8e84987e6d8c567dd00924677e290037b1449ebe29a",
+     "note": "Per-feature hardware validation inventory."
+    }
+   ]
+  },
+  {
+   "id": "nx809j-firmware-files",
+   "kind": "evidence",
+   "group": "Platform",
+   "label": "NX809J Linux firmware availability",
+   "scope": "Exact firmware bytes, provenance, hashes and Linux lookup paths for firmware required by the board drivers.",
+   "review_state": "pending",
+   "reason": "Android-side filename associations are not evidence that firmware bytes are available or load successfully under Linux.",
+   "blockers": [
+    "Required firmware bytes and hashes have not been verified.",
+    "Linux firmware lookup and secure-world dependencies are unresolved."
+   ],
+   "evidence": [
+    {
+     "path": "docs/nx809j-gpu-id.md",
+     "sha256": "aa6e8a7c1d61407ef9211886f2349b149d2390e3c8c0809668b316d1ebaa2c11",
+     "note": "GPU firmware filename associations and unresolved byte/lookup evidence."
+    },
+    {
+     "path": "docs/mainline-readiness.md",
+     "sha256": "b0cc15728e748b7a2180f0a82fee105473761d20f84656f1264e13807bc338c5",
+     "note": "Platform firmware readiness boundary."
+    },
+    {
+     "path": "collab/results/T-016-modem-remoteproc-inventory.md",
+     "sha256": "cb5a6854fb5978f02520a15a89a5fc56fd6778b30cd676231af6693dc6e5cb95",
+     "note": "Additional saved modem-image extraction; independent review and runtime gates remain."
+    }
+   ]
+  },
+  {
+   "id": "panel-command-table-extraction",
+   "kind": "evidence",
+   "group": "Display & input",
+   "label": "Panel command-table extraction",
+   "scope": "Byte-checked extraction of all 12 selected panel command tables with page-aware DCS annotations from the pinned vendor source.",
+   "review_state": "verified",
+   "reason": "All 12 table hashes still match the source. Page-aware annotations preserve raw commands and name standard DCS operations only on known page 00; this does not verify a functioning panel driver.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "docs/nx809j-panel.md",
+     "sha256": "e1d81f79bf7fb7d7592df2e1383d0fe59cf9f20596ea86f1ea819b1218098d9d",
+     "note": "Source pin, extraction scope and limits."
+    },
+    {
+     "path": "docs/nx809j-panel-crosscheck.md",
+     "sha256": "15ad80f656c9bab31af46d53a1c2e0620e787ea07ea92c8b1f2629ce48224d4e",
+     "note": "Independent command transport, timing, and page-label cross-check."
+    },
+    {
+     "path": "artifacts/panel-crosscheck/page-aware/provenance.json",
+     "sha256": "638a3da030bb0e8c4ac8b0d715db73e90b451fbfe37920e5a99e120a69877ff8",
+     "note": "Page-aware export receipt; legacy raw table hashes preserved."
+    },
+    {
+     "path": "artifacts/panel-analysis/panel-command-summary.json",
+     "sha256": "3eed7ec88b46810e4a752697659fa17ba89820cedd809e908236d412994c9144",
+     "note": "Machine-readable 12-table comparison summary."
+    },
+    {
+     "path": "artifacts/panel-analysis/SHA256SUMS",
+     "sha256": "d2401c84237ae62e2ec4447d9a85e62c911f5d989a652855ce1fadb668b86644",
+     "note": "Panel extraction artifact checksums."
+    }
+   ]
+  },
+  {
+   "id": "panel-driver-power-and-timing",
+   "kind": "evidence",
+   "group": "Display & input",
+   "label": "Panel driver power and timing",
+   "scope": "A mainline panel driver with validated reset polarity, rails, DSI/PHY timing, DSC, backlight and refresh modes.",
+   "review_state": "pending",
+   "reason": "Command extraction is complete, but driver sequencing and physical output are not.",
+   "blockers": [
+    "Reset polarity, TVDD use and panel/host PHY timing remain unresolved.",
+    "No mainline panel driver integration or visible-output test exists."
+   ],
+   "evidence": [
+    {
+     "path": "docs/nx809j-panel.md",
+     "sha256": "e1d81f79bf7fb7d7592df2e1383d0fe59cf9f20596ea86f1ea819b1218098d9d",
+     "note": "Panel source findings and unresolved driver requirements."
+    },
+    {
+     "path": "docs/mainline-readiness.md",
+     "sha256": "b0cc15728e748b7a2180f0a82fee105473761d20f84656f1264e13807bc338c5",
+     "note": "Display driver readiness."
+    },
+    {
+     "path": "docs/nx809j-dsc-pps-review.md",
+     "sha256": "7dbdea952bedc909d6ca892f3d663cd31b7b627a6cfe6495c3225ba563b478f1",
+     "note": "Independent actual-source PPS comparison and lifecycle review; no display test."
+    }
+   ]
+  },
+  {
+   "id": "touchscreen-input",
+   "kind": "evidence",
+   "group": "Display & input",
+   "label": "Touchscreen input",
+   "scope": "Mainline touchscreen probe, firmware/protocol support, reset and interrupt handling, suspend/resume, and usable phone input.",
+   "review_state": "pending",
+   "reason": "The candidate keeps touchscreen disabled; encoded reset/IRQ pins do not establish driver or input operation.",
+   "blockers": [
+    "Touch controller driver/protocol support is not integrated.",
+    "Touch reset, IRQ and power behavior are not hardware-validated."
+   ],
+   "evidence": [
+    {
+     "path": "docs/nx809j-board-foundation.md",
+     "sha256": "669a1e43430d986aa5c94bc581af6ec915b75732d9d3324b759b76b57dd0efbe",
+     "note": "Touchscreen remains disabled in the candidate."
+    },
+    {
+     "path": "docs/hardware-support.csv",
+     "sha256": "a221285e2f1bdf780cf6c8e84987e6d8c567dd00924677e290037b1449ebe29a",
+     "note": "Input feature test status."
+    }
+   ]
+  },
+  {
+   "id": "phone-and-dock-display",
+   "kind": "evidence",
+   "group": "Display & input",
+   "label": "Phone and dock display output",
+   "scope": "Visible and stable internal-panel and USB-C dock output with usable input and hotplug behavior.",
+   "review_state": "pending",
+   "reason": "No NX809J Linux visible-output or dock session has been tested.",
+   "blockers": [
+    "Internal panel driver is incomplete.",
+    "USB-C display path and dock hotplug are unvalidated."
+   ],
+   "evidence": [
+    {
+     "path": "docs/hardware-support.csv",
+     "sha256": "a221285e2f1bdf780cf6c8e84987e6d8c567dd00924677e290037b1449ebe29a",
+     "note": "Display and dock hardware validation inventory."
+    },
+    {
+     "path": "docs/nx809j-panel.md",
+     "sha256": "e1d81f79bf7fb7d7592df2e1383d0fe59cf9f20596ea86f1ea819b1218098d9d",
+     "note": "Static panel analysis only."
+    }
+   ]
+  },
+  {
+   "id": "mesa-arm64-package-path",
+   "kind": "evidence",
+   "group": "Graphics",
+   "label": "Mesa ARM64 package path",
+   "scope": "Offline ARM64 Mesa package selection and AArch64 ELF checks in the integrated Debian/Denial rootfs.",
+   "review_state": "verified",
+   "reason": "The package architecture and host-side binaries were checked; this does not prove NX809J DRM matching or rendering.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "docs/denial-rootfs-validation.md",
+     "sha256": "2e375dc7a589505502ec427c89f7aee33370d29d582b16dab8255129f4e10af6",
+     "note": "Offline package/ELF validation scope."
+    },
+    {
+     "path": "artifacts/denial/integration/debian13-arm64-mesa26.1.6-denial-20261019T205255Z-10.manifest.json",
+     "sha256": "954a9dd4d5ff438852cf0a8fb08b03af715393b8d62cada07b5d232d2d469d67",
+     "note": "Integrated package and source provenance."
+    }
+   ]
+  },
+  {
+   "id": "conditional-a840-chip-id-map",
+   "kind": "evidence",
+   "group": "Graphics",
+   "label": "Conditional A840 chip-ID mapping",
+   "scope": "Static kernel-to-Mesa chip-ID mapping under the explicit condition that three active A8xx slices are reported.",
+   "review_state": "verified",
+   "reason": "The conditional source arithmetic and table lookup are verified; the phone slice count and resulting runtime ID are not established here.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "docs/nx809j-gpu-id.md",
+     "sha256": "aa6e8a7c1d61407ef9211886f2349b149d2390e3c8c0809668b316d1ebaa2c11",
+     "note": "Exact three-slice condition and compatibility findings."
+    },
+    {
+     "path": "artifacts/gpu-id-analysis/chip-id-check.json",
+     "sha256": "91e8720d28a364d0629ef25b6a77c49b872e7353d00d39db4c66e34a5bc6436f",
+     "note": "Static conditional chip-ID check."
+    }
+   ]
+  },
+  {
+   "id": "nx809j-gpu-runtime-readiness",
+   "kind": "evidence",
+   "group": "Graphics",
+   "label": "NX809J GPU readiness",
+   "scope": "A probeable Adreno node with compatible bindings, clocks/power/IOMMU, exact firmware, confirmed slice count and sustained accelerated rendering.",
+   "review_state": "pending",
+   "reason": "The Mesa A840 userspace match is conditional; the current candidate has no GPU node and no phone render evidence.",
+   "blockers": [
+    "Candidate device tree has no Adreno platform node.",
+    "Captured compatible is not accepted as the only compatible by the pinned mainline match/binding.",
+    "Active-slice count and Linux firmware availability are unknown.",
+    "No GPU initialization or sustained render test has run."
+   ],
+   "evidence": [
+    {
+     "path": "docs/nx809j-gpu-id.md",
+     "sha256": "aa6e8a7c1d61407ef9211886f2349b149d2390e3c8c0809668b316d1ebaa2c11",
+     "note": "GPU node, slice, compatible, firmware and runtime gaps."
+    },
+    {
+     "path": "docs/nx809j-board-foundation.md",
+     "sha256": "669a1e43430d986aa5c94bc581af6ec915b75732d9d3324b759b76b57dd0efbe",
+     "note": "Candidate DTS scope and missing GPU node."
+    }
+   ]
+  },
+  {
+   "id": "wifi-bluetooth",
+   "kind": "evidence",
+   "group": "Radio & network",
+   "label": "Wi-Fi and Bluetooth",
+   "scope": "Linux Wi-Fi and Bluetooth drivers, firmware, discovery, pairing and sustained connectivity on NX809J.",
+   "review_state": "pending",
+   "reason": "No NX809J Linux radio path has been hardware-tested.",
+   "blockers": [
+    "Driver and firmware compatibility are not established.",
+    "NetworkManager/BlueZ are gated in the rootfs pending hardware qualification."
+   ],
+   "evidence": [
+    {
+     "path": "docs/hardware-support.csv",
+     "sha256": "a221285e2f1bdf780cf6c8e84987e6d8c567dd00924677e290037b1449ebe29a",
+     "note": "Radio feature validation inventory."
+    },
+    {
+     "path": "docs/denial-rootfs-validation.md",
+     "sha256": "2e375dc7a589505502ec427c89f7aee33370d29d582b16dab8255129f4e10af6",
+     "note": "Network and Bluetooth services remain gated."
+    }
+   ]
+  },
+  {
+   "id": "cellular-ims-gnss",
+   "kind": "evidence",
+   "group": "Radio & network",
+   "label": "Cellular, IMS and GNSS",
+   "scope": "Modem enumeration, data, calls/IMS, GNSS and required Android/vendor service dependencies under Linux.",
+   "review_state": "pending",
+   "reason": "No complete modem stack or NX809J Linux call/data/GNSS test is established.",
+   "blockers": [
+    "Modem protocol and userspace/firmware dependencies are unresolved.",
+    "Cellular data, voice/IMS and GNSS have not been tested under Linux."
+   ],
+   "evidence": [
+    {
+     "path": "docs/hardware-support.csv",
+     "sha256": "a221285e2f1bdf780cf6c8e84987e6d8c567dd00924677e290037b1449ebe29a",
+     "note": "Modem and GNSS validation inventory."
+    },
+    {
+     "path": "docs/mainline-readiness.md",
+     "sha256": "b0cc15728e748b7a2180f0a82fee105473761d20f84656f1264e13807bc338c5",
+     "note": "Platform driver readiness limits."
+    }
+   ]
+  },
+  {
+   "id": "audio-routing",
+   "kind": "evidence",
+   "group": "Audio & cameras",
+   "label": "Audio and audio routing",
+   "scope": "Working speaker, microphone, headset, USB audio and routing/power behavior under Linux.",
+   "review_state": "pending",
+   "reason": "No NX809J Linux audio path has been validated.",
+   "blockers": [
+    "Codec/DSP, firmware and routing integration are unresolved.",
+    "Playback, capture and suspend/resume have not been tested."
+   ],
+   "evidence": [
+    {
+     "path": "docs/hardware-support.csv",
+     "sha256": "a221285e2f1bdf780cf6c8e84987e6d8c567dd00924677e290037b1449ebe29a",
+     "note": "Audio feature validation inventory."
+    },
+    {
+     "path": "docs/mainline-readiness.md",
+     "sha256": "b0cc15728e748b7a2180f0a82fee105473761d20f84656f1264e13807bc338c5",
+     "note": "Driver and firmware validation boundary."
+    }
+   ]
+  },
+  {
+   "id": "camera-isp",
+   "kind": "evidence",
+   "group": "Audio & cameras",
+   "label": "Cameras and ISP",
+   "scope": "Camera sensors, ISP/processing, capture pipeline, controls and required firmware/userspace.",
+   "review_state": "pending",
+   "reason": "Camera support is not established by module presence or source references.",
+   "blockers": [
+    "Sensor/ISP driver and firmware dependencies are unresolved.",
+    "Capture, controls and camera pipeline have not been tested under Linux."
+   ],
+   "evidence": [
+    {
+     "path": "docs/hardware-support.csv",
+     "sha256": "a221285e2f1bdf780cf6c8e84987e6d8c567dd00924677e290037b1449ebe29a",
+     "note": "Camera and ISP validation inventory."
+    },
+    {
+     "path": "docs/mainline-readiness.md",
+     "sha256": "b0cc15728e748b7a2180f0a82fee105473761d20f84656f1264e13807bc338c5",
+     "note": "Platform readiness limits."
+    }
+   ]
+  },
+  {
+   "id": "battery-thermal-cooling",
+   "kind": "evidence",
+   "group": "Sensors & power",
+   "label": "Battery, thermal and cooling safety",
+   "scope": "Battery/charging telemetry, thermal zones, cooling limits, fan and watchdog behavior.",
+   "review_state": "pending",
+   "reason": "Safe sustained use requires working thermal and power controls; these have not been validated under Linux.",
+   "blockers": [
+    "Battery and charging controls are unvalidated.",
+    "Thermal sensors, cooling devices/fan and watchdog responses are untested."
+   ],
+   "evidence": [
+    {
+     "path": "docs/hardware-support.csv",
+     "sha256": "a221285e2f1bdf780cf6c8e84987e6d8c567dd00924677e290037b1449ebe29a",
+     "note": "Power, thermal and cooling validation inventory."
+    },
+    {
+     "path": "docs/mainline-readiness.md",
+     "sha256": "b0cc15728e748b7a2180f0a82fee105473761d20f84656f1264e13807bc338c5",
+     "note": "Power safety stage remains pending."
+    }
+   ]
+  },
+  {
+   "id": "sensors-biometrics-haptics",
+   "kind": "evidence",
+   "group": "Sensors & power",
+   "label": "Sensors, biometrics and haptics",
+   "scope": "Rotation/proximity/light sensors, fingerprint, haptic feedback and gaming controls under Linux.",
+   "review_state": "pending",
+   "reason": "No phone hardware tests establish these remaining device features.",
+   "blockers": [
+    "Sensor and input device mappings are incomplete.",
+    "Fingerprint, haptics and gaming controls lack validated Linux interfaces."
+   ],
+   "evidence": [
+    {
+     "path": "docs/hardware-support.csv",
+     "sha256": "a221285e2f1bdf780cf6c8e84987e6d8c567dd00924677e290037b1449ebe29a",
+     "note": "Sensors and device-feature validation inventory."
+    },
+    {
+     "path": "docs/mainline-readiness.md",
+     "sha256": "b0cc15728e748b7a2180f0a82fee105473761d20f84656f1264e13807bc338c5",
+     "note": "Per-feature support boundary."
+    }
+   ]
+  },
+  {
+   "id": "denial-arm64-rootfs-integration",
+   "kind": "evidence",
+   "group": "Desktop",
+   "label": "Denial ARM64 rootfs integration",
+   "scope": "Offline co-install of the corrected Denial ARM64 package pair with Debian/Mesa, package, ELF, unit and dependency checks.",
+   "review_state": "verified",
+   "reason": "The default host workflow and package integration checks pass; this is a root filesystem archive, not a booted desktop.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "docs/denial-rootfs-validation.md",
+     "sha256": "2e375dc7a589505502ec427c89f7aee33370d29d582b16dab8255129f4e10af6",
+     "note": "Verified host package integration and limits."
+    },
+    {
+     "path": "artifacts/denial/integration/debian13-arm64-mesa26.1.6-denial-20261019T205255Z-10.manifest.json",
+     "sha256": "954a9dd4d5ff438852cf0a8fb08b03af715393b8d62cada07b5d232d2d469d67",
+     "note": "Immutable integrated archive manifest."
+    },
+    {
+     "path": "artifacts/denial/integration/debian13-arm64-mesa26.1.6-denial-20261019T205255Z-10.validation.txt",
+     "sha256": "690a6d45b2fbe1ece598d94d4042b005880b96a6e6549b4116517a11dc56882a",
+     "note": "Default workflow validation."
+    },
+    {
+     "path": "artifacts/denial/integration/debian13-arm64-mesa26.1.6-denial-20261019T205255Z-10.systemd-verify.txt",
+     "sha256": "0a15fd7a936b9dedcee3ff6248a951d51af6ba46517e47d9e749491a384a8eff",
+     "note": "Offline systemd unit verification."
+    },
+    {
+     "path": "artifacts/denial/integration/debian13-arm64-mesa26.1.6-denial-20261019T205255Z-10.apt-check.txt",
+     "sha256": "b8d97fa5f27fa2e2463f1d83a366a93fcef8b402d7b67fc0e275cd5d1a73e505",
+     "note": "Offline dependency check."
+    }
+   ]
+  },
+  {
+   "id": "denial-login-seat-provisioning",
+   "kind": "evidence",
+   "group": "Desktop",
+   "label": "Denial login and seat provisioning",
+   "scope": "A safe account, login/seat and session-launch path that enters the Denial user session.",
+   "review_state": "pending",
+   "reason": "The integrated rootfs has no configured interactive user or validated login path.",
+   "blockers": [
+    "Root account remains locked and no interactive user is provisioned.",
+    "No login manager/seat path has been validated."
+   ],
+   "evidence": [
+    {
+     "path": "docs/denial-rootfs-validation.md",
+     "sha256": "2e375dc7a589505502ec427c89f7aee33370d29d582b16dab8255129f4e10af6",
+     "note": "Account and login provisioning explicitly pending."
+    },
+    {
+     "path": "artifacts/denial/integration/debian13-arm64-mesa26.1.6-denial-20261019T205255Z-10.manifest.json",
+     "sha256": "954a9dd4d5ff438852cf0a8fb08b03af715393b8d62cada07b5d232d2d469d67",
+     "note": "Rootfs manifest and package/service inventory."
+    }
+   ]
+  },
+  {
+   "id": "denial-phone-desktop-session",
+   "kind": "evidence",
+   "group": "Desktop",
+   "label": "Denial phone and dock session",
+   "scope": "Denial compositor session with working KMS/DRM, touch, on-screen keyboard, authorization, audio/network controls, dock and suspend/resume on the phone.",
+   "review_state": "pending",
+   "reason": "The desktop artifact has only host-side static validation; the compositor and services have not run on NX809J.",
+   "blockers": [
+    "No NX809J boot or Denial login/session test exists.",
+    "Display, touch, acceleration, dock and hardware-backed services remain unvalidated."
+   ],
+   "evidence": [
+    {
+     "path": "docs/denial-rootfs-validation.md",
+     "sha256": "2e375dc7a589505502ec427c89f7aee33370d29d582b16dab8255129f4e10af6",
+     "note": "Explicit no-phone-runtime boundary."
+    },
+    {
+     "path": "docs/hardware-support.csv",
+     "sha256": "a221285e2f1bdf780cf6c8e84987e6d8c567dd00924677e290037b1449ebe29a",
+     "note": "Hardware acceptance test inventory."
+    }
+   ]
+  },
+  {
+   "id": "saved-firmware-file-inventory",
+   "kind": "evidence",
+   "group": "Platform",
+   "label": "Saved firmware file inventory",
+   "scope": "190 selected SoCCP, Bluetooth and DSP files are extracted from the saved readback containers with unique contained paths, recorded sizes and SHA-256 identities; total 65,659,748 bytes.",
+   "review_state": "verified",
+   "reason": "This confirms the bounded offline inventory only. File semantics, firmware-loader selection, signatures and NX809J Linux hardware operation remain unverified; modem extraction and GPU bytes are outside this scope.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "docs/nx809j-firmware-inventory.md",
+     "sha256": "fb011ccb57afb6c83b81af69aa1e3fdabd1cf2becba5084c455c2424d5d6f6fd",
+     "note": "Source-partition provenance, 190 extracted file identities and compatibility limits."
+    },
+    {
+     "path": "artifacts/firmware-extraction/manifest.json",
+     "sha256": "5c7c36150c15ac4b418ca16015329652dafc68578d38666f52418fd36b1bd8e0",
+     "note": "Complete extracted path, size and SHA-256 inventory."
+    },
+    {
+     "path": "artifacts/claude-mapping/firmware-review.json",
+     "sha256": "c55ddf92a02e8bd1e54ad8f2d42869e3b66a4a2c88595ac060950230e450718d",
+     "note": "Independent count/path/size validation and three critical hash checks."
+    }
+   ]
+  },
+  {
+   "id": "captured-fan-module-identity",
+   "kind": "evidence",
+   "group": "Sensors & power",
+   "label": "Captured fan module identity",
+   "scope": "The saved October vendor_boot member lib/modules/soc_fan.ko is identified by its 42728-byte size, SHA-256, ELF64 AArch64 relocatable format and kernel-module vermagic.",
+   "review_state": "verified",
+   "reason": "File identity and ABI only. Runtime loader path and bytes are unproven; available-file basename matches are not loader provenance. Decompilation completeness, firmware behavior and a working mainline driver are not established.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "docs/nx809j-fan-map.md",
+     "sha256": "c1e321ef284296a8a29e9d5615d594efbad4d8b2a3d59675acb39dc4aa0a0a0f",
+     "note": "Artifact provenance, static analysis and unresolved runtime/porting limits."
+    },
+    {
+     "path": "artifacts/claude-mapping/captured-module-identities.json",
+     "sha256": "8af27c0ce65e603e52ac8b404d8153d254dc74be2481ce616160ba9a7b970707",
+     "note": "Independent module hash/size/ELF/ABI checks."
+    },
+    {
+     "path": "artifacts/fan-analysis/october-modules/manifest.json",
+     "sha256": "284a3db69a0c89d6f9ee0e07335a6f6f4cb9ae2780cd3a14b646912c5d5fd1db",
+     "note": "Bounded extraction from the saved October vendor_boot readback."
+    }
+   ]
+  },
+  {
+   "id": "captured-touch-module-identity",
+   "kind": "evidence",
+   "group": "Display & input",
+   "label": "Captured touch module identity",
+   "scope": "The saved October vendor_boot member lib/modules/zte_tpd.ko is identified by its 613616-byte size, SHA-256, ELF64 AArch64 relocatable format and kernel-module vermagic.",
+   "review_state": "verified",
+   "reason": "File identity and ABI only. Runtime loader path and bytes are unproven; available-file basename matches are not loader provenance. Decompilation completeness, firmware behavior and a working mainline driver are not established.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "docs/nx809j-touch-protocol.md",
+     "sha256": "48ed439e0470d28126f986ae9cddf3ef5da07ec3ccdec6939acb6768ecec0aca",
+     "note": "Artifact provenance, static analysis and unresolved runtime/porting limits."
+    },
+    {
+     "path": "artifacts/claude-mapping/captured-module-identities.json",
+     "sha256": "8af27c0ce65e603e52ac8b404d8153d254dc74be2481ce616160ba9a7b970707",
+     "note": "Independent module hash/size/ELF/ABI checks."
+    },
+    {
+     "path": "artifacts/fan-analysis/october-modules/manifest.json",
+     "sha256": "284a3db69a0c89d6f9ee0e07335a6f6f4cb9ae2780cd3a14b646912c5d5fd1db",
+     "note": "Bounded extraction from the saved October vendor_boot readback."
+    }
+   ]
+  },
+  {
+   "id": "captured-charger-module-identity",
+   "kind": "evidence",
+   "group": "Sensors & power",
+   "label": "Captured charger module identity",
+   "scope": "The saved October vendor_boot member lib/modules/qti_battery_charger.ko is identified by its 128528-byte size, SHA-256, ELF64 AArch64 relocatable format and kernel-module vermagic.",
+   "review_state": "verified",
+   "reason": "File identity and ABI only. Runtime loader path and bytes are unproven; available-file basename matches are not loader provenance. Decompilation completeness, firmware behavior and a working mainline driver are not established.",
+   "blockers": [],
+   "evidence": [
+    {
+     "path": "docs/nx809j-charger-protocol.md",
+     "sha256": "623ce4f66eb5e5c323a8e362eb614ec094867449deac336f0b939671cf2bed14",
+     "note": "Artifact provenance, static analysis and unresolved runtime/porting limits."
+    },
+    {
+     "path": "artifacts/claude-mapping/captured-module-identities.json",
+     "sha256": "8af27c0ce65e603e52ac8b404d8153d254dc74be2481ce616160ba9a7b970707",
+     "note": "Independent module hash/size/ELF/ABI checks."
+    },
+    {
+     "path": "artifacts/charger-protocol/october-modules/manifest.json",
+     "sha256": "575ec82944971c6d974c8f877b1b0c9bb63981c332c30a6bd478bb078e341e96",
+     "note": "Bounded extraction from the saved October vendor_boot readback."
+    }
+   ]
+  }
+ ]
+}

@@ -1,24 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="332" viewBox="0 0 880 332" font-family="Segoe UI,Helvetica,Arial,sans-serif">
 <rect width="100%" height="100%" rx="8" fill="#0d1117"/>
-<text x="10" y="20" font-size="13" fill="#e6edf3" font-weight="600">NX809J port scopes: 13 verified / 559</text>
+<text x="10" y="20" font-size="13" fill="#e6edf3" font-weight="600">NX809J port scopes: 13 verified / 557</text>
 <text x="10" y="43" font-size="11" fill="#9da7b3">Boot &amp; recovery</text>
 <rect x="150" y="34" width="10" height="10" rx="2" fill="#2ea043"><title>Android A return path</title></rect>
 <rect x="162" y="34" width="10" height="10" rx="2" fill="#2ea043"><title>EFISP boot callback analysis</title></rect>
 <rect x="174" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Android/Linux switching contract</title></rect>
-<rect x="186" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Full same-device restore</title></rect>
-<rect x="198" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Internal Linux root storage</title></rect>
-<rect x="210" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Linux image handoff</title></rect>
-<rect x="222" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Boot chain, AVB and boot control</title></rect>
-<rect x="234" y="34" width="10" height="10" rx="2" fill="#da3633"><title>UFS and Linux root storage</title></rect>
-<rect x="246" y="34" width="10" height="10" rx="2" fill="#da3633"><title>cqhci</title></rect>
-<rect x="258" y="34" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_ufs</title></rect>
-<rect x="270" y="34" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_ufs_qmp_v4_canoe</title></rect>
-<rect x="282" y="34" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_ufs_qrbtc_sdm845</title></rect>
-<rect x="294" y="34" width="10" height="10" rx="2" fill="#da3633"><title>sdhci_msm</title></rect>
-<rect x="306" y="34" width="10" height="10" rx="2" fill="#da3633"><title>sg</title></rect>
-<rect x="318" y="34" width="10" height="10" rx="2" fill="#da3633"><title>ufs_qcom</title></rect>
-<rect x="330" y="34" width="10" height="10" rx="2" fill="#da3633"><title>zram</title></rect>
-<rect x="342" y="34" width="10" height="10" rx="2" fill="#da3633"><title>zsmalloc</title></rect>
+<rect x="186" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Linux image handoff</title></rect>
+<rect x="198" y="34" width="10" height="10" rx="2" fill="#da3633"><title>Boot chain, AVB and boot control</title></rect>
+<rect x="210" y="34" width="10" height="10" rx="2" fill="#da3633"><title>UFS and Linux root storage</title></rect>
+<rect x="222" y="34" width="10" height="10" rx="2" fill="#da3633"><title>cqhci</title></rect>
+<rect x="234" y="34" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_ufs</title></rect>
+<rect x="246" y="34" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_ufs_qmp_v4_canoe</title></rect>
+<rect x="258" y="34" width="10" height="10" rx="2" fill="#da3633"><title>phy_qcom_ufs_qrbtc_sdm845</title></rect>
+<rect x="270" y="34" width="10" height="10" rx="2" fill="#da3633"><title>sdhci_msm</title></rect>
+<rect x="282" y="34" width="10" height="10" rx="2" fill="#da3633"><title>sg</title></rect>
+<rect x="294" y="34" width="10" height="10" rx="2" fill="#da3633"><title>ufs_qcom</title></rect>
+<rect x="306" y="34" width="10" height="10" rx="2" fill="#da3633"><title>zram</title></rect>
+<rect x="318" y="34" width="10" height="10" rx="2" fill="#da3633"><title>zsmalloc</title></rect>
 <text x="10" y="69" font-size="11" fill="#9da7b3">Platform</text>
 <rect x="150" y="60" width="10" height="10" rx="2" fill="#2ea043"><title>Pinned mainline reference build</title></rect>
 <rect x="162" y="60" width="10" height="10" rx="2" fill="#2ea043"><title>RPMh mode index 3 mapping</title></rect>

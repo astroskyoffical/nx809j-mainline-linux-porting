@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "note": "Hand-maintained milestone states, from docs/plan.md. Update the state and 'now' line when a milestone moves; PROGRESS.md is regenerated on every commit.",
+  "states": [
+    "done",
+    "in-progress",
+    "blocked",
+    "not-started"
+  ],
+  "milestones": [
+    {
+      "id": "M0",
+      "title": "State and recovery gate",
+      "state": "in-progress",
+      "now": "91 partitions and all 6 GPTs read back and hash-verified. Waiting on an EDL full dump of every partition and a proven restore route before any boot or flash.",
+      "evidence": [
+        "docs/recovery.md",
+        "docs/partition-classification.md"
+      ]
+    },
+    {
+      "id": "M1",
+      "title": "Kernel baseline",
+      "state": "in-progress",
+      "now": "Linux 7.3 and XEC 7.3-rc4 build reproducibly; NX809J board DTS candidate (patches 0001-0004) compiles with 0 schema errors and 3 inherited warnings. No temporary boot yet.",
+      "evidence": [
+        "docs/mainline-readiness.md",
+        "docs/nx809j-board-foundation.md",
+        "docs/nx809j-schema-followup.md"
+      ]
+    },
+    {
+      "id": "M2",
+      "title": "Safe foundation (UFS, USB, battery, thermal, watchdog)",
+      "state": "not-started",
+      "now": "Static maps only: UFS PHY (102 registers match), thermal (55 TSENS IDs match), ADC/battery reviewed. Nothing run on the phone.",
+      "evidence": [
+        "docs/hardware-support.csv"
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "Phone and dock hardware",
+      "state": "not-started",
+      "now": "0 of 20 hardware rows tested on the phone. Touch, panel, GPU and remoteproc analysis is done on the host.",
+      "evidence": [
+        "docs/hardware-support.csv"
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "Denial desktop",
+      "state": "in-progress",
+      "now": "Denial ARM64 packages and the integrated Debian 13 + Mesa 26.1.6 rootfs pass offline checks. No phone session yet.",
+      "evidence": [
+        "docs/denial.md",
+        "docs/denial-rootfs-validation.md"
+      ]
+    },
+    {
+      "id": "M5",
+      "title": "Dual boot and switching",
+      "state": "blocked",
+      "now": "Blocked on M0/M1: no proven temporary-boot path and no safe internal root area yet. Android slot A stays untouched.",
+      "evidence": [
+        "docs/boot-chain.md",
+        "docs/boot-slot-compatibility.md"
+      ]
+    },
+    {
+      "id": "M6",
+      "title": "Completion",
+      "state": "not-started",
+      "now": "Every hardware row must pass its phone test, plus five clean Android-Linux-Android cycles.",
+      "evidence": [
+        "docs/plan.md"
+      ]
+    }
+  ]
+}
